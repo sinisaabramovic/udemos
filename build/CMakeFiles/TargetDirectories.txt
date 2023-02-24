@@ -1,0 +1,3 @@
+/Users/sinisaabramovic/projects/udemos/build/CMakeFiles/udemos.dir
+/Users/sinisaabramovic/projects/udemos/build/CMakeFiles/edit_cache.dir
+/Users/sinisaabramovic/projects/udemos/build/CMakeFiles/rebuild_cache.dir
