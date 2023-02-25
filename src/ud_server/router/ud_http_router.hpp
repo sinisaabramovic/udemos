@@ -9,8 +9,8 @@
 #include <unistd.h>
 #include <map>
 
-#include "../Common/HttpRequest.hpp"
 #include "ud_http_route.hpp"
+#include "../models/request/ud_http_request.hpp"
 #include "../models/response/ud_http_response_generator_factory.hpp"
 
 class ud_http_router
@@ -39,7 +39,7 @@ public:
         }
 
         auto response_generator = ud_http_response_generator_factory::create_generator();
-        return response_generator->generate_response(ud_http_status_codes::NOT_FOUND, "application/json", "");
+        return response_generator->create_generator(ud_http_status_codes::NOT_FOUND, "application/json", "");
     }
 };
 

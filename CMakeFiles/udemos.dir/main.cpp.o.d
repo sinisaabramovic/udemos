@@ -414,9 +414,7 @@ CMakeFiles/udemos.dir/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/ud_http.hpp \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/thread \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/ud_server.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/router/ud_http_route.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__split_buffer \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/socket.h \
@@ -437,6 +435,76 @@ CMakeFiles/udemos.dir/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_select.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_uuid_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/gethostuuid.h \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/router/../controller/ud_http_controller.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/router/../controller/../view/ud_http_view.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/router/../view/ud_http_view.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/router/../models/request/ud_http_request.hpp \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/sstream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/unordered_map \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/is_transparent.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__hash_table \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cmath \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/math.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/math.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__node_handle \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/optional \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/document.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/reader.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/allocators.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/rapidjson.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/inttypes.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/inttypes.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/inttypes.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/xlocale/_inttypes.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/internal/meta.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/internal/../rapidjson.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/stream.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/encodings.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/encodedstream.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/memorystream.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/internal/clzll.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/internal/stack.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/internal/../allocators.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/internal/swap.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/internal/strtod.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/internal/ieee754.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/internal/biginteger.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/internal/diyfp.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/internal/pow10.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/error/error.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/error/../rapidjson.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/internal/strfunc.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/internal/../stream.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/error/en.h \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/router/ud_http_router.hpp \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/map \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__tree \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/router/../models/response/ud_http_response_generator_factory.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/router/../models/response/ud_i_http_response_generator.h \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/router/../models/response/ud_map_http_response_generator.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/router/../models/response/../../common/ud_http_time.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/ud_http.hpp \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/thread \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/common/ud_thread_manager.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/acceptor/ud_http_acceptor.hpp \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/arpa/inet.h \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/acceptor/ud_blacklist_manager.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/connection/ud_http_connection.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/connection/../common/udp_http_defines.h \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/connection/../router/ud_http_router.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/common/ud_http_thread_pool.hpp \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/queue \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/deque \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/condition_variable \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/ud_server.hpp \
   /Users/sinisaabramovic/projects/udemos/src/ud_server/common/ud_result.hpp \
   /Users/sinisaabramovic/projects/udemos/src/ud_server/common/ud_result_failure.hpp \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/common/ud_result_success.hpp
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/common/ud_result_success.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/api/home/home_controller.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/api/home/../../ud_server/controller/ud_http_controller.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/api/home/../../ud_server/view/ud_http_view.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/api/home/home_view.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/api/home/../../ud_server/models/response/ud_http_response_generator_factory.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/api/home/../../ud_server/models/response/util/ud_http_response_utils.hpp \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zlib.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zconf.h

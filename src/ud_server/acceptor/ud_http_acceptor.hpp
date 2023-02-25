@@ -11,30 +11,36 @@
 #include <chrono>
 #include <arpa/inet.h>
 
-class udp_http_acceptor
+#include  "ud_blacklist_manager.hpp"
+
+class ud_http_acceptor
 {
 public:
-    udp_http_acceptor(int port, const std::vector<std::string> &blacklisted_ips = {});
-    ~udp_http_acceptor();
+    ud_http_acceptor(int port, std::shared_ptr<ud_blacklist_manager> blacklist_manager);
+    ud_http_acceptor(int port) : m_port(port) 
+    {
+        initialize_socket();
+    }
+    ~ud_http_acceptor();
 
-    int32_t accept_connection();
-    void set_blacklisted_ip(const std::string &ip);
+    int32_t accept_connection();    
 
 private:
-    void initialize_socket();
-    bool is_ip_blacklisted(const std::string &ip);
-
-    int32_t m_socket;
-    std::vector<std::string> m_blacklisted_ips;
+    void initialize_socket();    
+    int32_t m_socket;    
     int m_port;
+    std::shared_ptr<ud_blacklist_manager> m_blacklist_manager;
 };
 
-udp_http_acceptor::udp_http_acceptor(int port, const std::vector<std::string> &blacklisted_ips) : m_socket(-1), m_blacklisted_ips(blacklisted_ips), m_port(port)
+ud_http_acceptor::ud_http_acceptor(int port, std::shared_ptr<ud_blacklist_manager> blacklist_manager)
+ : m_socket(-1),
+  m_port(port),
+  m_blacklist_manager(blacklist_manager)
 {
     initialize_socket();
 }
 
-udp_http_acceptor::~udp_http_acceptor()
+ud_http_acceptor::~ud_http_acceptor()
 {
     if (m_socket >= 0)
     {
@@ -42,7 +48,7 @@ udp_http_acceptor::~udp_http_acceptor()
     }
 }
 
-int32_t udp_http_acceptor::accept_connection()
+int32_t ud_http_acceptor::accept_connection()
 {
     struct sockaddr_in address;
     int addrlen = sizeof(address);
@@ -56,21 +62,18 @@ int32_t udp_http_acceptor::accept_connection()
     }
 
     // Check if the client IP is blacklisted
-    if (is_ip_blacklisted(inet_ntoa(address.sin_addr)))
-    {
-        close(new_socket);
-        return -1;
-    }
+    if (m_blacklist_manager) {
+        if (m_blacklist_manager->is_ip_blacklisted(inet_ntoa(address.sin_addr)))
+        {
+            close(new_socket);
+            return -1;
+        }
+    }    
 
     return new_socket;
 }
 
-void HttpAcceptor::set_blacklisted_ip(const std::string &ip)
-{
-    m_blacklisted_ips.emplace_back(ip);
-}
-
-void HttpAcceptor::initialize_socket()
+void ud_http_acceptor::initialize_socket()
 {
     struct sockaddr_in address;
     int opt = 1;
@@ -106,11 +109,6 @@ void HttpAcceptor::initialize_socket()
         perror("listen");
         exit(EXIT_FAILURE);
     }
-}
-
-bool udp_http_acceptor::is_ip_blacklisted(const std::string &ip)
-{
-    return std::find(m_blacklisted_ips.begin(), m_blacklisted_ips.end(), ip) != m_blacklisted_ips.end();
 }
 
 #endif

@@ -20,7 +20,10 @@ private:
     std::shared_ptr<ud_http_controller> m_controller;
 
 public:
-    ud_http_route(std::string path, std::string method, std::shared_ptr<ud_http_controller> controller) : m_path(path), m_method(method), m_controller(std::move(controller)) {}
+    ud_http_route(std::string path, std::string method, std::shared_ptr<ud_http_controller> controller)
+     : m_path(path),
+      m_method(method), 
+      m_controller(std::move(controller)) {}
 
     std::string handle_request(const ud_http_request &request)
     {

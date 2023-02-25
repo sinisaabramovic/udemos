@@ -5,12 +5,21 @@
 #include <chrono>
 #include <atomic>
 
+#include "common/ud_thread_manager.hpp"
+#include "acceptor/ud_http_acceptor.hpp"
+#include "connection/ud_http_connection.hpp"
+#include "router/ud_http_router.hpp"
+#include "common/ud_http_thread_pool.hpp"
 #include "ud_server.hpp"
 
 class ud_http : public ud_server
 {
 private:
-    /* data */
+    u_int32_t m_port;
+    std::shared_ptr<ud_http_router> m_router;
+    std::unique_ptr<ud_http_acceptor> m_acceptor;
+    std::unique_ptr<ud_http_thread_pool> m_thread_pool;
+
 public:
     ud_http()
     {
@@ -18,7 +27,7 @@ public:
     }
     ~ud_http() {}
 
-    void pause_listen(bool pause)
+    void pause_listen(bool pause) override
     {        
         std::unique_lock<std::mutex> lock(pause_mutex);
         pause_flag = pause;
@@ -42,11 +51,18 @@ public:
     {
         return !paused;
     }
-
-    void start_listen(u_int32_t port, const std::string &host_name, status_delegate delegate) override
+    
+    void start_listen(
+        u_int32_t port, 
+        const std::string &host_name, 
+        std::shared_ptr<ud_http_router> router,
+        status_delegate delegate) override
     {
         using ud_result_type = ud_result<ud_result_success, ud_result_failure>;
-
+        m_port = port;
+        m_router = std::move(router);
+        m_thread_pool = std::make_unique<ud_http_thread_pool>(4);
+        m_acceptor = std::make_unique<ud_http_acceptor>(port);
         // Start a new thread
         std::thread listener_thread([&]()
         {
@@ -67,8 +83,11 @@ public:
                 });
                 lock.unlock();
 
-                std::cout << "running \n";
-                std::this_thread::sleep_for(std::chrono::seconds(1));
+                int32_t new_socket;
+                if ((new_socket = accept_connection(delegate)) > 0) {
+                    std::shared_ptr<ud_http_connection<ud_http_router>> client_connection = std::make_shared<ud_http_connection<ud_http_router>>(new_socket, m_router);
+                    m_thread_pool->enqueue(&ud_http_connection<ud_http_router>::start, client_connection);
+                }
                 ud_result_type my_result{ud_result_success{"OK"}};
                 delegate(my_result);
             } 
@@ -90,6 +109,19 @@ private:
     void unbind_listener()
     {
         return;
+    }
+
+    int32_t accept_connection(status_delegate delegate)
+    {
+        using ud_result_type = ud_result<ud_result_success, ud_result_failure>;
+        int32_t new_socket;
+        if ((new_socket = m_acceptor->accept_connection()) < 0)
+        {
+            ud_result_type failure_listen{ud_result_failure{"Failed accept connection"}};
+            delegate(failure_listen); 
+            return -1;
+        }
+        return new_socket;
     }
 };
 

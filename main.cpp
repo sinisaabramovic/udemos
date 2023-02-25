@@ -1,6 +1,12 @@
 #include <iostream>
 
+#include "src/ud_server/router/ud_http_route.hpp"
+#include "src/ud_server/router/ud_http_router.hpp"
+#include "src/ud_server/router/ud_http_route.hpp"
 #include "src/ud_server/ud_http.hpp"
+
+#include "src/api/home/home_controller.hpp"
+#include "src/api/home/home_view.hpp"
 
 int main()
 {
@@ -15,23 +21,15 @@ int main()
     // logger->log(HttpLogLevel::ERROR, "      This is an error message");
     // logger->log(HttpLogLevel::FATAL_ERROR, "This is an fatal error message");
 
-    // std::shared_ptr<HomeView> homeView = std::make_shared<HomeView>();
-    // std::shared_ptr<HomeController> home_controller = std::make_shared<HomeController>(homeView);
-    // std::shared_ptr<HttpRoute> home_route = std::make_shared<HttpRoute>("/", "GET", home_controller);
+    std::shared_ptr<home_view> home_v = std::make_shared<home_view>();
+    std::shared_ptr<home_controller> home_ctrl = std::make_shared<home_controller>(home_v);
+    std::shared_ptr<ud_http_route> home_route = std::make_shared<ud_http_route>("/", "GET", home_ctrl);
 
-    // std::shared_ptr<HttpRouter> router = std::make_shared<HttpRouter>();
-    // router->add_route(home_route);
-
-    // std::shared_ptr<HttpServer<HttpRouter>> server = std::make_shared<HttpServer<HttpRouter>>(
-    //     8080,
-    //     router,
-    //     "/Users/sinisaabramovic/projects/udemos/bin/cert.pem",
-    //     "/Users/sinisaabramovic/projects/udemos/bin/key.pem",
-    //     true);
-    // server->start();
+    std::shared_ptr<ud_http_router> router = std::make_shared<ud_http_router>();
+    router->add_route(home_route);
 
     std::shared_ptr<ud_http> server = std::make_shared<ud_http>();
-    server->start_listen(8080, "localhost", [](const ud_result<ud_result_success, ud_result_failure> &server_result)
+    server->start_listen(8080, "localhost", router, [](const ud_result<ud_result_success, ud_result_failure> &server_result)
     {        
         if (server_result.is_success()) {
             std::cout << server_result.get_value().get_description() << std::endl;

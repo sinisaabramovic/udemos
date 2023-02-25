@@ -12,6 +12,7 @@
 #include <functional>
 
 #include "common/ud_result.hpp"
+#include "router/ud_http_router.hpp"
 #include "common/ud_result_failure.hpp"
 #include "common/ud_result_success.hpp"
 
@@ -20,8 +21,11 @@ class ud_server
 public:
   virtual ~ud_server() {}
 
-  using status_delegate = std::function<void(const ud_result<ud_result_success, ud_result_failure> &)>;
-  virtual void start_listen(u_int32_t port, const std::string &host_name, status_delegate delegate) = 0;
+  using status_delegate = std::function<void(const ud_result<ud_result_success, ud_result_failure> &)>;  
+  virtual void start_listen(u_int32_t port, 
+        const std::string &host_name, 
+        std::shared_ptr<ud_http_router> router,
+        status_delegate delegate) = 0;
   virtual void pause_listen(bool pause) = 0;
   virtual void stop_listen() = 0;
   virtual bool is_running() = 0;

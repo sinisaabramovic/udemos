@@ -29,6 +29,16 @@ private:
 public:
     ud_http_request(const std::string &request);
     ~ud_http_request();
+
+    std::string get_path() const 
+    {
+        return m_path;
+    }
+    
+    std::string get_method() const 
+    {
+        return m_method;
+    }
 };
 
 ud_http_request::ud_http_request(const std::string &request)
