@@ -38,6 +38,7 @@ protected:
   bool paused = false;
   std::condition_variable pause_cv;
   std::mutex pause_mutex;
+  std::unique_ptr<std::thread> m_listener_thread;
 };
 
 #endif

@@ -16,6 +16,7 @@ public:
 
     template <typename F, typename... Args>
     void enqueue(F &&f, Args &&...args);
+    void stop();
 
 private:
     std::vector<std::thread> m_threads;
@@ -79,6 +80,14 @@ void ud_http_thread_pool::worker()
         }
         task();
     }
+}
+
+void ud_http_thread_pool::stop()
+{
+    // for(auto thread : this->m_threads)
+    // {
+    //     thread.join();
+    // }
 }
 
 #endif // HTTP_THREAD_POOL_HPP

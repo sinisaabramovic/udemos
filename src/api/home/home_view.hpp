@@ -19,7 +19,7 @@ public:
     std::string render(const ud_http_request &request) override
     {
         // FOR DEMO ONLY - simulates slow response
-        // std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::this_thread::sleep_for(std::chrono::seconds(5));
         // const std::string compressed_payload = HttpResponseUtils::CompressPayload(request.get_body());
         const std::string payload = "HELLO!!!";
         auto responseGenerator = ud_http_response_generator_factory::create_generator();

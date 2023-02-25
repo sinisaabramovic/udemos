@@ -85,11 +85,11 @@ public:
 
                 int32_t new_socket;
                 if ((new_socket = accept_connection(delegate)) > 0) {
+                    ud_result_type my_result{ud_result_success{"Incomming connection..."}};
+                    delegate(my_result);
                     std::shared_ptr<ud_http_connection<ud_http_router>> client_connection = std::make_shared<ud_http_connection<ud_http_router>>(new_socket, m_router);
                     m_thread_pool->enqueue(&ud_http_connection<ud_http_router>::start, client_connection);
                 }
-                ud_result_type my_result{ud_result_success{"OK"}};
-                delegate(my_result);
             } 
         });
 
