@@ -492,6 +492,9 @@ CMakeFiles/udemos.dir/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/arpa/inet.h \
   /Users/sinisaabramovic/projects/udemos/src/ud_server/acceptor/../common/udp_http_defines.h \
   /Users/sinisaabramovic/projects/udemos/src/ud_server/acceptor/ud_blacklist_manager.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/acceptor/../common/ud_result.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/acceptor/../common/ud_result_failure.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/acceptor/../common/ud_result_success.hpp \
   /Users/sinisaabramovic/projects/udemos/src/ud_server/connection/ud_http_connection.hpp \
   /Users/sinisaabramovic/projects/udemos/src/ud_server/connection/../common/udp_http_defines.h \
   /Users/sinisaabramovic/projects/udemos/src/ud_server/connection/../router/ud_http_router.hpp \
@@ -510,4 +513,5 @@ CMakeFiles/udemos.dir/main.cpp.o: \
   /Users/sinisaabramovic/projects/udemos/src/api/home/../../ud_server/models/response/ud_http_response_generator_factory.hpp \
   /Users/sinisaabramovic/projects/udemos/src/api/home/../../ud_server/models/response/util/ud_http_response_utils.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zlib.h \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zconf.h
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zconf.h \
+  /Users/sinisaabramovic/projects/udemos/src/api/home/../../ud_server/common/ud_http_time.hpp

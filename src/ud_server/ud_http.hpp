@@ -31,13 +31,20 @@ public:
         this->stop_flag = false;
         this->setup_socket();
     }
+    ud_http(uint32_t port, const std::string& host) :
+     ud_server(port, host), 
+     m_rng(std::chrono::steady_clock::now().time_since_epoch().count()),
+     m_sleep_times(10, 100)
+    {
+        this->stop_flag = false;
+        this->setup_socket();
+    }
     ~ud_http() {}
 
     void pause_listen(bool pause) override
     {
         std::unique_lock<std::mutex> lock(pause_mutex);
         this->pause_flag = pause;
-        std::cout << "pause_listen: " << pause << std::endl;
         this->pause_cv.notify_one();
         this->stoped = pause;
     }
@@ -54,12 +61,12 @@ public:
 
     bool is_running() override
     {
-        return !stoped;
+        return !this->stoped;
     }
 
     bool is_paused() override
     {
-        return !paused;
+        return !this->paused;
     }
 
     void setup_socket()
@@ -73,21 +80,21 @@ public:
     void start_listen(
         std::shared_ptr<ud_http_router> router,
         status_delegate delegate) override
-    {
-        using ud_result_type = ud_result<ud_result_success, ud_result_failure>;
+    {        
         m_router = std::move(router);
         m_thread_pool = std::make_unique<ud_http_thread_pool>(4);
         m_acceptor = std::make_unique<ud_http_acceptor>(this->m_port, this->m_sock_fd);
 
-        m_acceptor->initialize_socket(this->m_sock_fd, this->m_port, this->m_host);
+        m_acceptor->initialize_socket(this->m_sock_fd, this->m_port, this->m_host, delegate);
 
-        m_listener_thread = std::make_unique<std::thread>(&ud_http::listen, this);
+        m_listener_thread = std::make_unique<std::thread>(&ud_http::listen, this, delegate);
         m_listener_thread->detach();
     }
 
 private:
-    void listen()
-    {        
+    void listen(status_delegate delegate)
+    {       
+        using ud_result_type = ud_result<ud_result_success, ud_result_failure>; 
         int client_socket_fd;
         bool active = true;        
         
@@ -98,10 +105,11 @@ private:
                 std::this_thread::sleep_for(std::chrono::microseconds(m_sleep_times(m_rng)));
             }       
 
-            if ((client_socket_fd = m_acceptor->accept_connection()) <= 0)
+            if ((client_socket_fd = m_acceptor->accept_connection(delegate)) <= 0)
             {                
                 active = false;
-                std::cout << client_socket_fd << " ERROR \n"; 
+                auto result = ud_result_type{ud_result_success{"listen accept rejected"}};
+                delegate(result);
                 close(client_socket_fd);               
                 continue;
             }

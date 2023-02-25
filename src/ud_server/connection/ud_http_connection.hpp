@@ -65,6 +65,7 @@ void ud_http_connection<T>::start()
                 }
                 else if (bytes_read == 0)
                 {
+                    close(this->m_socket);
                     std::cout << "Client disconnected I." << std::endl;
                     break; // Exit the thread if the client disconnected
                 }
@@ -93,6 +94,7 @@ void ud_http_connection<T>::start()
             else if (bytes_sent == 0)
             {
                 std::cout << "Client disconnected II." << std::endl;
+                close(this->m_socket);
                 break; // Exit the thread if the client disconnected
             }
         }
