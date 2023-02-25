@@ -4,6 +4,7 @@
 #include <thread>
 #include <chrono>
 #include <atomic>
+#include <random>
 
 #include "common/ud_thread_manager.hpp"
 #include "acceptor/ud_http_acceptor.hpp"
@@ -15,113 +16,100 @@
 class ud_http : public ud_server
 {
 private:
-    u_int32_t m_port;
     std::shared_ptr<ud_http_router> m_router;
     std::unique_ptr<ud_http_acceptor> m_acceptor;
     std::unique_ptr<ud_http_thread_pool> m_thread_pool;
+    std::mt19937 m_rng;
+    std::uniform_int_distribution<int> m_sleep_times;
 
 public:
-    ud_http()
+    ud_http() :
+     ud_server(8080, "0.0.0.0"), 
+     m_rng(std::chrono::steady_clock::now().time_since_epoch().count()),
+     m_sleep_times(10, 100)
     {
-        stop_flag = false;
+        this->stop_flag = false;
+        this->setup_socket();
     }
     ~ud_http() {}
 
     void pause_listen(bool pause) override
-    {        
+    {
         std::unique_lock<std::mutex> lock(pause_mutex);
-        pause_flag = pause;
+        this->pause_flag = pause;
         std::cout << "pause_listen: " << pause << std::endl;
-        pause_cv.notify_one();
-        stoped = pause;
+        this->pause_cv.notify_one();
+        this->stoped = pause;
     }
 
     void stop_listen() override
     {
-        stop_flag = true;
-        stoped = true;
+        this->stop_flag = true;
+        this->stoped = true;
+        if (this->m_listener_thread) 
+        {
+            this->m_listener_thread->join();
+        }        
     }
 
     bool is_running() override
     {
         return !stoped;
     }
-    
+
     bool is_paused() override
     {
         return !paused;
     }
-    
+
+    void setup_socket()
+    {
+        if ((this->m_sock_fd = socket(AF_INET, SOCK_STREAM, 0)) <= 0)
+        {
+            throw std::runtime_error("Failed to create a TCP socket");
+        }
+    }
+
     void start_listen(
-        u_int32_t port, 
-        const std::string &host_name, 
         std::shared_ptr<ud_http_router> router,
         status_delegate delegate) override
     {
         using ud_result_type = ud_result<ud_result_success, ud_result_failure>;
-        m_port = port;
         m_router = std::move(router);
         m_thread_pool = std::make_unique<ud_http_thread_pool>(4);
-        m_acceptor = std::make_unique<ud_http_acceptor>(port);
-        // Start a new thread
-        std::thread listener_thread([&]()
-        {
-            bool success = bind_listener(port, host_name);
-            if (!success) 
-            {
-                ud_result_type failure_listen{ud_result_failure{"Failed to bind listener to port."}};
-                delegate(failure_listen);                
-                stop_listen();
-                return;
-            }
+        m_acceptor = std::make_unique<ud_http_acceptor>(this->m_port, this->m_sock_fd);
 
-            while (!stop_flag) 
-            {
-                std::unique_lock<std::mutex> lock(pause_mutex);
-                pause_cv.wait(lock, [&]() {
-                    return pause_flag.load() == false; 
-                });
-                lock.unlock();
+        m_acceptor->initialize_socket(this->m_sock_fd, this->m_port, this->m_host);
 
-                int32_t new_socket;
-                if ((new_socket = accept_connection(delegate)) > 0) {
-                    ud_result_type my_result{ud_result_success{"Incomming connection..."}};
-                    delegate(my_result);
-                    std::shared_ptr<ud_http_connection<ud_http_router>> client_connection = std::make_shared<ud_http_connection<ud_http_router>>(new_socket, m_router);
-                    m_thread_pool->enqueue(&ud_http_connection<ud_http_router>::start, client_connection);
-                }
-            } 
-        });
-
-        // Detach the thread so that it can continue running in the background
-        listener_thread.detach();
+        m_listener_thread = std::make_unique<std::thread>(&ud_http::listen, this);
+        m_listener_thread->detach();
     }
 
 private:
-    bool bind_listener(u_int32_t port, const std::string &host_name)
-    {
-        // TODO: Implement code to bind listener to port and host_name
-        // Return true if successful, false otherwise
-        std::cout << "bind_listener() \n";
-        return true;
-    }
+    void listen()
+    {        
+        int client_socket_fd;
+        bool active = true;        
+        
+        while (!this->stoped)
+        {   
+            if (!active) 
+            {
+                std::this_thread::sleep_for(std::chrono::microseconds(m_sleep_times(m_rng)));
+            }       
 
-    void unbind_listener()
-    {
-        return;
-    }
-
-    int32_t accept_connection(status_delegate delegate)
-    {
-        using ud_result_type = ud_result<ud_result_success, ud_result_failure>;
-        int32_t new_socket;
-        if ((new_socket = m_acceptor->accept_connection()) < 0)
-        {
-            ud_result_type failure_listen{ud_result_failure{"Failed accept connection"}};
-            delegate(failure_listen); 
-            return -1;
+            if ((client_socket_fd = m_acceptor->accept_connection()) <= 0)
+            {                
+                active = false;
+                std::cout << client_socket_fd << " ERROR \n"; 
+                close(client_socket_fd);               
+                continue;
+            }
+            active = true;
+            
+            std::shared_ptr<ud_http_connection<ud_http_router>> client_connection = std::make_shared<ud_http_connection<ud_http_router>>(client_socket_fd, m_router);
+            this->m_thread_pool->enqueue(&ud_http_connection<ud_http_router>::start, client_connection);
         }
-        return new_socket;
     }
 };
 

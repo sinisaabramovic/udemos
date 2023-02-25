@@ -485,9 +485,12 @@ CMakeFiles/udemos.dir/main.cpp.o: \
   /Users/sinisaabramovic/projects/udemos/src/ud_server/router/../models/response/../../common/ud_http_time.hpp \
   /Users/sinisaabramovic/projects/udemos/src/ud_server/ud_http.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/thread \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/random \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/numeric \
   /Users/sinisaabramovic/projects/udemos/src/ud_server/common/ud_thread_manager.hpp \
   /Users/sinisaabramovic/projects/udemos/src/ud_server/acceptor/ud_http_acceptor.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/arpa/inet.h \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/acceptor/../common/udp_http_defines.h \
   /Users/sinisaabramovic/projects/udemos/src/ud_server/acceptor/ud_blacklist_manager.hpp \
   /Users/sinisaabramovic/projects/udemos/src/ud_server/connection/ud_http_connection.hpp \
   /Users/sinisaabramovic/projects/udemos/src/ud_server/connection/../common/udp_http_defines.h \
