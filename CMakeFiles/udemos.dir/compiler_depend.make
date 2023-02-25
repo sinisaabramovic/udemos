@@ -494,6 +494,9 @@ CMakeFiles/udemos.dir/main.cpp.o: main.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/arpa/inet.h \
   src/ud_server/common/udp_http_defines.h \
   src/ud_server/acceptor/ud_blacklist_manager.hpp \
+  src/ud_server/common/ud_result.hpp \
+  src/ud_server/common/ud_result_failure.hpp \
+  src/ud_server/common/ud_result_success.hpp \
   src/ud_server/connection/ud_http_connection.hpp \
   src/ud_server/common/udp_http_defines.h \
   src/ud_server/router/ud_http_router.hpp \
@@ -512,7 +515,8 @@ CMakeFiles/udemos.dir/main.cpp.o: main.cpp \
   src/ud_server/models/response/ud_http_response_generator_factory.hpp \
   src/ud_server/models/response/util/ud_http_response_utils.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zlib.h \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zconf.h
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zconf.h \
+  src/ud_server/common/ud_http_time.hpp
 
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zconf.h:
@@ -522,10 +526,6 @@ src/ud_server/models/response/util/ud_http_response_utils.hpp:
 src/api/home/home_view.hpp:
 
 src/api/home/home_controller.hpp:
-
-src/ud_server/common/ud_result_success.hpp:
-
-src/ud_server/common/ud_result.hpp:
 
 src/ud_server/ud_server.hpp:
 
@@ -538,6 +538,10 @@ src/ud_server/ud_server.hpp:
 src/ud_server/common/ud_http_thread_pool.hpp:
 
 src/ud_server/connection/ud_http_connection.hpp:
+
+src/ud_server/common/ud_result_success.hpp:
+
+src/ud_server/common/ud_result.hpp:
 
 src/ud_server/common/udp_http_defines.h:
 

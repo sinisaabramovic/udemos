@@ -13,6 +13,9 @@
 
 #include "../common/udp_http_defines.h"
 #include "ud_blacklist_manager.hpp"
+#include "../common/ud_result.hpp"
+#include "../common/ud_result_failure.hpp"
+#include "../common/ud_result_success.hpp"
 
 class ud_http_acceptor
 {
@@ -23,8 +26,9 @@ public:
     }
     ~ud_http_acceptor();
 
-    void initialize_socket(int32_t sock_fd, uint32_t port, const std::string &host);
-    int32_t accept_connection();
+    using status_delegate = std::function<void(const ud_result<ud_result_success, ud_result_failure> &)>;
+    void initialize_socket(int32_t sock_fd, uint32_t port, const std::string &host, status_delegate delegate);
+    int32_t accept_connection(status_delegate delegate);
 
 private:
     int32_t m_socket;
@@ -47,8 +51,9 @@ ud_http_acceptor::~ud_http_acceptor()
     }
 }
 
-int32_t ud_http_acceptor::accept_connection()
+int32_t ud_http_acceptor::accept_connection(status_delegate delegate)
 {
+    using ud_result_type = ud_result<ud_result_success, ud_result_failure>;
     sockaddr_in address;
     int addrlen = sizeof(address);
     int32_t client_socket;
@@ -57,17 +62,24 @@ int32_t ud_http_acceptor::accept_connection()
     if ((client_socket = accept(m_socket, (struct sockaddr *)&address, (socklen_t *)&addrlen)) <= 0)
     {
         perror("accept");
+        auto result = ud_result_type{ud_result_success{"ERROR: incoming connection - accept"}};
+        delegate(result);
         close(client_socket);
         return -1;
     }
-
-    std::cout << "client ip: " << inet_ntoa(address.sin_addr) << std::endl;
+    
+    std::string client_ip_info = "Incoming connection from client ip: " + std::string(inet_ntoa(address.sin_addr));
+    auto result = ud_result_type{ud_result_success{client_ip_info}};
+    delegate(result);
 
     // Check if the client IP is blacklisted
     if (m_blacklist_manager)
     {
         if (m_blacklist_manager->is_ip_blacklisted(inet_ntoa(address.sin_addr)))
         {
+            std::string client_ip_info = "REJECTED (blacklisted): Incoming connection from client ip: " + std::string(inet_ntoa(address.sin_addr));
+            auto result = ud_result_type{ud_result_success{client_ip_info}};
+            delegate(result);
             close(client_socket);
             return -1;
         }
@@ -76,15 +88,20 @@ int32_t ud_http_acceptor::accept_connection()
     return client_socket;
 }
 
-void ud_http_acceptor::initialize_socket(int32_t sock_fd, uint32_t port, const std::string &host)
+void ud_http_acceptor::initialize_socket(int32_t sock_fd, uint32_t port, const std::string &host, status_delegate delegate)
 {
-    std::cout << sock_fd << " " << port << " " << host << std::endl;
+    using ud_result_type = ud_result<ud_result_success, ud_result_failure>;
+    std::string info_message = "initialize_socket(): " + host;
+    auto result = ud_result_type{ud_result_success{info_message}};
+    delegate(result);
     int opt = 1;
     sockaddr_in server_address;
 
     if (setsockopt(sock_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt)) < 0)
     {
         throw std::runtime_error("Failed to set socket options");
+        auto result = ud_result_type{ud_result_success{"Failed to set socket options"}};
+        delegate(result);
     }
 
     server_address.sin_family = AF_INET;
@@ -95,6 +112,8 @@ void ud_http_acceptor::initialize_socket(int32_t sock_fd, uint32_t port, const s
     if (bind(sock_fd, (sockaddr *)&server_address, sizeof(server_address)) < 0)
     {
         throw std::runtime_error("Failed to bind to socket");
+        auto result = ud_result_type{ud_result_success{"initialize_socket() Failed to bind to socket"}};
+        delegate(result);
     }
 
     if (listen(sock_fd, MAX_BACKLOG_SIZE) < 0)
@@ -102,6 +121,8 @@ void ud_http_acceptor::initialize_socket(int32_t sock_fd, uint32_t port, const s
         std::ostringstream msg;
         msg << "Failed to listen on port " << port;
         throw std::runtime_error(msg.str());
+        auto result = ud_result_type{ud_result_success{"initialize_socket() Failed to listen on port"}};
+        delegate(result);
     }
 }
 
