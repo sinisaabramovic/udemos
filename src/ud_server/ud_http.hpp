@@ -31,13 +31,20 @@ public:
         this->stop_flag = false;
         this->setup_socket();
     }
+    ud_http(uint32_t port, const std::string& host) :
+     ud_server(port, host), 
+     m_rng(std::chrono::steady_clock::now().time_since_epoch().count()),
+     m_sleep_times(10, 100)
+    {
+        this->stop_flag = false;
+        this->setup_socket();
+    }
     ~ud_http() {}
 
     void pause_listen(bool pause) override
     {
         std::unique_lock<std::mutex> lock(pause_mutex);
         this->pause_flag = pause;
-        std::cout << "pause_listen: " << pause << std::endl;
         this->pause_cv.notify_one();
         this->stoped = pause;
     }

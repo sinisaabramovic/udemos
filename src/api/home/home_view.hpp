@@ -39,7 +39,7 @@ public:
                               " which is then followed by a non-raw literal that's concatenated \n with"
                               " an embedded non-raw newline";
 
-        const std::string payload_result = "{ payload: pong, at: " + current_time + ", data: " + payload + " }";
+        const std::string payload_result = "{ ""payload:"" ""pong"", ""at"":  """ + current_time + """, ""data: "" "" " + payload + " "" }";
         auto responseGenerator = ud_http_response_generator_factory::create_generator();
         return responseGenerator->create_generator(ud_http_status_codes::OK, "application/json", payload_result);
     }
