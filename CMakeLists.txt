@@ -20,11 +20,11 @@ if(UNIX AND NOT APPLE)
     message(STATUS ">>> LINUX")
     # linux stuff here
     INCLUDE_DIRECTORIES(
-        /home/sinisa/projects/externals/vcpkg/installed/x64-linux/include/
+        /home/sino/projects/externals/vcpkg/installed/x64-linux/include/
     )
 
     LINK_DIRECTORIES(
-       /home/sinisa/projects/externals/vcpkg/installed/x64-linux/lib/
+       /home/sino/projects/externals/vcpkg/installed/x64-linux/lib/
     )  
     set(CMAKE_CXX_FLAGS "-pthread")  
 else()
@@ -65,8 +65,14 @@ set(SOURCES main.cpp
     )
 add_executable(udemos ${SOURCES})
 
-# Link with Google Test library
-set(CMAKE_PREFIX_PATH "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/")
+if(UNIX AND NOT APPLE)
+    message(STATUS ">>> LINUX")
+    set(CMAKE_PREFIX_PATH "/home/sino/projects/externals/vcpkg/installed/arm64-osx/")
+else()
+    message(STATUS ">>> APPLE")
+    set(CMAKE_PREFIX_PATH "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/")
+endif()
+
 find_package(EnTT CONFIG REQUIRED)
 find_package(OpenSSL REQUIRED)
 find_package(ZLIB REQUIRED)
