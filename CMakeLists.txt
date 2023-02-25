@@ -48,28 +48,7 @@ else()
 endif()
  
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
-set(SOURCES main.cpp 
-            # src/Logger/HttpLoggerMediator.cpp
-            # src/Logger/HttpLogger.cpp
-            # src/Logger/HttpLogType.hpp
-            # src/Logger/Logs/HttpLogCommon.hpp
-            # src/Common/HttpTime.hpp
-            # src/Common/HttpRequest.hpp
-            # src/Common/Response/Util/HttpResponseUtils.hpp
-            # src/Common/Response/MapHttpResponseGenerator.hpp
-            # src/Common/Response/HttpResponseGeneratorFactory.hpp
-            # src/Common/HttpThreadPool.hpp
-            # src/Controllers/HttpController.hpp
-            # src/Acceptor/HttpAcceptor.hpp
-            # src/View/HttpView.hpp
-            # src/Route/HttpRoute.hpp
-            # src/Router/HttpRouter.hpp
-            # src/Connection/HttpClientConnection.hpp
-            # src/Connection/HttpsClientConnection.hpp
-            # src/Server/HttpServer.hpp
-            # src/API/Home/HomeView.hpp
-            # src/API/Home/HomeController.hpp
-            
+set(SOURCES main.cpp             
             src/ud_server/ud_server.hpp
             src/ud_server/models/request/ud_http_request.hpp
             src/ud_server/models/response/ud_http_response_generator_factory.hpp
