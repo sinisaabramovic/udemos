@@ -1,5 +1,5 @@
-#ifndef HTTP_DEFINES_HPP
-#define HTTP_DEFINES_HPP
+#ifndef udp_http_defines
+#define udp_http_defines
 
 #include <unistd.h>
 

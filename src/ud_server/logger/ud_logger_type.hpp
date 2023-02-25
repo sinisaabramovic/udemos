@@ -1,5 +1,5 @@
-#ifndef HTTP_LOGTYPE_HPP
-#define HTTP_LOGTYPE_HPP
+#ifndef udp_logger_type_hpp
+#define udp_logger_type_hpp
 
 #include <iostream>
 #include <string>
@@ -7,7 +7,7 @@
 #include <memory>
 #include <chrono>
 
-enum class HttpLogLevel
+enum class ud_log_level
 {
     INFO,
     WARNING,
@@ -15,12 +15,14 @@ enum class HttpLogLevel
     FATAL_ERROR
 };
 
-class HttpLog
+class ud_log
 {
 public:
-    HttpLog(HttpLogLevel level, const std::string &message) : m_level(level), m_message(message), m_createdAt(std::chrono::system_clock::now()) {}
+    ud_log(ud_log_level level, const std::string &message) :
+     m_level(level), m_message(message), 
+     m_createdAt(std::chrono::system_clock::now()) {}
 
-    HttpLogLevel get_level() const { return m_level; }
+    ud_log_level get_level() const { return m_level; }
     std::string get_message() const { return m_message; }
     std::chrono::system_clock::time_point get_createdAt() const { return m_createdAt; }
 
@@ -29,16 +31,16 @@ public:
         std::string levelString;
         switch (m_level)
         {
-        case HttpLogLevel::INFO:
+        case ud_log_level::INFO:
             levelString = "INFO";
             break;
-        case HttpLogLevel::WARNING:
+        case ud_log_level::WARNING:
             levelString = "WARNING";
             break;
-        case HttpLogLevel::ERROR:
+        case ud_log_level::ERROR:
             levelString = "ERROR";
             break;
-        case HttpLogLevel::FATAL_ERROR:
+        case ud_log_level::FATAL_ERROR:
             levelString = "FATAL_ERROR";
             break;
         }
@@ -49,8 +51,10 @@ public:
         return levelString + ": " + "created: " + elapsedString + " " + m_message;
     }
 
+    ~ud_log() {}
+    
 protected:
-    HttpLogLevel m_level;
+    ud_log_level m_level;
     std::string m_message;
     std::chrono::system_clock::time_point m_createdAt;
 };

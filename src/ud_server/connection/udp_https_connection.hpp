@@ -1,17 +1,17 @@
-#ifndef HTTPS_CLIENT_CONNECTION_HPP
-#define HTTPS_CLIENT_CONNECTION_HPP
+#ifndef udp_https_connection_hpp
+#define udp_https_connection_hpp
 
 #include <openssl/ssl.h>
 #include <openssl/err.h>
-
-#include "../Defines/HttpDefines.h"
 #include <memory>
 #include <string>
 #include <sys/socket.h>
-#include "../Router/HttpRouter.hpp"
+
+#include "../common/udp_http_defines.h"
+#include "../router/ud_http_router.hpp"
 
 template <typename T>
-class HttpsClientConnection
+class udp_https_connection
 {
 private:
     SSL *m_ssl;
@@ -19,13 +19,13 @@ private:
     int32_t m_socket;
 
 public:
-    HttpsClientConnection(int32_t socket, const std::shared_ptr<T> &router, SSL_CTX *ssl_ctx) : m_router(std::move(router)), m_socket(socket)
+    udp_https_connection(int32_t socket, const std::shared_ptr<T> &router, SSL_CTX *ssl_ctx) : m_router(std::move(router)), m_socket(socket)
     {
         m_ssl = SSL_new(ssl_ctx);
         SSL_set_fd(m_ssl, socket);
         SSL_accept(m_ssl);
     }
-    ~HttpsClientConnection()
+    ~udp_https_connection()
     {
         SSL_shutdown(m_ssl);
         SSL_free(m_ssl);
@@ -35,7 +35,7 @@ public:
 };
 
 template <typename T>
-void HttpsClientConnection<T>::start()
+void udp_https_connection<T>::start()
 {
     while (true)
     {
