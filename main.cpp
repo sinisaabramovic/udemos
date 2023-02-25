@@ -1,15 +1,5 @@
 #include <iostream>
 
-// #include "src/Server/HttpServer.hpp"
-// #include "src/API/Home/HomeController.hpp"
-// #include "src/Route/HttpRoute.hpp"
-// #include "src/Router/HttpRouter.hpp"
-
-// #include "src/Logger/HttpLogType.hpp"
-// #include "src/Logger/HttpLogger.h"
-// #include "src/Logger/HttpLoggerMediator.h"
-// #include "src/Logger/Logs/HttpLogCommon.hpp"
-
 #include "src/ud_server/ud_http.hpp"
 
 int main()
