@@ -61,7 +61,7 @@ int32_t ud_http_acceptor::accept_connection()
         return -1;
     }
 
-    std::cout << "ip: " << inet_ntoa(address.sin_addr) << std::endl;
+    std::cout << "client ip: " << inet_ntoa(address.sin_addr) << std::endl;
 
     // Check if the client IP is blacklisted
     if (m_blacklist_manager)
@@ -82,8 +82,7 @@ void ud_http_acceptor::initialize_socket(int32_t sock_fd, uint32_t port, const s
     int opt = 1;
     sockaddr_in server_address;
 
-    if (setsockopt(sock_fd, SOL_SOCKET, SO_REUSEADDR, &opt,
-                   sizeof(opt)) < 0)
+    if (setsockopt(sock_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt)) <= 0)
     {
         throw std::runtime_error("Failed to set socket options");
     }
@@ -93,12 +92,12 @@ void ud_http_acceptor::initialize_socket(int32_t sock_fd, uint32_t port, const s
     inet_pton(AF_INET, host.c_str(), &(server_address.sin_addr.s_addr));
     server_address.sin_port = htons(port);
 
-    if (bind(sock_fd, (sockaddr *)&server_address, sizeof(server_address)) < 0)
+    if (bind(sock_fd, (sockaddr *)&server_address, sizeof(server_address)) <= 0)
     {
         throw std::runtime_error("Failed to bind to socket");
     }
 
-    if (listen(sock_fd, MAX_BACKLOG_SIZE) < 0)
+    if (listen(sock_fd, MAX_BACKLOG_SIZE) <= 0)
     {
         std::ostringstream msg;
         msg << "Failed to listen on port " << port;
