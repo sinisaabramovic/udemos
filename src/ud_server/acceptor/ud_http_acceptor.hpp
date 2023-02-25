@@ -27,7 +27,7 @@ public:
     ~ud_http_acceptor();
 
     using status_delegate = std::function<void(const ud_result<ud_result_success, ud_result_failure> &)>;
-    void initialize_socket(int32_t sock_fd, uint32_t port, const std::string &host, status_delegate delegate);
+    void initialize_socket(int32_t sock_fd, int timeout_ms, uint32_t port, const std::string &host, status_delegate delegate);
     int32_t accept_connection(status_delegate delegate);
 
 private:
@@ -88,7 +88,7 @@ int32_t ud_http_acceptor::accept_connection(status_delegate delegate)
     return client_socket;
 }
 
-void ud_http_acceptor::initialize_socket(int32_t sock_fd, uint32_t port, const std::string &host, status_delegate delegate)
+void ud_http_acceptor::initialize_socket(int32_t sock_fd, int timeout_ms, uint32_t port, const std::string &host, status_delegate delegate)
 {
     using ud_result_type = ud_result<ud_result_success, ud_result_failure>;
     std::string info_message = "initialize_socket(): " + host;
@@ -97,7 +97,11 @@ void ud_http_acceptor::initialize_socket(int32_t sock_fd, uint32_t port, const s
     int opt = 1;
     sockaddr_in server_address;
 
-    if (setsockopt(sock_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt)) < 0)
+    struct timeval tv;
+    tv.tv_sec = timeout_ms / 1000;
+    tv.tv_usec = (timeout_ms % 1000) * 1000;
+
+    if (setsockopt(sock_fd, SOL_SOCKET, SO_REUSEADDR | SO_RCVTIMEO, &tv, sizeof(tv)) < 0)
     {
         throw std::runtime_error("Failed to set socket options");
         auto result = ud_result_type{ud_result_success{"Failed to set socket options"}};

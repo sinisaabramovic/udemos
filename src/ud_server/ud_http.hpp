@@ -85,7 +85,7 @@ public:
         m_thread_pool = std::make_unique<ud_http_thread_pool>(4);
         m_acceptor = std::make_unique<ud_http_acceptor>(this->m_port, this->m_sock_fd);
 
-        m_acceptor->initialize_socket(this->m_sock_fd, this->m_port, this->m_host, delegate);
+        m_acceptor->initialize_socket(this->m_sock_fd, TIMEOUT_DELAY, this->m_port, this->m_host, delegate);
 
         m_listener_thread = std::make_unique<std::thread>(&ud_http::listen, this, delegate);
         m_listener_thread->detach();

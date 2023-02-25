@@ -21,7 +21,7 @@ public:
     std::string render(const ud_http_request &request) override
     {
         // FOR DEMO ONLY - simulates slow response
-        // std::this_thread::sleep_for(std::chrono::seconds(5));
+        std::this_thread::sleep_for(std::chrono::seconds(1));
         // const std::string compressed_payload = HttpResponseUtils::CompressPayload(request.get_body());
         std::string current_time = ud_http_time::current_date_time();
         std::string payload = R"(RUNNER)"
