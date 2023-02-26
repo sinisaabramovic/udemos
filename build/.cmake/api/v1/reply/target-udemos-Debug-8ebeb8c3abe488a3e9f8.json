@@ -19,7 +19,8 @@
 			"include",
 			"find_package",
 			"set_property",
-			"INCLUDE_DIRECTORIES"
+			"INCLUDE_DIRECTORIES",
+			"include_directories"
 		],
 		"files" : 
 		[
@@ -54,7 +55,7 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 80,
+				"line" : 90,
 				"parent" : 0
 			},
 			{
@@ -100,6 +101,12 @@
 				"file" : 1,
 				"line" : 33,
 				"parent" : 0
+			},
+			{
+				"command" : 10,
+				"file" : 1,
+				"line" : 88,
+				"parent" : 0
 			}
 		]
 	},
@@ -120,6 +127,10 @@
 				{
 					"backtrace" : 12,
 					"path" : "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include"
+				},
+				{
+					"backtrace" : 13,
+					"path" : "/opt/homebrew/include"
 				},
 				{
 					"backtrace" : 4,

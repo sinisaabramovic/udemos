@@ -77,4 +77,14 @@ find_package(EnTT CONFIG REQUIRED)
 find_package(OpenSSL REQUIRED)
 find_package(ZLIB REQUIRED)
 find_package(RapidJSON CONFIG REQUIRED)
+
+set(Boost_USE_STATIC_LIBS        ON)  # only find static libs
+set(Boost_USE_DEBUG_LIBS        OFF)  # ignore debug libs and
+set(Boost_USE_RELEASE_LIBS       ON)  # only find release libs
+set(Boost_USE_MULTITHREADED      ON)
+set(Boost_USE_STATIC_RUNTIME     ON)  # link Boost Static libraries
+
+find_package(Boost CONFIG REQUIRED)
+include_directories(${Boost_INCLUDE_DIRS})
+
 target_link_libraries(udemos EnTT::EnTT OpenSSL::SSL ZLIB::ZLIB rapidjson)
