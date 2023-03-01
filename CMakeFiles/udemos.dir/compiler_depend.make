@@ -500,6 +500,8 @@ CMakeFiles/udemos.dir/main.cpp.o: main.cpp \
   src/ud_server/connection/ud_http_connection.hpp \
   src/ud_server/common/udp_http_defines.h \
   src/ud_server/router/ud_http_router.hpp \
+  src/ud_server/socket/ud_http_socket.hpp \
+  src/ud_server/socket/ud_socket.hpp \
   src/ud_server/common/ud_http_thread_pool.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/queue \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/deque \
@@ -536,6 +538,8 @@ src/ud_server/ud_server.hpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/queue:
 
 src/ud_server/common/ud_http_thread_pool.hpp:
+
+src/ud_server/socket/ud_http_socket.hpp:
 
 src/ud_server/connection/ud_http_connection.hpp:
 
@@ -944,6 +948,8 @@ src/ud_server/ud_http.hpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/erase_if_container.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/common_iterator.h:
+
+src/ud_server/socket/ud_socket.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/back_insert_iterator.h:
 
