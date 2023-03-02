@@ -518,8 +518,66 @@ CMakeFiles/udemos.dir/main.cpp.o: main.cpp \
   src/ud_server/models/response/util/ud_http_response_utils.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zlib.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zconf.h \
-  src/ud_server/common/ud_http_time.hpp
+  src/ud_server/common/ud_http_time.hpp \
+  src/security/encrypt_aes.hpp \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/aes.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/macros.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/opensslconf.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/configuration.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/opensslv.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/rand.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/types.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/e_os2.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/safestack.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/stack.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/randerr.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/symhacks.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/cryptoerr_legacy.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/evp.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/core.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/core_dispatch.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/bio.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/crypto.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/cryptoerr.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/bioerr.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/evperr.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/params.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/bn.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/bnerr.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/objects.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/obj_mac.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/asn1.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/asn1err.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/objectserr.h
 
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/asn1err.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/params.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/evperr.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/cryptoerr.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/core_dispatch.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/evp.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/cryptoerr_legacy.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/randerr.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/e_os2.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/types.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/rand.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/opensslv.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/aes.h:
+
+src/security/encrypt_aes.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zconf.h:
 
@@ -536,6 +594,8 @@ src/ud_server/ud_server.hpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/deque:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/queue:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/opensslconf.h:
 
 src/ud_server/common/ud_http_thread_pool.hpp:
 
@@ -583,11 +643,15 @@ src/ud_server/models/response/ud_i_http_response_generator.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/inttypes.h:
 
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/bioerr.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/inttypes.h:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/document.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/optional:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/core.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__node_handle:
 
@@ -629,6 +693,8 @@ src/ud_server/view/ud_http_view.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/_types/_nl_item.h:
 
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/bio.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fsfilcnt_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/math.h:
@@ -658,6 +724,10 @@ src/ud_server/view/ud_http_view.hpp:
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/encodedstream.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_u_char.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/objects.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/stack.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/partition_copy.h:
 
@@ -693,6 +763,8 @@ src/ud_server/view/ud_http_view.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_in_port_t.h:
 
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/safestack.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/_xlocale.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cerrno:
@@ -718,6 +790,8 @@ src/ud_server/view/ud_http_view.hpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/limits.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cstdio:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/symhacks.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/transform.h:
 
@@ -821,6 +895,8 @@ src/ud_server/ud_http.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/min_element.h:
 
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/crypto.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/arm/_limits.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/includes.h:
@@ -911,7 +987,11 @@ src/ud_server/ud_http.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/reverse_iterator.h:
 
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/macros.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/projected.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/obj_mac.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/prev.h:
 
@@ -1091,6 +1171,8 @@ src/ud_server/acceptor/ud_http_acceptor.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/replace_copy_if.h:
 
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/objectserr.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/function.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/default_searcher.h:
@@ -1113,6 +1195,8 @@ src/ud_server/acceptor/ud_http_acceptor.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/pthread/pthread_impl.h:
 
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/bn.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/locale.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/perfect_forward.h:
@@ -1120,6 +1204,8 @@ src/ud_server/acceptor/ud_http_acceptor.hpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/empty.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/replace_copy.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/bnerr.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/pop_heap.h:
 
@@ -1379,6 +1465,8 @@ src/ud_server/router/ud_http_router.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/allocator_arg_t.h:
 
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/asn1.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/fill.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_int64_t.h:
@@ -1512,6 +1600,8 @@ main.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/is_heap_until.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_uintptr_t.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/configuration.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__nullptr:
 
