@@ -9,6 +9,7 @@
 #include "../router/ud_http_router.hpp"
 
 #include "../socket/ud_http_socket.hpp"
+#include "../common/result/ud_common_result.hpp"
 
 template <typename T>
 class ud_http_connection
@@ -17,9 +18,9 @@ private:
     std::shared_ptr<ud_http_socket> m_socket;
     std::shared_ptr<T> m_router;
 
-    bool send_response_to_client(const std::string &response);
+    result<bool, ud_error> send_response_to_client(const std::string &response);    
     std::shared_ptr<std::string> read_request_from_client();
-    bool handle_client_request(fd_set *readfds);
+    result<bool, ud_error> handle_client_request(fd_set *readfds);
     int wait_for_activity(int max_sd, fd_set *readfds);
 
 public:
@@ -59,7 +60,8 @@ void ud_http_connection<T>::start()
             continue;
         }
 
-        if (!handle_client_request(&readfds))
+        auto client_request_result = handle_client_request(&readfds);
+        if (!client_request_result.is_ok())
         {
             // An error occurred while handling the client request
             break;
@@ -77,33 +79,30 @@ int ud_http_connection<T>::wait_for_activity(int max_sd, fd_set *readfds)
 }
 
 template <typename T>
-bool ud_http_connection<T>::handle_client_request(fd_set *readfds)
+result<bool, ud_error> ud_http_connection<T>::handle_client_request(fd_set *readfds)
 {
     // If the client socket has data to read
     if (!FD_ISSET(this->m_socket->get_socket(), readfds))
     {
-        // The socket was closed, exit the thread
-        return false;
+        return ud_error{"The socket was closed, exit the thread"};
     }
 
     std::shared_ptr<std::string> request = read_request_from_client();
     if (request->empty())
-    {
-        // An error occurred while reading the request
-        return false;
+    {        
+        return ud_error{"An error occurred while reading the request"};
     }
 
     std::string response = m_router->handle_request(*request);
     if (response.empty())
     {
-        // An error occurred while handling the request
-        return false;
+        return ud_error{"An error occurred while reading the request"};
     }
 
-    if (!send_response_to_client(response))
+    auto handle_response = send_response_to_client(response);
+    if (!handle_response.is_ok())
     {
-        // An error occurred while sending the response
-        return false;
+        return ud_error{"An error occurred while sending the response"};
     }
 
     return true;
@@ -147,20 +146,18 @@ std::shared_ptr<std::string> ud_http_connection<T>::read_request_from_client()
 
 
 template <typename T>
-bool ud_http_connection<T>::send_response_to_client(const std::string &response)
+result<bool, ud_error> ud_http_connection<T>::send_response_to_client(const std::string &response)
 {
     int bytes_sent = send(this->m_socket->get_socket(), response.c_str(), response.size(), 0);
     if (bytes_sent < 0)
-    {
-        perror("send");
+    {        
         this->m_socket->close_socket();
-        return false;
+        return ud_error{"error in send"};
     }
     else if (bytes_sent == 0)
     {
-        std::cout << "Client disconnected II." << std::endl;
         this->m_socket->close_socket();
-        return false;
+        return ud_error{"client in disconnected"};
     }
 
     return true;

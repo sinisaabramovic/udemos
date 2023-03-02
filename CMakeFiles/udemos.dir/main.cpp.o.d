@@ -500,6 +500,7 @@ CMakeFiles/udemos.dir/main.cpp.o: \
   /Users/sinisaabramovic/projects/udemos/src/ud_server/connection/../router/ud_http_router.hpp \
   /Users/sinisaabramovic/projects/udemos/src/ud_server/connection/../socket/ud_http_socket.hpp \
   /Users/sinisaabramovic/projects/udemos/src/ud_server/connection/../socket/ud_socket.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/connection/../common/result/ud_common_result.hpp \
   /Users/sinisaabramovic/projects/udemos/src/ud_server/common/ud_http_thread_pool.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/queue \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/deque \
