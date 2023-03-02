@@ -26,7 +26,18 @@ public:
 
     std::string render(const ud_http_request &request) override
     {
-        return get_user(request);
+        auto responseGenerator = ud_http_response_generator_factory::create_generator();
+
+        if (request.get_path() == "/")
+        {
+            return dummy();
+        }
+        else if (request.get_path() == "/user")
+        {
+            return get_user(request);
+        }
+
+        return responseGenerator->create_generator(ud_http_status_codes::BAD_REQUEST, "application/json", "Bad request");
     }
 
 private:
@@ -38,7 +49,7 @@ private:
             return responseGenerator->create_generator(ud_http_status_codes::BAD_REQUEST, "application/json", "Invalid data");
         }
 
-        Document document;        
+        Document document;
         if (document.Parse(request.get_body().c_str()).HasParseError())
         {
             std::cout << "JSON parse error: " << rapidjson::GetParseError_En(document.GetParseError()) << std::endl;
@@ -49,7 +60,8 @@ private:
 
         person person_{};
         bool isParsed = person_.fromJson(document);
-        if (!isParsed) {
+        if (!isParsed)
+        {
             return responseGenerator->create_generator(ud_http_status_codes::BAD_REQUEST, "application/json", "Invalid data");
         }
 
