@@ -55,7 +55,7 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 90,
+				"line" : 91,
 				"parent" : 0
 			},
 			{
@@ -105,7 +105,7 @@
 			{
 				"command" : 10,
 				"file" : 1,
-				"line" : 88,
+				"line" : 89,
 				"parent" : 0
 			}
 		]
@@ -141,6 +141,11 @@
 					"backtrace" : 4,
 					"isSystem" : true,
 					"path" : "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rapidjson/../../include"
+				},
+				{
+					"backtrace" : 4,
+					"isSystem" : true,
+					"path" : "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rxcpp"
 				}
 			],
 			"language" : "CXX",

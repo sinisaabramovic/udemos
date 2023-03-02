@@ -226,6 +226,14 @@
 		},
 		{
 			"isExternal" : true,
+			"path" : "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rxcpp/rxcppConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rxcpp/rxcppConfig.cmake"
+		},
+		{
+			"isExternal" : true,
 			"path" : "/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/share/boost/vcpkg-cmake-wrapper.cmake"
 		},
 		{

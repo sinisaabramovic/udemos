@@ -92,7 +92,7 @@ result<bool, ud_error> ud_http_connection<T>::handle_client_request(fd_set *read
         return ud_error{"An error occurred while reading the request"};
     } 
 
-    std::string response = m_router->handle_request(request.value());
+    std::string response = m_router->process_request(request.value());
     if (response.empty())
     {
         return ud_error{"An error occurred while reading the request"};

@@ -435,6 +435,9 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
+//The directory containing a CMake configuration file for rxcpp.
+rxcpp_DIR:PATH=/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rxcpp
+
 //Value Computed by CMake
 udemos_project_BINARY_DIR:STATIC=/Users/sinisaabramovic/projects/udemos/build
 

@@ -2618,6 +2618,18 @@
 			"value" : "general;gtest;"
 		},
 		{
+			"name" : "rxcpp_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for rxcpp."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rxcpp"
+		},
+		{
 			"name" : "targets_export_name",
 			"properties" : 
 			[

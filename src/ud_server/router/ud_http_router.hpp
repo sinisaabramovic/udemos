@@ -8,6 +8,7 @@
 #include <netinet/in.h>
 #include <unistd.h>
 #include <map>
+#include <future>
 
 #include "ud_http_route.hpp"
 #include "../models/request/ud_http_request.hpp"
@@ -25,7 +26,7 @@ public:
         m_routes[route->get_path()] = route;
     }
 
-    std::string handle_request(const std::shared_ptr<std::string> &request)
+    std::string process_request(const std::shared_ptr<std::string> &request)
     {
         if (request.get() == nullptr)
         {
