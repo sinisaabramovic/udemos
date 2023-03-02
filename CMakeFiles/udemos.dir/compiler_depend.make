@@ -522,6 +522,11 @@ CMakeFiles/udemos.dir/main.cpp.o: main.cpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zlib.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zconf.h \
   src/ud_server/common/ud_http_time.hpp \
+  src/api/home/models/person.hpp \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/writer.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/internal/dtoa.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/internal/itoa.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/stringbuffer.h \
   src/security/encrypt_aes.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/aes.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/macros.h \
@@ -581,6 +586,12 @@ CMakeFiles/udemos.dir/main.cpp.o: main.cpp \
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/aes.h:
 
 src/security/encrypt_aes.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/internal/itoa.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/internal/dtoa.h:
+
+src/api/home/models/person.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zconf.h:
 
@@ -698,6 +709,8 @@ src/ud_server/view/ud_http_view.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__bsd_locale_defaults.h:
 
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/writer.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/_types/_nl_item.h:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/bio.h:
@@ -713,6 +726,8 @@ src/ud_server/view/ud_http_view.hpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fd_clr.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fd_setsize.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/stringbuffer.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fd_def.h:
 

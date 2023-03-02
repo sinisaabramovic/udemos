@@ -6,11 +6,17 @@
 #include <iostream>
 #include <ostream>
 #include <string>
+#include "rapidjson/document.h"
+#include "rapidjson/error/en.h"
 
 #include "../../ud_server/models/response/ud_http_response_generator_factory.hpp"
 #include "../../ud_server/models/response/util/ud_http_response_utils.hpp"
 #include "../../ud_server/view/ud_http_view.hpp"
 #include "../../ud_server/common/ud_http_time.hpp"
+
+#include "models/person.hpp"
+
+using namespace rapidjson;
 
 class home_view : public ud_http_view
 {
@@ -19,6 +25,42 @@ public:
     ~home_view() {}
 
     std::string render(const ud_http_request &request) override
+    {
+        return get_user(request);
+    }
+
+private:
+    std::string get_user(const ud_http_request &request) const
+    {
+        auto responseGenerator = ud_http_response_generator_factory::create_generator();
+        if (request.get_body().empty())
+        {
+            return responseGenerator->create_generator(ud_http_status_codes::BAD_REQUEST, "application/json", "Invalid data");
+        }
+
+        Document document;        
+        if (document.Parse(request.get_body().c_str()).HasParseError())
+        {
+            std::cout << "JSON parse error: " << rapidjson::GetParseError_En(document.GetParseError()) << std::endl;
+            return responseGenerator->create_generator(ud_http_status_codes::BAD_REQUEST, "application/json", "Invalid data");
+        }
+
+        document.Parse(request.get_body().c_str());
+
+        person person_{};
+        bool isParsed = person_.fromJson(document);
+        if (!isParsed) {
+            return responseGenerator->create_generator(ud_http_status_codes::BAD_REQUEST, "application/json", "Invalid data");
+        }
+
+        person_.set_name("Jurica Pesic");
+        person_.set_address("Hruskovica 39");
+        person_.set_age(person_.get_age() + 1);
+
+        return responseGenerator->create_generator(ud_http_status_codes::OK, "application/json", person_.toJSON());
+    }
+
+    std::string dummy() const
     {
         // FOR DEMO ONLY - simulates slow response
         // std::this_thread::sleep_for(std::chrono::seconds(1));
@@ -40,14 +82,29 @@ public:
                               " an embedded non-raw newline";
 
         std::string logo = R"(UDEMOS)"
-                        "  _    _ _____  ______ __  __  ____   _____  \n"
-                        " | |  | |  __ \\|  ____|  \\/  |/ __ \\ / ____| \n" 
-                        " | |  | | |  | | |__  | \\  / | |  | | (___   \n" 
-                        " | |  | | |  | |  __| | |\\/| | |  | |\\___ \\  \n" 
-                        " | |__| | |__| | |____| |  | | |__| |____) | \n" 
-                        "  \\____/|_____/|______|_|  |_|\\____/|_____/  \n";
+                           "  _    _ _____  ______ __  __  ____   _____  \n"
+                           " | |  | |  __ \\|  ____|  \\/  |/ __ \\ / ____| \n"
+                           " | |  | | |  | | |__  | \\  / | |  | | (___   \n"
+                           " | |  | | |  | |  __| | |\\/| | |  | |\\___ \\  \n"
+                           " | |__| | |__| | |____| |  | | |__| |____) | \n"
+                           "  \\____/|_____/|______|_|  |_|\\____/|_____/  \n";
 
-        const std::string payload_result = "{ ""payload:"" ""pong"", ""at"":  """ + current_time + """, ""data: "" "" " + payload + " "" logo: " + logo + "}";        
+        const std::string payload_result = "{ "
+                                           "payload:"
+                                           " "
+                                           "pong"
+                                           ", "
+                                           "at"
+                                           ":  "
+                                           "" +
+                                           current_time + ""
+                                                          ", "
+                                                          "data: "
+                                                          " "
+                                                          " " +
+                                           payload + " "
+                                                     " logo: " +
+                                           logo + "}";
         auto responseGenerator = ud_http_response_generator_factory::create_generator();
         return responseGenerator->create_generator(ud_http_status_codes::OK, "application/json", payload_result);
     }
