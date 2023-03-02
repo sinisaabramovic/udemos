@@ -18,10 +18,10 @@ private:
     std::shared_ptr<ud_http_socket> m_socket;
     std::shared_ptr<T> m_router;
 
-    result<bool, ud_error> send_response_to_client(const std::string &response);    
+    result<bool, ud_error> send_response_to_client(const std::string &response);
     std::shared_ptr<std::string> read_request_from_client();
     result<bool, ud_error> handle_client_request(fd_set *readfds);
-    int wait_for_activity(int max_sd, fd_set *readfds);
+    int32_t wait_for_activity(int32_t max_sd, fd_set *readfds);
 
 public:
     ud_http_connection(int32_t socket, const std::shared_ptr<T> &router) : m_socket(std::make_shared<ud_http_socket>(socket)),
@@ -72,7 +72,7 @@ void ud_http_connection<T>::start()
 }
 
 template <typename T>
-int ud_http_connection<T>::wait_for_activity(int max_sd, fd_set *readfds)
+int32_t ud_http_connection<T>::wait_for_activity(int32_t max_sd, fd_set *readfds)
 {
     // Wait for activity on any of the file descriptors
     return select(max_sd + 1, readfds, nullptr, nullptr, nullptr);
@@ -89,7 +89,7 @@ result<bool, ud_error> ud_http_connection<T>::handle_client_request(fd_set *read
 
     std::shared_ptr<std::string> request = read_request_from_client();
     if (request->empty())
-    {        
+    {
         return ud_error{"An error occurred while reading the request"};
     }
 
@@ -144,13 +144,12 @@ std::shared_ptr<std::string> ud_http_connection<T>::read_request_from_client()
     return request;
 }
 
-
 template <typename T>
 result<bool, ud_error> ud_http_connection<T>::send_response_to_client(const std::string &response)
 {
     int bytes_sent = send(this->m_socket->get_socket(), response.c_str(), response.size(), 0);
     if (bytes_sent < 0)
-    {        
+    {
         this->m_socket->close_socket();
         return ud_error{"error in send"};
     }
