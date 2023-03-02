@@ -26,22 +26,25 @@ public:
 
     std::string render(const ud_http_request &request) override
     {
-        auto responseGenerator = ud_http_response_generator_factory::create_generator();
+        std::map<std::string, std::function<std::string(const ud_http_request &)>> handlers = {
+            {"/", [this](const ud_http_request &req)
+             { return dummy(); }},
+            {"/user", [this](const ud_http_request &req)
+             { return get_user(req); }},
+            {"/time", [this](const ud_http_request &req)
+             { return get_current_time(); }},
+        };
 
-        if (request.get_path() == "/")
+        auto it = handlers.find(request.get_path());
+        if (it != handlers.end())
         {
-            return dummy();
+            return it->second(request);
         }
-        else if (request.get_path() == "/user")
+        else
         {
-            return get_user(request);
+            auto responseGenerator = ud_http_response_generator_factory::create_generator();
+            return responseGenerator->create_generator(ud_http_status_codes::BAD_REQUEST, "application/json", "Bad request");
         }
-        else if (request.get_path() == "/time")
-        {
-            return get_current_time();
-        }
-
-        return responseGenerator->create_generator(ud_http_status_codes::BAD_REQUEST, "application/json", "Bad request");
     }
 
 private:
@@ -125,7 +128,7 @@ private:
         return responseGenerator->create_generator(ud_http_status_codes::OK, "application/json", payload_result);
     }
 
-    std::string get_current_time() const 
+    std::string get_current_time() const
     {
         std::string current_time = ud_http_time::current_date_time();
         auto responseGenerator = ud_http_response_generator_factory::create_generator();
