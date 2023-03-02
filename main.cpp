@@ -29,10 +29,12 @@ int main()
     std::shared_ptr<home_controller> home_ctrl = std::make_shared<home_controller>(home_v);
     std::shared_ptr<ud_http_route> home_route = std::make_shared<ud_http_route>("/", "GET", home_ctrl);
     std::shared_ptr<ud_http_route> user_route = std::make_shared<ud_http_route>("/user", "GET", home_ctrl);
+    std::shared_ptr<ud_http_route> timer_route = std::make_shared<ud_http_route>("/time", "GET", home_ctrl);
 
     std::shared_ptr<ud_http_router> router = std::make_shared<ud_http_router>();
     router->add_route(home_route);
     router->add_route(user_route);
+    router->add_route(timer_route);
 
     try
     {

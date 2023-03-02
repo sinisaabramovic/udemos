@@ -36,6 +36,10 @@ public:
         {
             return get_user(request);
         }
+        else if (request.get_path() == "/time")
+        {
+            return get_current_time();
+        }
 
         return responseGenerator->create_generator(ud_http_status_codes::BAD_REQUEST, "application/json", "Bad request");
     }
@@ -119,6 +123,13 @@ private:
                                            logo + "}";
         auto responseGenerator = ud_http_response_generator_factory::create_generator();
         return responseGenerator->create_generator(ud_http_status_codes::OK, "application/json", payload_result);
+    }
+
+    std::string get_current_time() const 
+    {
+        std::string current_time = ud_http_time::current_date_time();
+        auto responseGenerator = ud_http_response_generator_factory::create_generator();
+        return responseGenerator->create_generator(ud_http_status_codes::OK, "application/json", current_time);
     }
 };
 
