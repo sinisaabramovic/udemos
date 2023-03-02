@@ -19,7 +19,7 @@ private:
     std::shared_ptr<T> m_router;
 
     result<bool, ud_error> send_response_to_client(const std::string &response);
-    std::shared_ptr<std::string> read_request_from_client();
+    result<std::shared_ptr<std::string>, ud_error> read_request_from_client();
     result<bool, ud_error> handle_client_request(fd_set *readfds);
     int32_t wait_for_activity(int32_t max_sd, fd_set *readfds);
 
@@ -87,13 +87,12 @@ result<bool, ud_error> ud_http_connection<T>::handle_client_request(fd_set *read
         return ud_error{"The socket was closed, exit the thread"};
     }
 
-    std::shared_ptr<std::string> request = read_request_from_client();
-    if (request->empty())
-    {
+    auto request = read_request_from_client();
+    if (!request.is_ok()) {
         return ud_error{"An error occurred while reading the request"};
-    }
+    } 
 
-    std::string response = m_router->handle_request(*request);
+    std::string response = m_router->handle_request(request.value());
     if (response.empty())
     {
         return ud_error{"An error occurred while reading the request"};
@@ -109,7 +108,7 @@ result<bool, ud_error> ud_http_connection<T>::handle_client_request(fd_set *read
 }
 
 template <typename T>
-std::shared_ptr<std::string> ud_http_connection<T>::read_request_from_client()
+result<std::shared_ptr<std::string>, ud_error> ud_http_connection<T>::read_request_from_client()
 {
     std::shared_ptr<std::string> request = std::make_shared<std::string>();
     char buffer[MAX_BUFFER_SIZE];
@@ -119,17 +118,15 @@ std::shared_ptr<std::string> ud_http_connection<T>::read_request_from_client()
         int bytes_read = read(this->m_socket->get_socket(), buffer, MAX_BUFFER_SIZE);
         if (bytes_read < 0)
         {
-            perror("read");
             this->m_socket->close_socket();
             request.reset();
-            return request;
+            return ud_error{"error read request"};
         }
         else if (bytes_read == 0)
         {
             this->m_socket->close_socket();
-            std::cout << "Client disconnected I." << std::endl;
             request.reset();
-            return request;
+            return ud_error{"error client is disconnected"};
         }
 
         request->append(buffer, bytes_read);
