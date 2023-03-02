@@ -81,7 +81,8 @@
         "variant": "cpp",
         "vector": "cpp",
         "algorithm": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "*.ipp": "cpp"
     },
     "C_Cpp.default.includePath": [
         "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/**"

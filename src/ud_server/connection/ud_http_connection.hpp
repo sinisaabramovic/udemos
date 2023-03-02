@@ -18,7 +18,7 @@ private:
     std::shared_ptr<T> m_router;
 
     bool send_response_to_client(const std::string &response);
-    std::string read_request_from_client();
+    std::shared_ptr<std::string> read_request_from_client();
     bool handle_client_request(fd_set *readfds);
     int wait_for_activity(int max_sd, fd_set *readfds);
 
@@ -86,14 +86,14 @@ bool ud_http_connection<T>::handle_client_request(fd_set *readfds)
         return false;
     }
 
-    std::string request = read_request_from_client();
-    if (request.empty())
+    std::shared_ptr<std::string> request = read_request_from_client();
+    if (request->empty())
     {
         // An error occurred while reading the request
         return false;
     }
 
-    std::string response = m_router->handle_request(request);
+    std::string response = m_router->handle_request(*request);
     if (response.empty())
     {
         // An error occurred while handling the request
@@ -110,9 +110,9 @@ bool ud_http_connection<T>::handle_client_request(fd_set *readfds)
 }
 
 template <typename T>
-std::string ud_http_connection<T>::read_request_from_client()
+std::shared_ptr<std::string> ud_http_connection<T>::read_request_from_client()
 {
-    std::string request;
+    std::shared_ptr<std::string> request = std::make_shared<std::string>();
     char buffer[MAX_BUFFER_SIZE];
 
     while (true)
@@ -122,16 +122,18 @@ std::string ud_http_connection<T>::read_request_from_client()
         {
             perror("read");
             this->m_socket->close_socket();
-            return "";
+            request.reset();
+            return request;
         }
         else if (bytes_read == 0)
         {
             this->m_socket->close_socket();
             std::cout << "Client disconnected I." << std::endl;
-            return "";
+            request.reset();
+            return request;
         }
 
-        request.append(buffer, bytes_read);
+        request->append(buffer, bytes_read);
 
         if (bytes_read < MAX_BUFFER_SIZE)
         {
@@ -142,6 +144,7 @@ std::string ud_http_connection<T>::read_request_from_client()
 
     return request;
 }
+
 
 template <typename T>
 bool ud_http_connection<T>::send_response_to_client(const std::string &response)
