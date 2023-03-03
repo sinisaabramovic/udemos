@@ -24,7 +24,7 @@ if(UNIX AND NOT APPLE)
     )
 
     LINK_DIRECTORIES(
-        /opt/vcpkg/x64-linux/lib/
+        /opt/vcpkg/installed/x64-linux/lib/
     )  
     set(CMAKE_CXX_FLAGS "-pthread")  
 else()
@@ -68,7 +68,7 @@ add_executable(udemos ${SOURCES})
 if(UNIX AND NOT APPLE)
     message(STATUS ">>> LINUX")
     #/opt/vcpkg/installed/
-    set(CMAKE_PREFIX_PATH "/opt/vcpkg/installed/arm64-osx/")
+    set(CMAKE_PREFIX_PATH "/opt/vcpkg/installed/x64-linux/")
 else()
     message(STATUS ">>> APPLE")
     set(CMAKE_PREFIX_PATH "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/")
@@ -86,7 +86,7 @@ set(Boost_USE_RELEASE_LIBS       ON)  # only find release libs
 set(Boost_USE_MULTITHREADED      ON)
 set(Boost_USE_STATIC_RUNTIME     ON)  # link Boost Static libraries
 
-find_package(Boost CONFIG REQUIRED)
-include_directories(${Boost_INCLUDE_DIRS})
+#find_package(Boost CONFIG REQUIRED)
+#include_directories(${Boost_INCLUDE_DIRS})
 
 target_link_libraries(udemos EnTT::EnTT OpenSSL::SSL ZLIB::ZLIB rapidjson rxcpp)
