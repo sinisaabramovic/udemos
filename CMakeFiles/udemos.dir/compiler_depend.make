@@ -494,13 +494,14 @@ CMakeFiles/udemos.dir/main.cpp.o: main.cpp \
   src/ud_server/common/ud_thread_manager.hpp \
   src/ud_server/acceptor/ud_http_acceptor.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/arpa/inet.h \
-  src/ud_server/common/udp_http_defines.h \
+  src/ud_server/common/ud_http_defines.h \
   src/ud_server/acceptor/ud_blacklist_manager.hpp \
   src/ud_server/common/ud_result.hpp \
   src/ud_server/common/ud_result_failure.hpp \
   src/ud_server/common/ud_result_success.hpp \
+  src/ud_server/socket/ud_socket_wrapper.hpp \
   src/ud_server/connection/ud_http_connection.hpp \
-  src/ud_server/common/udp_http_defines.h \
+  src/ud_server/common/ud_http_defines.h \
   src/ud_server/router/ud_http_router.hpp \
   src/ud_server/socket/ud_http_socket.hpp \
   src/ud_server/socket/ud_socket.hpp \
@@ -617,11 +618,11 @@ src/ud_server/socket/ud_http_socket.hpp:
 
 src/ud_server/connection/ud_http_connection.hpp:
 
+src/ud_server/socket/ud_socket_wrapper.hpp:
+
 src/ud_server/common/ud_result_success.hpp:
 
 src/ud_server/common/ud_result.hpp:
-
-src/ud_server/common/udp_http_defines.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/arpa/inet.h:
 
@@ -1592,6 +1593,8 @@ src/ud_server/common/ud_result_failure.hpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/arm/types.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_size_t.h:
+
+src/ud_server/common/ud_http_defines.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/count_if.h:
 
