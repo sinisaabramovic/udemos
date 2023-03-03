@@ -1,6 +1,7 @@
 #ifndef HTTP_CONTROLLER_HPP
 #define HTTP_CONTROLLER_HPP
 
+#include <memory>
 #include <iostream>
 #include <string>
 #include <vector>

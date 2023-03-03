@@ -4,7 +4,11 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
+<<<<<<< HEAD
 CXX_INCLUDES = -isystem /opt/vcpkg/installed/x64-linux/include -isystem /opt/vcpkg/installed/x64-linux/share/rapidjson/../../include -isystem /opt/vcpkg/installed/x64-linux/include/rxcpp
+=======
+CXX_INCLUDES = -isystem /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include -isystem /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rapidjson/../../include -isystem /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rxcpp
+>>>>>>> 3cb530598929709252e2c6ad80fd34a694c05e41
 
 CXX_FLAGS = -pthread -std=c++20
 
