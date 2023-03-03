@@ -99,7 +99,7 @@ void ud_http_acceptor::set_socket_options(int32_t sock_fd, int timeout_ms, statu
     tv.tv_sec = timeout_ms / 1000;
     tv.tv_usec = (timeout_ms % 1000) * 1000;
 
-    int ret = setsockopt(sock_fd, SOL_SOCKET, SO_REUSEADDR | SO_RCVTIMEO, &tv, sizeof(tv));
+    int ret = setsockopt(sock_fd, SOL_SOCKET, SO_SNDTIMEO, &tv, sizeof(tv));
     if (ret < 0)
     {
         std::cerr << "setsockopt() failed: " << strerror(errno) << std::endl;
