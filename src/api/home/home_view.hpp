@@ -215,7 +215,7 @@ private:
                          "</html>";
 
 
-        return responseGenerator->create_generator(ud_http_status_codes::OK, "application/json", html_string);
+        return responseGenerator->create_generator(ud_http_status_codes::OK, "text/html", html_string);
     }
 };
 
