@@ -28,11 +28,13 @@ public:
     {
         std::map<std::string, std::function<std::string(const ud_http_request &)>> handlers = {
             {"/", [this](const ud_http_request &req)
-             { return dummy(); }},
+             { return get_hello(); }},
             {"/user", [this](const ud_http_request &req)
              { return get_user(req); }},
             {"/time", [this](const ud_http_request &req)
              { return get_current_time(); }},
+            {"/html", [this](const ud_http_request &req)
+             { return get_html(); }},
         };
 
         auto it = handlers.find(request.get_path());
@@ -133,6 +135,87 @@ private:
         std::string current_time = ud_http_time::current_date_time();
         auto responseGenerator = ud_http_response_generator_factory::create_generator();
         return responseGenerator->create_generator(ud_http_status_codes::OK, "application/json", current_time);
+    }
+
+    std::string get_hello() const
+    {
+        auto responseGenerator = ud_http_response_generator_factory::create_generator();
+        return responseGenerator->create_generator(ud_http_status_codes::OK, "application/json", "hello");
+    }
+
+    std::string get_html() const
+    {
+        auto responseGenerator = ud_http_response_generator_factory::create_generator();
+
+        std::string html_string = "<!DOCTYPE html>\n"
+                         "<html>\n"
+                         "<head>\n"
+                         "<title>Fortunes</title>\n"
+                         "</head>\n"
+                         "<body>\n"
+                         "<table>\n"
+                         "<tr>\n"
+                         "<th>id</th>\n"
+                         "<th>message</th>\n"
+                         "</tr>\n"
+                         "<tr>\n"
+                         "<td>11</td>\n"
+                         "<td>&lt;script&gt;alert(&quot;This should not be displayed in a browser alert box.&quot;);&lt;/script&gt;</td>\n"
+                         "</tr>\n"
+                         "<tr>\n"
+                         "<td>4</td>\n"
+                         "<td>A bad random number generator: 1, 1, 1, 1, 1, 4.33e+67, 1, 1, 1</td>\n"
+                         "</tr>\n"
+                         "<tr>\n"
+                         "<td>5</td>\n"
+                         "<td>A computer program does what you tell it to do, not what you want it to do.</td>\n"
+                         "</tr>\n"
+                         "<tr>\n"
+                         "<td>2</td>\n"
+                         "<td>A computer scientist is someone who fixes things that aren&apos;t broken.</td>\n"
+                         "</tr>\n"
+                         "<tr>\n"
+                         "<td>8</td>\n"
+                         "<td>A list is only as strong as its weakest link. — Donald Knuth</td>\n"
+                         "</tr>\n"
+                         "<tr>\n"
+                         "<td>0</td>\n"
+                         "<td>Additional fortune added at request time.</td>\n"
+                         "</tr>\n"
+                         "<tr>\n"
+                         "<td>3</td>\n"
+                         "<td>After enough decimal places, nobody gives a damn.</td>\n"
+                         "</tr>\n"
+                         "<tr>\n"
+                         "<td>7</td>\n"
+                         "<td>Any program that runs right is obsolete.</td>\n"
+                         "</tr>\n"
+                         "<tr>\n"
+                         "<td>10</td>\n"
+                         "<td>Computers make very fast, very accurate mistakes.</td>\n"
+                         "</tr>\n"
+                         "<tr>\n"
+                         "<td>6</td>\n"
+                         "<td>Emacs is a nice operating system, but I prefer UNIX. — Tom Christaensen</td>\n"
+                         "</tr>\n"
+                         "<tr>\n"
+                         "<td>9</td>\n"
+                         "<td>Feature: A bug with seniority.</td>\n"
+                         "</tr>\n"
+                         "<tr>\n"
+                         "<td>1</td>\n"
+                         "<td>fortune: No such file or directory</td>\n"
+                         "</tr>\n"
+                         "<tr>\n"
+                         "<td>12</td>\n"
+                         "<td>フレームワークのベンチマーク</td>\n"
+                         "</tr>\n"
+                         "</table>\n"
+                         "</body>\n"
+                         "</html>";
+
+
+        return responseGenerator->create_generator(ud_http_status_codes::OK, "application/json", html_string);
     }
 };
 
