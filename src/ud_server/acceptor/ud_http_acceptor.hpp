@@ -35,6 +35,10 @@ private:
     int32_t m_port;
     std::unique_ptr<ud_socket_wrapper> m_socket;
     std::shared_ptr<ud_blacklist_manager> m_blacklist_manager;
+
+    void set_socket_options(int32_t sock_fd, int timeout_ms, status_delegate delegate);
+    void bind_socket(int32_t sock_fd, uint32_t port, const std::string &host, status_delegate delegate);
+    void listen_socket(int32_t sock_fd, status_delegate delegate);
 };
 
 ud_http_acceptor::ud_http_acceptor(int port, int32_t sock_fd, std::shared_ptr<ud_blacklist_manager> blacklist_manager)
@@ -82,14 +86,14 @@ int32_t ud_http_acceptor::accept_connection(status_delegate delegate)
     return client_socket;
 }
 
-void ud_http_acceptor::initialize_socket(int32_t sock_fd, int timeout_ms, uint32_t port, const std::string &host, status_delegate delegate)
+void ud_http_acceptor::set_socket_options(int32_t sock_fd, int timeout_ms, status_delegate delegate)
 {
     using ud_result_type = ud_result<ud_result_success, ud_result_failure>;
-    std::string info_message = "initialize_socket(): " + host;
+    std::string info_message = "set_socket_options()";
     auto result = ud_result_type{ud_result_success{info_message}};
     delegate(result);
+
     int opt = 1;
-    sockaddr_in server_address;
 
     struct timeval tv;
     tv.tv_sec = timeout_ms / 1000;
@@ -101,6 +105,16 @@ void ud_http_acceptor::initialize_socket(int32_t sock_fd, int timeout_ms, uint32
         auto result = ud_result_type{ud_result_success{"Failed to set socket options"}};
         delegate(result);
     }
+}
+
+void ud_http_acceptor::bind_socket(int32_t sock_fd, uint32_t port, const std::string &host, status_delegate delegate)
+{
+    using ud_result_type = ud_result<ud_result_success, ud_result_failure>;
+    std::string info_message = "bind_socket(): " + host;
+    auto result = ud_result_type{ud_result_success{info_message}};
+    delegate(result);
+
+    sockaddr_in server_address;
 
     server_address.sin_family = AF_INET;
     server_address.sin_addr.s_addr = INADDR_ANY;
@@ -110,18 +124,33 @@ void ud_http_acceptor::initialize_socket(int32_t sock_fd, int timeout_ms, uint32
     if (bind(sock_fd, (sockaddr *)&server_address, sizeof(server_address)) < 0)
     {
         throw std::runtime_error("Failed to bind to socket");
-        auto result = ud_result_type{ud_result_success{"initialize_socket() Failed to bind to socket"}};
+        auto result = ud_result_type{ud_result_success{"bind_socket() Failed to bind to socket"}};
         delegate(result);
     }
+}
+
+void ud_http_acceptor::listen_socket(int32_t sock_fd, status_delegate delegate)
+{
+    using ud_result_type = ud_result<ud_result_success, ud_result_failure>;
+    std::string info_message = "listen_socket()";
+    auto result = ud_result_type{ud_result_success{info_message}};
+    delegate(result);
 
     if (listen(sock_fd, MAX_BACKLOG_SIZE) < 0)
     {
         std::ostringstream msg;
-        msg << "Failed to listen on port " << port;
+        msg << "Failed to listen on socket";
         throw std::runtime_error(msg.str());
-        auto result = ud_result_type{ud_result_success{"initialize_socket() Failed to listen on port"}};
+        auto result = ud_result_type{ud_result_success{"listen_socket() Failed to listen on socket"}};
         delegate(result);
     }
+}
+
+void ud_http_acceptor::initialize_socket(int32_t sock_fd, int timeout_ms, uint32_t port, const std::string &host, status_delegate delegate)
+{
+    set_socket_options(sock_fd, timeout_ms, delegate);
+    bind_socket(sock_fd, port, host, delegate);
+    listen_socket(sock_fd, delegate);
 }
 
 #endif
