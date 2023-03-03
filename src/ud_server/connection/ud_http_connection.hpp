@@ -88,9 +88,10 @@ result<bool, ud_error> ud_http_connection<T>::handle_client_request(fd_set *read
     }
 
     auto request = read_request_from_client();
-    if (!request.is_ok()) {
+    if (!request.is_ok())
+    {
         return ud_error{"An error occurred while reading the request"};
-    } 
+    }
 
     std::string response = m_router->process_request(request.value());
     if (response.empty())
@@ -112,6 +113,7 @@ result<std::shared_ptr<std::string>, ud_error> ud_http_connection<T>::read_reque
 {
     std::shared_ptr<std::string> request = std::make_shared<std::string>();
     char buffer[MAX_BUFFER_SIZE];
+    int total_bytes_read = 0;
 
     while (true)
     {
@@ -129,7 +131,13 @@ result<std::shared_ptr<std::string>, ud_error> ud_http_connection<T>::read_reque
             return ud_error{"error client is disconnected"};
         }
 
+        total_bytes_read += bytes_read;
         request->append(buffer, bytes_read);
+
+        if (total_bytes_read >= MAX_REQUEST_SIZE)
+        {
+            return ud_error{"The request size is too large"};
+        }
 
         if (bytes_read < MAX_BUFFER_SIZE)
         {
