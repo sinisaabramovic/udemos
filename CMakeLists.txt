@@ -24,7 +24,7 @@ if(UNIX AND NOT APPLE)
     )
 
     LINK_DIRECTORIES(
-        /opt/vcpkg/x64-linux/lib/
+        /opt/vcpkg/installed/x64-linux/lib/
     )  
     set(CMAKE_CXX_FLAGS "-pthread")  
 else()
@@ -68,7 +68,7 @@ add_executable(udemos ${SOURCES})
 if(UNIX AND NOT APPLE)
     message(STATUS ">>> LINUX")
     #/opt/vcpkg/installed/
-    set(CMAKE_PREFIX_PATH "/opt/vcpkg/installed/arm64-osx/")
+    set(CMAKE_PREFIX_PATH "/opt/vcpkg/installed/x64-linux/")
 else()
     message(STATUS ">>> APPLE")
     set(CMAKE_PREFIX_PATH "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/")
