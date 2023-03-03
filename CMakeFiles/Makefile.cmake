@@ -10,7 +10,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
   "CMakeLists.txt"
-<<<<<<< HEAD
   "/opt/vcpkg/installed/x64-linux/share/entt/EnTTConfig.cmake"
   "/opt/vcpkg/installed/x64-linux/share/entt/EnTTConfigVersion.cmake"
   "/opt/vcpkg/installed/x64-linux/share/entt/EnTTTargets.cmake"
@@ -43,31 +42,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.22/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake"
   "/usr/share/cmake-3.22/Modules/SelectLibraryConfigurations.cmake"
-=======
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeCXXInformation.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeGenericSystem.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeInitializeConfigs.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeLanguageInformation.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeSystemSpecificInformation.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Compiler/AppleClang-CXX.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Compiler/Clang.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Compiler/GNU.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindOpenSSL.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindPackageMessage.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindPkgConfig.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindZLIB.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Platform/Apple-Clang.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Platform/Darwin-Initialize.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Platform/Darwin.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Platform/UnixPaths.cmake"
-  "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/SelectLibraryConfigurations.cmake"
->>>>>>> 3cb530598929709252e2c6ad80fd34a694c05e41
   )
 
 # The corresponding makefile is:

@@ -185,38 +185,19 @@ CMakeFiles/udemos.dir/main.cpp.o: /home/korisnik/udemos/main.cpp \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h \
  /home/korisnik/udemos/src/ud_server/router/../controller/ud_http_controller.hpp \
- /home/korisnik/udemos/src/ud_server/router/../controller/../view/ud_http_view.hpp \
- /home/korisnik/udemos/src/ud_server/router/../view/ud_http_view.hpp \
- /home/korisnik/udemos/src/ud_server/router/../models/request/ud_http_request.hpp \
- /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
- /usr/include/c++/11/unordered_map \
- /usr/include/c++/11/ext/aligned_buffer.h \
- /usr/include/c++/11/bits/hashtable.h \
- /usr/include/c++/11/bits/hashtable_policy.h /usr/include/c++/11/tuple \
- /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
- /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
- /usr/include/c++/11/bits/invoke.h \
- /usr/include/c++/11/bits/enable_special_members.h \
- /usr/include/c++/11/bits/node_handle.h \
- /usr/include/c++/11/bits/unordered_map.h \
- /usr/include/c++/11/bits/erase_if.h \
- /opt/vcpkg/installed/x64-linux/include/rapidjson/document.h \
- /opt/vcpkg/installed/x64-linux/include/rapidjson/reader.h \
- /opt/vcpkg/installed/x64-linux/include/rapidjson/allocators.h \
- /opt/vcpkg/installed/x64-linux/include/rapidjson/rapidjson.h \
- /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
- /usr/include/inttypes.h /usr/include/c++/11/cassert \
- /usr/include/assert.h \
- /opt/vcpkg/installed/x64-linux/include/rapidjson/internal/meta.h \
- /opt/vcpkg/installed/x64-linux/include/rapidjson/rapidjson.h \
  /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
  /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
- /usr/include/c++/11/bits/unique_ptr.h \
+ /usr/include/c++/11/bits/uses_allocator.h \
+ /usr/include/c++/11/bits/unique_ptr.h /usr/include/c++/11/utility \
+ /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/tuple \
+ /usr/include/c++/11/array /usr/include/c++/11/bits/invoke.h \
  /usr/include/c++/11/bits/shared_ptr.h \
  /usr/include/c++/11/bits/shared_ptr_base.h \
  /usr/include/c++/11/bits/allocated_ptr.h \
- /usr/include/c++/11/bits/refwrap.h /usr/include/c++/11/ext/concurrence.h \
+ /usr/include/c++/11/bits/refwrap.h \
+ /usr/include/c++/11/ext/aligned_buffer.h \
+ /usr/include/c++/11/ext/concurrence.h \
  /usr/include/c++/11/bits/shared_ptr_atomic.h \
  /usr/include/c++/11/bits/atomic_base.h \
  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
@@ -241,6 +222,25 @@ CMakeFiles/udemos.dir/main.cpp.o: /home/korisnik/udemos/main.cpp \
  /usr/include/c++/11/bits/uses_allocator_args.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
+ /home/korisnik/udemos/src/ud_server/router/../controller/../view/ud_http_view.hpp \
+ /home/korisnik/udemos/src/ud_server/router/../view/ud_http_view.hpp \
+ /home/korisnik/udemos/src/ud_server/router/../models/request/ud_http_request.hpp \
+ /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
+ /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
+ /usr/include/c++/11/bits/hashtable_policy.h \
+ /usr/include/c++/11/bits/enable_special_members.h \
+ /usr/include/c++/11/bits/node_handle.h \
+ /usr/include/c++/11/bits/unordered_map.h \
+ /usr/include/c++/11/bits/erase_if.h \
+ /opt/vcpkg/installed/x64-linux/include/rapidjson/document.h \
+ /opt/vcpkg/installed/x64-linux/include/rapidjson/reader.h \
+ /opt/vcpkg/installed/x64-linux/include/rapidjson/allocators.h \
+ /opt/vcpkg/installed/x64-linux/include/rapidjson/rapidjson.h \
+ /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
+ /usr/include/inttypes.h /usr/include/c++/11/cassert \
+ /usr/include/assert.h \
+ /opt/vcpkg/installed/x64-linux/include/rapidjson/internal/meta.h \
+ /opt/vcpkg/installed/x64-linux/include/rapidjson/rapidjson.h \
  /opt/vcpkg/installed/x64-linux/include/rapidjson/stream.h \
  /opt/vcpkg/installed/x64-linux/include/rapidjson/encodings.h \
  /opt/vcpkg/installed/x64-linux/include/rapidjson/encodedstream.h \
