@@ -1,7 +1,7 @@
 [
 {
   "directory": "/Users/sinisaabramovic/projects/udemos/build",
-  "command": "/usr/bin/clang++  -I/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include -I/opt/homebrew/include -isystem /Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/include -isystem /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rapidjson/../../include -isystem /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rxcpp  -Wall -Wbuiltin-macro-redefined -pedantic -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -std=c++20 -o CMakeFiles/udemos.dir/main.cpp.o -c /Users/sinisaabramovic/projects/udemos/main.cpp",
+  "command": "/usr/bin/clang++  -I/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include -isystem /Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/include -isystem /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rapidjson/../../include -isystem /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rxcpp  -Wall -Wbuiltin-macro-redefined -pedantic -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -std=c++20 -o CMakeFiles/udemos.dir/main.cpp.o -c /Users/sinisaabramovic/projects/udemos/main.cpp",
   "file": "/Users/sinisaabramovic/projects/udemos/main.cpp"
 }
 ]

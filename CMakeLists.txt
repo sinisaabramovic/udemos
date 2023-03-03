@@ -86,7 +86,7 @@ set(Boost_USE_RELEASE_LIBS       ON)  # only find release libs
 set(Boost_USE_MULTITHREADED      ON)
 set(Boost_USE_STATIC_RUNTIME     ON)  # link Boost Static libraries
 
-find_package(Boost CONFIG REQUIRED)
-include_directories(${Boost_INCLUDE_DIRS})
+#find_package(Boost CONFIG REQUIRED)
+#include_directories(${Boost_INCLUDE_DIRS})
 
 target_link_libraries(udemos EnTT::EnTT OpenSSL::SSL ZLIB::ZLIB rapidjson rxcpp)

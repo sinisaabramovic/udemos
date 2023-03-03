@@ -7,7 +7,6 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/share/boost/vcpkg-cmake-wrapper.cmake"
   "/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/share/entt/EnTTConfig.cmake"
   "/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/share/entt/EnTTConfigVersion.cmake"
   "/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/share/entt/EnTTTargets.cmake"
@@ -50,10 +49,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Platform/Darwin.cmake"
   "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Platform/UnixPaths.cmake"
   "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/SelectLibraryConfigurations.cmake"
-  "/opt/homebrew/lib/cmake/Boost-1.81.0/BoostConfig.cmake"
-  "/opt/homebrew/lib/cmake/Boost-1.81.0/BoostConfigVersion.cmake"
-  "/opt/homebrew/lib/cmake/boost_headers-1.81.0/boost_headers-config-version.cmake"
-  "/opt/homebrew/lib/cmake/boost_headers-1.81.0/boost_headers-config.cmake"
   )
 
 # The corresponding makefile is:
