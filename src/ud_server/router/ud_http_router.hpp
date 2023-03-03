@@ -8,10 +8,12 @@
 #include <netinet/in.h>
 #include <unistd.h>
 #include <map>
+#include <future>
 
 #include "ud_http_route.hpp"
 #include "../models/request/ud_http_request.hpp"
 #include "../models/response/ud_http_response_generator_factory.hpp"
+#include "../common/result/ud_common_result.hpp"
 
 class ud_http_router
 {
@@ -24,9 +26,14 @@ public:
         m_routes[route->get_path()] = route;
     }
 
-    std::string handle_request(const std::string &request)
+    std::string process_request(const std::shared_ptr<std::string> &request)
     {
-        ud_http_request parsed_request{request};
+        if (request.get() == nullptr)
+        {
+            auto response_generator = ud_http_response_generator_factory::create_generator();
+            return response_generator->create_generator(ud_http_status_codes::NOT_FOUND, "application/json", "");
+        }
+        ud_http_request parsed_request{request->data()};
 
         auto route_it = m_routes.find(parsed_request.get_path());
         if (route_it != m_routes.end())

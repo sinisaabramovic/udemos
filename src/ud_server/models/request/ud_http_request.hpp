@@ -32,12 +32,17 @@ public:
 
     std::string get_path() const 
     {
-        return m_path;
+        return this->m_path;
     }
     
     std::string get_method() const 
     {
-        return m_method;
+        return this->m_method;
+    }
+
+    std::string get_body() const 
+    {
+        return this->m_body;
     }
 };
 

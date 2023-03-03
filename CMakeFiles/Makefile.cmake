@@ -12,6 +12,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/entt/EnTTTargets.cmake"
   "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rapidjson/RapidJSONConfig.cmake"
   "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rapidjson/RapidJSONConfigVersion.cmake"
+  "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rxcpp/rxcppConfig.cmake"
+  "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rxcpp/rxcppConfigVersion.cmake"
   "CMakeFiles/3.24.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.24.1/CMakeSystem.cmake"
   "CMakeLists.txt"
@@ -38,6 +40,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Platform/Darwin.cmake"
   "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Platform/UnixPaths.cmake"
   "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/SelectLibraryConfigurations.cmake"
+  "/opt/homebrew/lib/cmake/Boost-1.81.0/BoostConfig.cmake"
+  "/opt/homebrew/lib/cmake/Boost-1.81.0/BoostConfigVersion.cmake"
+  "/opt/homebrew/lib/cmake/boost_headers-1.81.0/boost_headers-config-version.cmake"
+  "/opt/homebrew/lib/cmake/boost_headers-1.81.0/boost_headers-config.cmake"
   )
 
 # The corresponding makefile is:
