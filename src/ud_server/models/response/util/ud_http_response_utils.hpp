@@ -6,6 +6,7 @@
 #include <string>
 #include <vector>
 #include <stdexcept>
+#include <map>
 
 class ud_http_response_utils
 {
@@ -55,6 +56,17 @@ public:
 
         return compressed_data;
     }
+
+    static std::map<std::string, std::string> cors_headers_default() 
+    {
+        std::map<std::string, std::string> cors_headers;
+        cors_headers["Access-Control-Allow-Origin"] = "*";
+        cors_headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS";
+        cors_headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization";
+
+        return cors_headers;
+    }
+
 };
 
 #endif

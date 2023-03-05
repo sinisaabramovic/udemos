@@ -2,7 +2,11 @@
 #define ud_http_response_hpp
 
 #include <string>
+#include <utility>
+#include <iostream>
 #include <map>
+#include <unordered_map>
+#include "util/ud_http_response_utils.hpp"
 
 enum class ud_response_status_code
 {
@@ -37,26 +41,26 @@ public:
     ud_http_response() : m_status_code(ud_response_status_code::OK), m_content_type("text/plain"), m_body("") {}
     ~ud_http_response() {}
 
-    std::string to_string() const;
+    std::string to_string();
 
     ud_response_status_code get_status_code() const;
     void set_status_code(ud_response_status_code status_code);
 
     std::string get_content_type() const;
-    void set_content_type(std::string content_type);
+    void set_content_type(const std::string& content_type);
 
     std::string get_body() const;
-    void set_body(std::string body);
+    void set_body(const std::string& body);
 
-    std::map<std::string, std::string> get_headers() const;
-    void set_headers(std::map<std::string, std::string> headers);
-    void add_header(std::string name, std::string value);
+    std::unordered_map<std::string, std::string> get_headers() const;
+    void set_headers(std::unordered_map<std::string, std::string> headers);
+    void add_header(const std::string& name, const std::string& value);
 
 private:
     ud_response_status_code m_status_code;
     std::string m_content_type;
     std::string m_body;
-    std::map<std::string, std::string> m_headers;
+    std::unordered_map<std::string, std::string> m_headers;
 
     std::string get_status_description(ud_response_status_code code) const
     {
@@ -112,51 +116,59 @@ private:
 
 ud_response_status_code ud_http_response::get_status_code() const
 {
-    return m_status_code;
+    return this->m_status_code;
 }
 
 void ud_http_response::set_status_code(ud_response_status_code status_code)
 {
-    m_status_code = status_code;
+    this->m_status_code = status_code;
 }
 
 std::string ud_http_response::get_content_type() const
 {
-    return m_content_type;
+    return this->m_content_type;
 }
 
-void ud_http_response::set_content_type(std::string content_type)
+void ud_http_response::set_content_type(const std::string& content_type)
 {
-    m_content_type = content_type;
+    this->m_content_type = content_type;
 }
 
 std::string ud_http_response::get_body() const
 {
-    return m_body;
+    return this->m_body;
 }
 
-void ud_http_response::set_body(std::string body)
+void ud_http_response::set_body(const std::string& body)
 {
-    m_body = body;
+    this->m_body = body;
 }
 
-std::map<std::string, std::string> ud_http_response::get_headers() const
+std::unordered_map<std::string, std::string> ud_http_response::get_headers() const
 {
     return m_headers;
 }
 
-void ud_http_response::set_headers(std::map<std::string, std::string> headers)
+void ud_http_response::set_headers(std::unordered_map<std::string, std::string> headers)
 {
-    m_headers = headers;
+    for (const auto& [header_name, header_value] : headers) {
+      this->add_header(header_name, header_value);
+    }
 }
 
-void ud_http_response::add_header(std::string name, std::string value)
+void ud_http_response::add_header(const std::string& name, const std::string& value)
 {
-    m_headers.emplace(name, value);
+    this->m_headers[name] = value;
 }
 
-std::string ud_http_response::to_string() const
+std::string ud_http_response::to_string()
 {
+    // TODO: refactor this - currently we set default headers
+    for (const auto& [header_name, header_value] : ud_http_response_utils::cors_headers_default()) {
+      this->add_header(header_name, header_value);
+    }
+    //
+
     std::string status_description = get_status_description(m_status_code);
     std::string response = "HTTP/1.1 " + std::to_string(static_cast<int>(m_status_code)) + " " + status_description + "\r\n";
     response += "Content-Length: " + std::to_string(m_body.length()) + "\r\n";
