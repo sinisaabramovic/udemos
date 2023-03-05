@@ -13,7 +13,7 @@ private:
     std::string body_;
 
 public:
-    udHttpResponse(int status_code = 200)
+    udHttpResponse(ud_response_status_code status_code = ud_response_status_code::OK)
         : status_code_(status_code)
     {
     }
@@ -62,7 +62,7 @@ public:
     }
 
 private:
-    std::string GetStatusText(int status_code) const
+    std::string GetStatusText(ud_response_status_code status_code) const
     {
         switch (status_code)
         {

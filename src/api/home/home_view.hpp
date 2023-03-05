@@ -9,8 +9,7 @@
 #include "rapidjson/document.h"
 #include "rapidjson/error/en.h"
 
-#include "../../ud_server/models/response/ud_http_response_generator_factory.hpp"
-#include "../../ud_server/models/response/util/ud_http_response_utils.hpp"
+#include "../../ud_server/models/response/ud_http_response.hpp"
 #include "../../ud_server/view/ud_http_view.hpp"
 #include "../../ud_server/common/ud_http_time.hpp"
 
@@ -44,25 +43,26 @@ public:
         }
         else
         {
-            auto responseGenerator = ud_http_response_generator_factory::create_generator();
-            return responseGenerator->create_generator(ud_http_status_codes::BAD_REQUEST, "application/json", "Bad request");
+            auto response = ud_http_response(ud_response_status_code::BAD_REQUEST, "application/json", "Bad request");
+            return response.to_string();
         }
     }
 
 private:
     std::string get_user(const ud_http_request &request) const
     {
-        auto responseGenerator = ud_http_response_generator_factory::create_generator();
         if (request.get_body().empty())
         {
-            return responseGenerator->create_generator(ud_http_status_codes::BAD_REQUEST, "application/json", "Invalid data");
+            auto response = ud_http_response(ud_response_status_code::BAD_REQUEST, "application/json", "Bad request");
+            return response.to_string();
         }
 
         Document document;
         if (document.Parse(request.get_body().c_str()).HasParseError())
         {
             std::cout << "JSON parse error: " << rapidjson::GetParseError_En(document.GetParseError()) << std::endl;
-            return responseGenerator->create_generator(ud_http_status_codes::BAD_REQUEST, "application/json", "Invalid data");
+            auto response = ud_http_response(ud_response_status_code::BAD_REQUEST, "application/json", "Bad request");
+            return response.to_string();
         }
 
         document.Parse(request.get_body().c_str());
@@ -71,14 +71,16 @@ private:
         bool isParsed = person_.fromJson(document);
         if (!isParsed)
         {
-            return responseGenerator->create_generator(ud_http_status_codes::BAD_REQUEST, "application/json", "Invalid data");
+            auto response = ud_http_response(ud_response_status_code::BAD_REQUEST, "application/json", "Bad request");
+            return response.to_string();
         }
 
         person_.set_name("Jurica Pesic");
         person_.set_address("Hruskovica 39");
         person_.set_age(person_.get_age() + 1);
 
-        return responseGenerator->create_generator(ud_http_status_codes::OK, "application/json", person_.toJSON());
+        auto response = ud_http_response(ud_response_status_code::BAD_REQUEST, "application/json", person_.toJSON());
+        return response.to_string();
     }
 
     std::string dummy() const
@@ -126,27 +128,25 @@ private:
                                            payload + " "
                                                      " logo: " +
                                            logo + "}";
-        auto responseGenerator = ud_http_response_generator_factory::create_generator();
-        return responseGenerator->create_generator(ud_http_status_codes::OK, "application/json", payload_result);
+        auto response = ud_http_response(ud_response_status_code::BAD_REQUEST, "application/json", payload_result);
+        return response.to_string();
     }
 
     std::string get_current_time() const
     {
         std::string current_time = ud_http_time::current_date_time();
-        auto responseGenerator = ud_http_response_generator_factory::create_generator();
-        return responseGenerator->create_generator(ud_http_status_codes::OK, "application/json", current_time);
+        auto response = ud_http_response(ud_response_status_code::BAD_REQUEST, "application/json", current_time);
+        return response.to_string();
     }
 
     std::string get_hello() const
     {
-        auto responseGenerator = ud_http_response_generator_factory::create_generator();
-        return responseGenerator->create_generator(ud_http_status_codes::OK, "application/json", "hello");
+        auto response = ud_http_response(ud_response_status_code::BAD_REQUEST, "application/json", "hello");
+        return response.to_string();
     }
 
     std::string get_html() const
     {
-        auto responseGenerator = ud_http_response_generator_factory::create_generator();
-
         std::string html_string = "<!DOCTYPE html>\n"
                          "<html>\n"
                          "<head>\n"
@@ -215,7 +215,8 @@ private:
                          "</html>";
 
 
-        return responseGenerator->create_generator(ud_http_status_codes::OK, "text/html", html_string);
+        auto response = ud_http_response(ud_response_status_code::BAD_REQUEST, "application/json", html_string);
+        return response.to_string();
     }
 };
 

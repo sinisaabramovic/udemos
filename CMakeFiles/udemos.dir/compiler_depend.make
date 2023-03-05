@@ -483,10 +483,7 @@ CMakeFiles/udemos.dir/main.cpp.o: main.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__tree \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/future \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/thread \
-  src/ud_server/models/response/ud_http_response_generator_factory.hpp \
-  src/ud_server/models/response/ud_i_http_response_generator.h \
-  src/ud_server/models/response/ud_map_http_response_generator.hpp \
-  src/ud_server/common/ud_http_time.hpp \
+  src/ud_server/models/response/ud_http_response.hpp \
   src/ud_server/common/result/ud_common_result.hpp \
   src/ud_server/ud_http.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/random \
@@ -519,10 +516,7 @@ CMakeFiles/udemos.dir/main.cpp.o: main.cpp \
   src/ud_server/controller/ud_http_controller.hpp \
   src/ud_server/view/ud_http_view.hpp \
   src/api/home/home_view.hpp \
-  src/ud_server/models/response/ud_http_response_generator_factory.hpp \
-  src/ud_server/models/response/util/ud_http_response_utils.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zlib.h \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zconf.h \
+  src/ud_server/models/response/ud_http_response.hpp \
   src/ud_server/common/ud_http_time.hpp \
   src/api/home/models/person.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rapidjson/writer.h \
@@ -595,10 +589,6 @@ src/security/encrypt_aes.hpp:
 
 src/api/home/models/person.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zconf.h:
-
-src/ud_server/models/response/util/ud_http_response_utils.hpp:
-
 src/api/home/home_view.hpp:
 
 src/api/home/home_controller.hpp:
@@ -631,9 +621,7 @@ src/ud_server/common/ud_thread_manager.hpp:
 
 src/ud_server/common/result/ud_common_result.hpp:
 
-src/ud_server/models/response/ud_map_http_response_generator.hpp:
-
-src/ud_server/models/response/ud_i_http_response_generator.h:
+src/ud_server/models/response/ud_http_response.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/future:
 
@@ -966,8 +954,6 @@ src/ud_server/ud_http.hpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/binary_search.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/unique_copy.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zlib.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/adjacent_find.h:
 
@@ -1514,8 +1500,6 @@ src/ud_server/router/ud_http_router.hpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/stdio.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__utility/move.h:
-
-src/ud_server/models/response/ud_http_response_generator_factory.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_off_t.h:
 

@@ -51,9 +51,6 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 set(SOURCES main.cpp             
             src/ud_server/ud_server.hpp
             src/ud_server/models/request/ud_http_request.hpp
-            src/ud_server/models/response/ud_http_response_generator_factory.hpp
-            src/ud_server/models/response/ud_i_http_response_generator.h
-            src/ud_server/models/response/ud_map_http_response_generator.hpp
             src/ud_server/models/response/util/ud_http_response_utils.hpp
             src/ud_server/common/ud_http_thread_pool.hpp
             src/ud_server/common/ud_http_time.hpp
