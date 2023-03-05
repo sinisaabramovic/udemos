@@ -12,7 +12,7 @@
 
 #include "ud_http_route.hpp"
 #include "../models/request/ud_http_request.hpp"
-#include "../models/response/ud_http_response_generator_factory.hpp"
+#include "../models/response/ud_http_response.hpp"
 #include "../common/result/ud_common_result.hpp"
 
 class ud_http_router
@@ -30,8 +30,8 @@ public:
     {
         if (request.get() == nullptr)
         {
-            auto response_generator = ud_http_response_generator_factory::create_generator();
-            return response_generator->create_generator(ud_http_status_codes::NOT_FOUND, "application/json", "");
+            auto response = ud_http_response(ud_response_status_code::NOT_FOUND, "application/json", "Bad request");
+            return response.to_string();
         }
         ud_http_request parsed_request{request->data()};
 
@@ -45,8 +45,8 @@ public:
             }
         }
 
-        auto response_generator = ud_http_response_generator_factory::create_generator();
-        return response_generator->create_generator(ud_http_status_codes::NOT_FOUND, "application/json", "");
+        auto response = ud_http_response(ud_response_status_code::NOT_FOUND, "application/json", "Bad request");
+        return response.to_string();
     }
 };
 

@@ -36,7 +36,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 66,
+				"line" : 63,
 				"parent" : 0
 			},
 			{
@@ -54,13 +54,13 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 92,
+				"line" : 89,
 				"parent" : 0
 			},
 			{
 				"command" : 7,
 				"file" : 1,
-				"line" : 78,
+				"line" : 75,
 				"parent" : 0
 			},
 			{
@@ -226,10 +226,7 @@
 				7,
 				8,
 				9,
-				10,
-				11,
-				12,
-				13
+				10
 			]
 		}
 	],
@@ -249,21 +246,6 @@
 		{
 			"backtrace" : 2,
 			"path" : "src/ud_server/models/request/ud_http_request.hpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 2,
-			"path" : "src/ud_server/models/response/ud_http_response_generator_factory.hpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 2,
-			"path" : "src/ud_server/models/response/ud_i_http_response_generator.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 2,
-			"path" : "src/ud_server/models/response/ud_map_http_response_generator.hpp",
 			"sourceGroupIndex" : 1
 		},
 		{

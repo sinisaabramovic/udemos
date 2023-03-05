@@ -11,4 +11,6 @@ static constexpr int MAX_BACKLOG_SIZE = 4096;
 
 static constexpr int TIMEOUT_DELAY = 30000;
 
+static constexpr std::size_t MAX_TASK_QUEUE_SIZE = 100;
+
 #endif

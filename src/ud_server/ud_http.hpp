@@ -52,11 +52,12 @@ public:
     void stop_listen() override
     {
         this->stop_flag = true;
-        this->stoped = true;
+        this->stoped = true;        
         if (this->m_listener_thread) 
         {
             this->m_listener_thread->join();
         }        
+        this->m_thread_pool->stop();
     }
 
     bool is_running() override
@@ -82,13 +83,13 @@ public:
         status_delegate delegate) override
     {        
         m_router = std::move(router);
-        m_thread_pool = std::make_unique<ud_http_thread_pool>(4);
+        m_thread_pool = std::make_unique<ud_http_thread_pool>(32);
         m_acceptor = std::make_unique<ud_http_acceptor>(this->m_port, this->m_sock_fd);
 
         m_acceptor->initialize_socket(this->m_sock_fd, TIMEOUT_DELAY, this->m_port, this->m_host, delegate);
 
         m_listener_thread = std::make_unique<std::thread>(&ud_http::listen, this, delegate);
-        m_listener_thread->detach();
+        m_listener_thread->join();
     }
 
 private:
