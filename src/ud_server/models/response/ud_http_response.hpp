@@ -36,8 +36,8 @@ enum class ud_response_status_code
 class ud_http_response
 {
 public:
-    ud_http_response(ud_response_status_code code, const std::string &content_type, const std::string &body) 
-    : m_status_code(code), m_content_type(content_type), m_body(body) {}
+    ud_http_response(ud_response_status_code code, const std::string &content_type, const std::string &body)
+        : m_status_code(code), m_content_type(content_type), m_body(body) {}
     ud_http_response() : m_status_code(ud_response_status_code::OK), m_content_type("text/plain"), m_body("") {}
     ~ud_http_response() {}
 
@@ -47,14 +47,14 @@ public:
     void set_status_code(ud_response_status_code status_code);
 
     std::string get_content_type() const;
-    void set_content_type(const std::string& content_type);
+    void set_content_type(const std::string &content_type);
 
     std::string get_body() const;
-    void set_body(const std::string& body);
+    void set_body(const std::string &body);
 
     std::unordered_map<std::string, std::string> get_headers() const;
     void set_headers(std::unordered_map<std::string, std::string> headers);
-    void add_header(const std::string& name, const std::string& value);
+    void add_header(const std::string &name, const std::string &value);
 
 private:
     ud_response_status_code m_status_code;
@@ -129,7 +129,7 @@ std::string ud_http_response::get_content_type() const
     return this->m_content_type;
 }
 
-void ud_http_response::set_content_type(const std::string& content_type)
+void ud_http_response::set_content_type(const std::string &content_type)
 {
     this->m_content_type = content_type;
 }
@@ -139,7 +139,7 @@ std::string ud_http_response::get_body() const
     return this->m_body;
 }
 
-void ud_http_response::set_body(const std::string& body)
+void ud_http_response::set_body(const std::string &body)
 {
     this->m_body = body;
 }
@@ -151,12 +151,13 @@ std::unordered_map<std::string, std::string> ud_http_response::get_headers() con
 
 void ud_http_response::set_headers(std::unordered_map<std::string, std::string> headers)
 {
-    for (const auto& [header_name, header_value] : headers) {
-      this->add_header(header_name, header_value);
+    for (const auto &[header_name, header_value] : headers)
+    {
+        this->add_header(header_name, header_value);
     }
 }
 
-void ud_http_response::add_header(const std::string& name, const std::string& value)
+void ud_http_response::add_header(const std::string &name, const std::string &value)
 {
     this->m_headers[name] = value;
 }
@@ -164,8 +165,9 @@ void ud_http_response::add_header(const std::string& name, const std::string& va
 std::string ud_http_response::to_string()
 {
     // TODO: refactor this - currently we set default headers
-    for (const auto& [header_name, header_value] : ud_http_response_utils::cors_headers_default()) {
-      this->add_header(header_name, header_value);
+    for (const auto &[header_name, header_value] : ud_http_response_utils::cors_headers_default())
+    {
+        this->add_header(header_name, header_value);
     }
     //
 
