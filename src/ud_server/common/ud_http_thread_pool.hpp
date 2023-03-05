@@ -7,6 +7,7 @@
 #include <mutex>
 #include <condition_variable>
 #include <functional>
+#include "ud_http_defines.h"
 
 class ud_http_thread_pool
 {
@@ -56,6 +57,13 @@ void ud_http_thread_pool::enqueue(F &&f, Args &&...args)
     auto task = std::make_shared<std::function<void()>>(std::bind(std::forward<F>(f), std::forward<Args>(args)...));
     {
         std::unique_lock<std::mutex> lock(m_tasks_mutex);
+        // Wait until there's space in the queue
+        m_tasks_cv.wait(lock, [this]()
+                        { return m_stop || m_tasks.size() < MAX_TASK_QUEUE_SIZE; });
+        if (m_stop)
+        {
+            throw std::runtime_error("Thread pool has stopped");
+        }
         m_tasks.emplace([task]()
                         { (*task)(); });
     }
@@ -84,10 +92,15 @@ void ud_http_thread_pool::worker()
 
 void ud_http_thread_pool::stop()
 {
-    // for(auto thread : this->m_threads)
-    // {
-    //     thread.join();
-    // }
+    {
+        std::unique_lock<std::mutex> lock(m_tasks_mutex);
+        m_stop = true;
+    }
+    m_tasks_cv.notify_all();
+    for (auto &thread : m_threads)
+    {
+        thread.join();
+    }
 }
 
 #endif // HTTP_THREAD_POOL_HPP

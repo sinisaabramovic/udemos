@@ -510,6 +510,7 @@ CMakeFiles/udemos.dir/main.cpp.o: main.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/queue \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/deque \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/condition_variable \
+  src/ud_server/common/ud_http_defines.h \
   src/ud_server/ud_server.hpp \
   src/ud_server/common/ud_result.hpp \
   src/ud_server/common/ud_result_failure.hpp \
