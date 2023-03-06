@@ -484,6 +484,9 @@ CMakeFiles/udemos.dir/main.cpp.o: main.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/future \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/thread \
   src/ud_server/models/response/ud_http_response.hpp \
+  src/ud_server/models/response/util/ud_http_response_utils.hpp \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zlib.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zconf.h \
   src/ud_server/common/result/ud_common_result.hpp \
   src/ud_server/ud_http.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/random \
@@ -631,6 +634,10 @@ src/ud_server/common/ud_result.hpp:
 src/ud_server/common/ud_thread_manager.hpp:
 
 src/ud_server/common/result/ud_common_result.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zconf.h:
+
+src/ud_server/models/response/util/ud_http_response_utils.hpp:
 
 src/ud_server/models/response/ud_http_response.hpp:
 
@@ -967,6 +974,8 @@ src/ud_server/ud_http.hpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/binary_search.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/unique_copy.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zlib.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/adjacent_find.h:
 
