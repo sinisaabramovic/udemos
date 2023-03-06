@@ -485,6 +485,9 @@ CMakeFiles/udemos.dir/main.cpp.o
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/future
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/thread
  /Users/sinisaabramovic/projects/udemos/src/ud_server/models/response/ud_http_response.hpp
+ /Users/sinisaabramovic/projects/udemos/src/ud_server/models/response/util/ud_http_response_utils.hpp
+ /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zlib.h
+ /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zconf.h
  /Users/sinisaabramovic/projects/udemos/src/ud_server/common/result/ud_common_result.hpp
  /Users/sinisaabramovic/projects/udemos/src/ud_server/ud_http.hpp
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/random
