@@ -1,7 +1,9 @@
 # Ignore CMake cache and Makefile
 CMakeCache.txt
 Makefile
+cmake_install.cmake
 
 # Ignore build and bin directories and their contents
 build/
 bin/
+CMakeFiles/
