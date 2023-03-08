@@ -7,9 +7,6 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/entt/EnTTConfig.cmake"
-  "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/entt/EnTTConfigVersion.cmake"
-  "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/entt/EnTTTargets.cmake"
   "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rapidjson/RapidJSONConfig.cmake"
   "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rapidjson/RapidJSONConfigVersion.cmake"
   "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rxcpp/rxcppConfig.cmake"
