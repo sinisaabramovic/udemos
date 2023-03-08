@@ -1,6 +1,28 @@
 #ifndef ud_server_balancer_hpp
 #define ud_server_balancer_hpp
 
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <thread>
+#include <chrono>
+
+#ifdef __linux__
+#include <sys/statvfs.h>
+#include <sys/sysinfo.h>
+#include <arpa/inet.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <sys/socket.h>
+#include <unistd.h>
+#elif defined(__APPLE__)
+#include <sys/param.h>
+#include <sys/mount.h>
+#include <sys/sysctl.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <sys/socket.h>
+#include <unistd.h>
 #include <mach/mach.h>
 #include <mach/mach_host.h>
 #include <mach/mach_init.h>
@@ -12,7 +34,7 @@
 #include <sys/param.h>
 #include <sys/mount.h>
 #include <iostream>
-#include <string>
+#endif
 
 class ud_server_balancer
 {
@@ -147,7 +169,7 @@ public:
 
         return memory_usage_str;
     }
-    std::string get_disk_usage_description() 
+    std::string get_disk_usage_description()
     {
         double disk_usage = get_disk_usage();
         std::string disk_usage_str;
@@ -160,7 +182,7 @@ public:
             disk_usage_str = "Error getting disk usage";
         }
 
-        return disk_usage_str;        
+        return disk_usage_str;
     }
 };
 
