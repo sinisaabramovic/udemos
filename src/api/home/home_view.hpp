@@ -16,6 +16,8 @@
 #include "models/person.hpp"
 #include "home_view_static_index_html.hpp"
 
+#include "../../ud_server/balancer/ud_server_balancer.hpp"
+
 using namespace rapidjson;
 
 class home_view : public ud_http_view
@@ -35,6 +37,8 @@ public:
              { return get_current_time(); }},
             {"/html", [this](const ud_http_request &req)
              { return get_html(); }},
+            {"/performance", [this](const ud_http_request &req)
+             { return get_performance(); }},
         };
 
         auto it = handlers.find(request.get_path());
@@ -152,6 +156,23 @@ private:
         auto html = html_reader.from_static_value();
 
         auto response = ud_http_response(ud_response_status_code::BAD_REQUEST, "text/plain", html);
+        return response.to_string();
+    }
+
+    std::string get_performance() const
+    {
+        ud_server_balancer balancer;
+
+        std::ostringstream jsonResponse;
+        jsonResponse << "{";
+        jsonResponse << "\"cpu\": \""
+             << balancer.get_cpu_usage_description()
+             << "\", ";
+        jsonResponse << "\"memory\": " << balancer.get_memory_usage_description() << ", ";
+        jsonResponse << "\"disk\": " << balancer.get_disk_usage_description() << true;
+        jsonResponse << "}";
+
+        auto response = ud_http_response(ud_response_status_code::BAD_REQUEST, "application/json", jsonResponse.str());
         return response.to_string();
     }
 };

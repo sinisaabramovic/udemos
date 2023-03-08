@@ -83,7 +83,8 @@ public:
         status_delegate delegate) override
     {        
         m_router = std::move(router);
-        m_thread_pool = std::make_unique<ud_http_thread_pool>(32);
+        int num_threads = std::thread::hardware_concurrency();
+        m_thread_pool = std::make_unique<ud_http_thread_pool>(num_threads);
         m_acceptor = std::make_unique<ud_http_acceptor>(this->m_port, this->m_sock_fd);
 
         m_acceptor->initialize_socket(this->m_sock_fd, TIMEOUT_DELAY, this->m_port, this->m_host, delegate);
