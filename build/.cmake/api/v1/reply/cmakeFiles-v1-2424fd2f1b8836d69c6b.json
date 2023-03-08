@@ -113,18 +113,6 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/share/entt/EnTTConfigVersion.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/share/entt/EnTTConfig.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/share/entt/EnTTTargets.cmake"
-		},
-		{
-			"isExternal" : true,
 			"path" : "/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/share/openssl/vcpkg-cmake-wrapper.cmake"
 		},
 		{

@@ -9,6 +9,8 @@
 #include "src/api/home/home_controller.hpp"
 #include "src/api/home/home_view.hpp"
 
+#include "src/security/encrypt_aes.hpp"
+
 int main()
 {
 
