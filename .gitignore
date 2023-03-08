@@ -1,0 +1,7 @@
+# Ignore CMake cache and Makefile
+CMakeCache.txt
+Makefile
+
+# Ignore build and bin directories and their contents
+build/
+bin/

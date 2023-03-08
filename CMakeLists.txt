@@ -71,7 +71,6 @@ else()
     set(CMAKE_PREFIX_PATH "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/")
 endif()
 
-find_package(EnTT CONFIG REQUIRED)
 find_package(OpenSSL REQUIRED)
 find_package(ZLIB REQUIRED)
 find_package(RapidJSON CONFIG REQUIRED)
@@ -86,4 +85,4 @@ set(Boost_USE_STATIC_RUNTIME     ON)  # link Boost Static libraries
 #find_package(Boost CONFIG REQUIRED)
 #include_directories(${Boost_INCLUDE_DIRS})
 
-target_link_libraries(udemos EnTT::EnTT OpenSSL::SSL ZLIB::ZLIB rapidjson rxcpp)
+target_link_libraries(udemos OpenSSL::SSL ZLIB::ZLIB rapidjson rxcpp)
