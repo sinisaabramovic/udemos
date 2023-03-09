@@ -5,9 +5,6 @@
 
 class ud_result_failure
 {
-private:
-    std::string m_result;
-
 public:
     ud_result_failure() {}
     ud_result_failure(const std::string &result) : m_result(result) {}
@@ -17,6 +14,9 @@ public:
     {
         return m_result;
     }
+    
+private:
+    std::string m_result;
 };
 
 #endif

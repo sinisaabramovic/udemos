@@ -17,9 +17,6 @@
 
 class ud_http_router
 {
-private:
-    std::map<std::string, std::shared_ptr<ud_http_route>> m_routes;
-
 public:
     void add_route(const std::shared_ptr<ud_http_route> &route)
     {
@@ -48,6 +45,9 @@ public:
         auto response = ud_http_response(ud_response_status_code::NOT_FOUND, "application/json", "Bad request");
         return response.to_string();
     }
+
+private:
+    std::map<std::string, std::shared_ptr<ud_http_route>> m_routes;
 };
 
 #endif

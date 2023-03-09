@@ -15,14 +15,15 @@ class HttpRequest;
 
 class ud_http_controller
 {
-protected:
-    std::shared_ptr<ud_http_view> view;
-
 public:
     ud_http_controller(std::shared_ptr<ud_http_view> view) : view(std::move(view)){};
     ~ud_http_controller(){};
 
     virtual std::string handle_request(const ud_http_request &request) = 0;
+
+protected:
+    std::shared_ptr<ud_http_view> view;
+    
 };
 
 #endif

@@ -98,8 +98,6 @@ private:
         }
     }
     
-    
-    
     ud_c_message_queue<T>& queue_;
     std::thread thread_;
     std::mutex mutex_;

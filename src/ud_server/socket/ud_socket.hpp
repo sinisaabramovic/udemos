@@ -7,15 +7,15 @@
 
 class ud_socket
 {
-protected:
-    int32_t m_socket;
-
 public:
     ud_socket(int32_t socket) : m_socket(socket) {}
     virtual ~ud_socket() {}
 
     virtual int32_t get_socket() const = 0;
     virtual void close_socket() = 0;
+
+protected:
+    int32_t m_socket;
 };
 
 #endif

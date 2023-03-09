@@ -9,23 +9,7 @@
 #include "rapidjson/error/en.h"
 
 class ud_http_request
-{
-private:
-    std::string m_method;
-    std::string m_path;
-    std::unordered_map<std::string, std::string> m_headers;
-    std::string m_body;
-    std::string m_queryString;
-    std::unordered_map<std::string, std::string> m_params;
-    std::unordered_map<std::string, std::string> m_cookies;
-    std::string m_authToken;
-    std::unordered_map<std::string, std::string> m_formFields;
-    std::unordered_map<std::string, std::string> m_fileUploads;
-
-    void parse_http_request(const std::string &request);
-    void handle_multipart_form_data();
-    bool is_valid_json(const std::string &jsonStr) const;
-    
+{   
 public:
     ud_http_request(const std::string &request);
     ~ud_http_request();
@@ -44,6 +28,23 @@ public:
     {
         return this->m_body;
     }
+
+private:
+    std::string m_method;
+    std::string m_path;
+    std::unordered_map<std::string, std::string> m_headers;
+    std::string m_body;
+    std::string m_queryString;
+    std::unordered_map<std::string, std::string> m_params;
+    std::unordered_map<std::string, std::string> m_cookies;
+    std::string m_authToken;
+    std::unordered_map<std::string, std::string> m_formFields;
+    std::unordered_map<std::string, std::string> m_fileUploads;
+
+    void parse_http_request(const std::string &request);
+    void handle_multipart_form_data();
+    bool is_valid_json(const std::string &jsonStr) const;
+    
 };
 
 ud_http_request::ud_http_request(const std::string &request)
