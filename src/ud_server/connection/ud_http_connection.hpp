@@ -14,6 +14,13 @@
 template <typename T>
 class ud_http_connection
 {
+public:
+    ud_http_connection(int32_t socket, const std::shared_ptr<T> &router) : m_socket(std::make_shared<ud_http_socket>(socket)),
+                                                                           m_router(std::move(router)){};
+    ~ud_http_connection() {}
+
+    void start();
+    
 private:
     std::shared_ptr<ud_http_socket> m_socket;
     std::shared_ptr<T> m_router;
@@ -22,13 +29,6 @@ private:
     result<std::shared_ptr<std::string>, ud_error> read_request_from_client();
     result<bool, ud_error> handle_client_request(fd_set *readfds);
     int32_t wait_for_activity(int32_t max_sd, fd_set *readfds);
-
-public:
-    ud_http_connection(int32_t socket, const std::shared_ptr<T> &router) : m_socket(std::make_shared<ud_http_socket>(socket)),
-                                                                           m_router(std::move(router)){};
-    ~ud_http_connection() {}
-
-    void start();
 };
 
 template <typename T>

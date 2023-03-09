@@ -14,11 +14,6 @@
 
 class ud_http_route
 {
-private:
-    std::string m_path;
-    std::string m_method;
-    std::shared_ptr<ud_http_controller> m_controller;
-
 public:
     ud_http_route(std::string path, std::string method, std::shared_ptr<ud_http_controller> controller)
      : m_path(path),
@@ -44,6 +39,11 @@ public:
     {
         return get_path() == request.get_path() && get_method() == request.get_method();
     }
+
+private:
+    std::string m_path;
+    std::string m_method;
+    std::shared_ptr<ud_http_controller> m_controller;
 };
 
 #endif
