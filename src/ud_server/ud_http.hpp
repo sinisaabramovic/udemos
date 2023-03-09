@@ -16,29 +16,21 @@
 class ud_http : public ud_server
 {
 public:
-    ud_http() : ud_server(8080U, "0.0.0.0"),
-                m_router(std::make_shared<ud_http_router>()),
-                m_acceptor(std::make_unique<ud_http_acceptor>(this->m_port, this->m_sock_fd)),
-                m_thread_pool(std::make_unique<ud_http_thread_pool>(std::thread::hardware_concurrency())),
-                m_rng(std::random_device{}()),
+    ud_http() : ud_server(8080, "0.0.0.0"),
+                m_rng(std::chrono::steady_clock::now().time_since_epoch().count()),
                 m_sleep_times(10U, 100U)
     {
         this->stop_flag = false;
         this->setup_socket();
     }
-
-    explicit ud_http(uint32_t port, const std::string &host) : ud_server(port, host),
-                                                               m_router(std::make_shared<ud_http_router>()),
-                                                               m_acceptor(std::make_unique<ud_http_acceptor>(this->m_port, this->m_sock_fd)),
-                                                               m_thread_pool(std::make_unique<ud_http_thread_pool>(std::thread::hardware_concurrency())),
-                                                               m_rng(std::random_device{}()),
-                                                               m_sleep_times(10U, 100U)
+    ud_http(uint32_t port, const std::string &host) : ud_server(port, host),
+                                                      m_rng(std::chrono::steady_clock::now().time_since_epoch().count()),
+                                                      m_sleep_times(10U, 100U)
     {
         this->stop_flag = false;
         this->setup_socket();
     }
-
-    virtual ~ud_http() {}
+    ~ud_http() {}
 
     void pause_listen(bool pause) override
     {
@@ -69,15 +61,6 @@ public:
         return !this->paused;
     }
 
-    void start_listen(std::shared_ptr<ud_http_router> router, status_delegate delegate) override
-    {
-        m_router = std::move(router);
-        m_acceptor->initialize_socket(this->m_sock_fd, TIMEOUT_DELAY, this->m_port, this->m_host, delegate);
-        m_listener_thread = std::make_unique<std::thread>(&ud_http::listen, this, delegate);
-        m_listener_thread->join();
-    }
-
-private:
     void setup_socket()
     {
         if ((this->m_sock_fd = socket(AF_INET, SOCK_STREAM, 0)) <= 0)
@@ -86,6 +69,21 @@ private:
         }
     }
 
+    void start_listen(
+        std::shared_ptr<ud_http_router> router,
+        status_delegate delegate) override
+    {
+        m_router = std::move(router);
+        m_thread_pool = std::make_unique<ud_http_thread_pool>(32);
+        m_acceptor = std::make_unique<ud_http_acceptor>(this->m_port, this->m_sock_fd);
+
+        m_acceptor->initialize_socket(this->m_sock_fd, TIMEOUT_DELAY, this->m_port, this->m_host, delegate);
+
+        m_listener_thread = std::make_unique<std::thread>(&ud_http::listen, this, delegate);
+        m_listener_thread->join();
+    }
+
+private:
     void listen(status_delegate delegate)
     {
         using ud_result_type = ud_result<ud_result_success, ud_result_failure>;
@@ -119,7 +117,8 @@ private:
     std::unique_ptr<ud_http_acceptor> m_acceptor;
     std::unique_ptr<ud_http_thread_pool> m_thread_pool;
     std::mt19937 m_rng;
-    std::uniform_int_distribution<uint32_t> m_sleep_times;
+    std::uniform_int_distribution<int> m_sleep_times;
+        
 };
 
 #endif
