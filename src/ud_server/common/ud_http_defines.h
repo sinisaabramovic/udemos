@@ -3,14 +3,14 @@
 
 #include <unistd.h>
 
-const uint32_t MAX_BUFFER_SIZE = 1024;
+constexpr uint32_t MAX_BUFFER_SIZE = 1024U;
 
-const uint32_t MAX_REQUEST_SIZE = 1024;
+constexpr uint32_t MAX_REQUEST_SIZE = 1024U;
 
-static constexpr int MAX_BACKLOG_SIZE = 4096;
+static constexpr int32_t MAX_BACKLOG_SIZE = 4096;
 
-static constexpr int TIMEOUT_DELAY = 30000;
+static constexpr std::size_t MAX_TASK_QUEUE_SIZE = 100U;
 
-static constexpr std::size_t MAX_TASK_QUEUE_SIZE = 100;
+static constexpr uint32_t TIMEOUT_DELAY = 5000U;
 
 #endif
