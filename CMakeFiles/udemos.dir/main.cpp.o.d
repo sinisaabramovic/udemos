@@ -486,33 +486,32 @@ CMakeFiles/udemos.dir/main.cpp.o: \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zlib.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zconf.h \
   /Users/sinisaabramovic/projects/udemos/src/ud_server/router/../common/result/ud_common_result.hpp \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/ud_http.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/ud_http_server.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/random \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/numeric \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/common/ud_thread_manager.hpp \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/acceptor/ud_http_acceptor.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/ud_server_data.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/../common/ud_thread_manager.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/../acceptor/ud_http_acceptor.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/arpa/inet.h \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/acceptor/../common/ud_http_defines.h \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/acceptor/ud_blacklist_manager.hpp \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/acceptor/../common/ud_result.hpp \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/acceptor/../common/ud_result_failure.hpp \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/acceptor/../common/ud_result_success.hpp \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/acceptor/../socket/ud_socket_wrapper.hpp \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/connection/ud_http_connection.hpp \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/connection/../common/ud_http_defines.h \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/connection/../router/ud_http_router.hpp \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/connection/../socket/ud_http_socket.hpp \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/acceptor/../socket/ud_socket.hpp \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/connection/../common/result/ud_common_result.hpp \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/common/ud_http_thread_pool.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/../acceptor/../common/ud_http_defines.h \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/../acceptor/ud_blacklist_manager.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/../acceptor/../common/ud_result.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/../acceptor/../common/ud_result_failure.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/../acceptor/../common/ud_result_success.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/../acceptor/../socket/ud_socket_wrapper.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/../connection/ud_http_connection.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/../connection/../common/ud_http_defines.h \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/../connection/../router/ud_http_router.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/../connection/../socket/ud_http_socket.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/../acceptor/../socket/ud_socket.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/../connection/../common/result/ud_common_result.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/../router/ud_http_router.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/../common/ud_http_thread_pool.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/queue \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/deque \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/condition_variable \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/common/ud_http_defines.h \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/ud_server.hpp \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/common/ud_result.hpp \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/common/ud_result_failure.hpp \
-  /Users/sinisaabramovic/projects/udemos/src/ud_server/common/ud_result_success.hpp \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/../common/ud_http_defines.h \
+  /Users/sinisaabramovic/projects/udemos/src/ud_server/server/ud_server_utils.hpp \
   /Users/sinisaabramovic/projects/udemos/src/api/home/home_controller.hpp \
   /Users/sinisaabramovic/projects/udemos/src/api/home/../../ud_server/controller/ud_http_controller.hpp \
   /Users/sinisaabramovic/projects/udemos/src/api/home/../../ud_server/view/ud_http_view.hpp \

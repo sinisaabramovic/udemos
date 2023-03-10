@@ -488,9 +488,10 @@ CMakeFiles/udemos.dir/main.cpp.o: main.cpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zlib.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/zconf.h \
   src/ud_server/common/result/ud_common_result.hpp \
-  src/ud_server/ud_http.hpp \
+  src/ud_server/server/ud_http_server.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/random \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/numeric \
+  src/ud_server/server/ud_server_data.hpp \
   src/ud_server/common/ud_thread_manager.hpp \
   src/ud_server/acceptor/ud_http_acceptor.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/arpa/inet.h \
@@ -506,15 +507,13 @@ CMakeFiles/udemos.dir/main.cpp.o: main.cpp \
   src/ud_server/socket/ud_http_socket.hpp \
   src/ud_server/socket/ud_socket.hpp \
   src/ud_server/common/result/ud_common_result.hpp \
+  src/ud_server/router/ud_http_router.hpp \
   src/ud_server/common/ud_http_thread_pool.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/queue \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/deque \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/condition_variable \
   src/ud_server/common/ud_http_defines.h \
-  src/ud_server/ud_server.hpp \
-  src/ud_server/common/ud_result.hpp \
-  src/ud_server/common/ud_result_failure.hpp \
-  src/ud_server/common/ud_result_success.hpp \
+  src/ud_server/server/ud_server_utils.hpp \
   src/api/home/home_controller.hpp \
   src/ud_server/controller/ud_http_controller.hpp \
   src/ud_server/view/ud_http_view.hpp \
@@ -656,6 +655,8 @@ CMakeFiles/udemos.dir/main.cpp.o: main.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/mach/processor_set.h:
 
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/mach/processor.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/mach/host_security.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/mach_debug/hash_info.h:
@@ -770,9 +771,7 @@ src/api/home/home_view.hpp:
 
 src/api/home/home_controller.hpp:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/mach/processor.h:
-
-src/ud_server/ud_server.hpp:
+src/ud_server/server/ud_server_utils.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/condition_variable:
 
@@ -999,8 +998,6 @@ src/ud_server/view/ud_http_view.hpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/string.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/shuffle.h:
-
-src/ud_server/ud_http.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/shift_right.h:
 
@@ -1632,6 +1629,8 @@ src/ud_server/router/ud_http_router.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/stdint.h:
 
+src/ud_server/server/ud_http_server.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_sigset_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/find_if.h:
@@ -1657,6 +1656,8 @@ src/ud_server/router/ud_http_router.hpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/appleapiopts.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_id_t.h:
+
+src/ud_server/server/ud_server_data.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/wait.h:
 
