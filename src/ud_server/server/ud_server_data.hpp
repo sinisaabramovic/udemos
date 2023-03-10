@@ -57,8 +57,8 @@ public:
     void set_acceptor(std::shared_ptr<ud_http_acceptor> acceptor) { m_acceptor = std::move(acceptor); }
     std::shared_ptr<ud_http_acceptor> get_acceptor() const { return m_acceptor; }
 
-    void set_thread_pool(std::unique_ptr<ud_http_thread_pool> thread_pool) { m_thread_pool = std::move(thread_pool); }
-    ud_http_thread_pool* get_thread_pool() const { return m_thread_pool.get(); }
+    void set_thread_pool(std::shared_ptr<ud_http_thread_pool> thread_pool) { m_thread_pool = std::move(thread_pool); }
+    std::shared_ptr<ud_http_thread_pool> get_thread_pool() const { return m_thread_pool; }
 
     void set_listener_thread(std::shared_ptr<std::thread> listener_thread) { m_listener_thread = std::move(listener_thread); }
     std::shared_ptr<std::thread> get_listener_thread() const { return m_listener_thread; }
@@ -86,7 +86,7 @@ private:
     int m_sock_fd;
     std::shared_ptr<ud_http_router> m_router;
     std::shared_ptr<ud_http_acceptor> m_acceptor;
-    std::unique_ptr<ud_http_thread_pool> m_thread_pool;
+    std::shared_ptr<ud_http_thread_pool> m_thread_pool;
     std::shared_ptr<std::thread> m_listener_thread;
     std::mt19937 m_rng;
     std::uniform_int_distribution<int> m_sleep_times;
