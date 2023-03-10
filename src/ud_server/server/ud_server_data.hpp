@@ -39,14 +39,14 @@ public:
     void set_pause_flag(bool flag) { m_pause_flag = flag; }
     bool get_pause_flag() const { return m_pause_flag; }
 
-    std::mutex &get_pause_mutex() { return m_pause_mutex; }
-    std::condition_variable &get_pause_cv() { return m_pause_cv; }
+    std::mutex& get_pause_mutex() { return m_pause_mutex; }
+    std::condition_variable& get_pause_cv() { return m_pause_cv; }
 
     void set_port(uint32_t port) { m_port = port; }
     uint32_t get_port() const { return m_port; }
 
-    void set_host(const std::string &host) { m_host = host; }
-    const std::string &get_host() const { return m_host; }
+    void set_host(const std::string& host) { m_host = host; }
+    const std::string& get_host() const { return m_host; }
 
     void set_sock_fd(int sock_fd) { m_sock_fd = sock_fd; }
     int get_sock_fd() const { return m_sock_fd; }
@@ -54,18 +54,18 @@ public:
     void set_router(std::shared_ptr<ud_http_router> router) { m_router = std::move(router); }
     std::shared_ptr<ud_http_router> get_router() const { return m_router; }
 
-    void set_acceptor(std::unique_ptr<ud_http_acceptor> acceptor) { m_acceptor = std::move(acceptor); }
-    ud_http_acceptor *get_acceptor() const { return m_acceptor.get(); }
+    void set_acceptor(std::shared_ptr<ud_http_acceptor> acceptor) { m_acceptor = std::move(acceptor); }
+    std::shared_ptr<ud_http_acceptor> get_acceptor() const { return m_acceptor; }
 
     void set_thread_pool(std::unique_ptr<ud_http_thread_pool> thread_pool) { m_thread_pool = std::move(thread_pool); }
-    ud_http_thread_pool *get_thread_pool() const { return m_thread_pool.get(); }
+    ud_http_thread_pool* get_thread_pool() const { return m_thread_pool.get(); }
 
-    void set_listener_thread(std::unique_ptr<std::thread> listener_thread) { m_listener_thread = std::move(listener_thread); }
-    std::thread *get_listener_thread() const { return m_listener_thread.get(); }
+    void set_listener_thread(std::shared_ptr<std::thread> listener_thread) { m_listener_thread = std::move(listener_thread); }
+    std::shared_ptr<std::thread> get_listener_thread() const { return m_listener_thread; }
 
-    std::mt19937 &get_rng() { return m_rng; }
+    std::mt19937& get_rng() { return m_rng; }
 
-    std::uniform_int_distribution<int> &get_sleep_times() { return m_sleep_times; }
+    std::uniform_int_distribution<int>& get_sleep_times() { return m_sleep_times; }
 
     void setup_socket()
     {
@@ -85,9 +85,9 @@ private:
     std::string m_host;
     int m_sock_fd;
     std::shared_ptr<ud_http_router> m_router;
-    std::unique_ptr<ud_http_acceptor> m_acceptor;
+    std::shared_ptr<ud_http_acceptor> m_acceptor;
     std::unique_ptr<ud_http_thread_pool> m_thread_pool;
-    std::unique_ptr<std::thread> m_listener_thread;
+    std::shared_ptr<std::thread> m_listener_thread;
     std::mt19937 m_rng;
     std::uniform_int_distribution<int> m_sleep_times;
 };
