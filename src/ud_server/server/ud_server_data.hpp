@@ -5,6 +5,13 @@
 #include <chrono>
 #include <atomic>
 #include <random>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/types.h> 
+#include <sys/socket.h>
+#include <netinet/in.h>
 
 #include "../common/ud_thread_manager.hpp"
 #include "../acceptor/ud_http_acceptor.hpp"
@@ -50,6 +57,10 @@ public:
 
     void set_sock_fd(int sock_fd) { m_sock_fd = sock_fd; }
     int get_sock_fd() const { return m_sock_fd; }
+    void close() 
+    {
+        ::close(m_sock_fd);
+    }
 
     void set_router(std::shared_ptr<ud_http_router> router) { m_router = std::move(router); }
     std::shared_ptr<ud_http_router> get_router() const { return m_router; }

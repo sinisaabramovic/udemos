@@ -42,7 +42,7 @@ int main()
     ud_http_server server(8080, "0.0.0.0");
 
     // Start listening for connections
-    std::cout << "Server start listening for connections..." << std::endl;
+    std::cout << "Server start listening for connections..." << std::endl;    
     server.start_listen(router);
 
     // Wait for user input to stop the server

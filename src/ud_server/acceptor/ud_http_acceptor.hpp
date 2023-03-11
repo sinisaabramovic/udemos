@@ -46,24 +46,24 @@ ud_http_acceptor::ud_http_acceptor(int32_t port, int32_t sock_fd, std::shared_pt
 
 ud_http_acceptor::~ud_http_acceptor()
 {
-    if (m_acceptor_data.getSocketFd() >= 0)
+    if (m_acceptor_data.get_socket_fd() >= 0)
     {
-        close(m_acceptor_data.getSocketFd());
+        close(m_acceptor_data.get_socket_fd());
     }
 }
 
 void ud_http_acceptor::initialize_socket(int timeout_ms, const std::string &host)
 {
-    m_acceptor_data = ud_acceptor_data(m_acceptor_data.getPort(), m_acceptor_data.getSocketFd());
+    m_acceptor_data = ud_acceptor_data(m_acceptor_data.get_port(), m_acceptor_data.get_socket_fd());
     m_blacklist_manager = std::make_shared<ud_blacklist_manager>();
     m_acceptor_util = std::make_unique<ud_acceptor_util>(m_blacklist_manager);
 
-    m_acceptor_util->initialize_socket(m_acceptor_data.getSocketFd(), timeout_ms, m_acceptor_data.getPort(), host);
+    m_acceptor_util->initialize_socket(m_acceptor_data.get_socket_fd(), timeout_ms, m_acceptor_data.get_port(), host);
 }
 
 int32_t ud_http_acceptor::accept_connection()
 {
-    return m_acceptor_util->accept_connection(m_acceptor_data.getSocketFd());
+    return m_acceptor_util->accept_connection(m_acceptor_data.get_socket_fd());
 }
 
 #endif
