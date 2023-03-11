@@ -4,7 +4,7 @@
 #include "src/ud_server/router/ud_http_route.hpp"
 #include "src/ud_server/router/ud_http_router.hpp"
 #include "src/ud_server/router/ud_http_route.hpp"
-#include "src/ud_server/ud_http.hpp"
+#include "src/ud_server/server/ud_http_server.hpp"
 
 #include "src/api/home/home_controller.hpp"
 #include "src/api/home/home_view.hpp"
@@ -21,7 +21,6 @@ int main()
     std::cout << "  \\____/|_____/|______|_|  |_|\\____/|_____/    " << std::endl;
     std::cout << "  " << std::endl;
     std::cout << "  " << std::endl;
-                                            
 
     std::shared_ptr<home_view> home_v = std::make_shared<home_view>();
     std::shared_ptr<home_controller> home_ctrl = std::make_shared<home_controller>(home_v);
@@ -30,43 +29,28 @@ int main()
     std::shared_ptr<ud_http_route> timer_route = std::make_shared<ud_http_route>("/time", "GET", home_ctrl);
     std::shared_ptr<ud_http_route> html_route = std::make_shared<ud_http_route>("/html", "GET", home_ctrl);
     std::shared_ptr<ud_http_route> performance_route = std::make_shared<ud_http_route>("/performance", "GET", home_ctrl);
+    std::shared_ptr<ud_http_route> heavy_compute_route = std::make_shared<ud_http_route>("/strong", "GET", home_ctrl);
 
     std::shared_ptr<ud_http_router> router = std::make_shared<ud_http_router>();
     router->add_route(home_route);
     router->add_route(user_route);
     router->add_route(timer_route);
-    router->add_route(html_route); 
-    router->add_route(performance_route);   
+    router->add_route(html_route);
+    router->add_route(performance_route);
+    router->add_route(heavy_compute_route);    
 
-    try
-    {
-        std::shared_ptr<ud_http> http_server = std::make_shared<ud_http>();
+    ud_http_server server(8080, "0.0.0.0");
 
-        http_server->start_listen(router, [](const ud_result<ud_result_success, ud_result_failure> &status_info)
-                                  {        
-        if (status_info.is_success()) {
-            std::cout << status_info.get_value().get_description() << std::endl;
-        } else {
-            std::cout << status_info.get_error().get_description() << std::endl;
-        } });
+    // Start listening for connections
+    std::cout << "Server start listening for connections..." << std::endl;
+    server.start_listen(router);
 
-        std::cout << "Enter [q] to stop the server" << std::endl;
-        std::string command;
-        while (std::cin >> command, command != "q")
-        {
-            std::this_thread::sleep_for(std::chrono::milliseconds(100));
-        }
-        std::cout << "'QUIT' command entered. Stopping the web server.."
-                  << std::endl;
+    // Wait for user input to stop the server
+    std::cout << "Press Enter to stop the server..." << std::endl;
+    std::cin.ignore();
 
-        http_server->stop_listen();
-    }
-    catch (const std::exception &e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-
-    std::cout << "Server stopped" << std::endl;
+    // Stop the server
+    server.stop_listen();
 
     return 0;
 }

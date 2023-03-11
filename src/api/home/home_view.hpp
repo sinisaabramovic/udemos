@@ -39,6 +39,8 @@ public:
              { return get_html(); }},
             {"/performance", [this](const ud_http_request &req)
              { return get_performance(); }},
+            {"/strong", [this](const ud_http_request &req)
+             { return heavy_computation(); }},
         };
 
         auto it = handlers.find(request.get_path());
@@ -166,12 +168,35 @@ private:
         std::ostringstream jsonResponse;
         jsonResponse << "{";
         jsonResponse << "\"cpu\": \""
-             << balancer.get_cpu_usage_description()
-             << "\", ";
+                     << balancer.get_cpu_usage_description()
+                     << "\", ";
         jsonResponse << "\"memory\": " << balancer.get_memory_usage_description() << ", ";
         jsonResponse << "\"disk\": " << balancer.get_disk_usage_description() << true;
         jsonResponse << "}";
 
+        auto response = ud_http_response(ud_response_status_code::BAD_REQUEST, "application/json", jsonResponse.str());
+        return response.to_string();
+    }
+
+    std::string heavy_computation()
+    {
+        // Do some heavy computation, e.g. calculate the factorial of a large number
+        int n = 50000;
+        long long factorial = 1;
+        for (int i = 1; i <= n; i++)
+        {
+            factorial *= i;
+        }
+
+        // Sleep for a few seconds to simulate a long-running computation
+        std::this_thread::sleep_for(std::chrono::seconds(5));
+
+        std::ostringstream jsonResponse;
+        jsonResponse << "{";
+        jsonResponse << "\"heavy\": \""
+                     << "done";
+        jsonResponse << "}";
+        // Print a message indicating that the computation is complete        
         auto response = ud_http_response(ud_response_status_code::BAD_REQUEST, "application/json", jsonResponse.str());
         return response.to_string();
     }

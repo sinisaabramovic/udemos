@@ -49,7 +49,6 @@ endif()
  
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 set(SOURCES main.cpp             
-            src/ud_server/ud_server.hpp
             src/ud_server/models/request/ud_http_request.hpp
             src/ud_server/models/response/util/ud_http_response_utils.hpp
             src/ud_server/common/ud_http_thread_pool.hpp
@@ -58,7 +57,6 @@ set(SOURCES main.cpp
             src/ud_server/common/ud_result_success.hpp
             src/ud_server/common/ud_result_failure.hpp
             src/ud_server/acceptor/ud_http_acceptor.hpp
-            src/ud_server/ud_http.hpp
     )
 add_executable(udemos ${SOURCES})
 
