@@ -64,7 +64,7 @@ public:
         data_ptr->set_thread_pool(std::make_unique<ud_http_thread_pool>(32));
         data_ptr->set_acceptor(std::make_unique<ud_http_acceptor>(data_ptr->get_port(), data_ptr->get_sock_fd()));
 
-        data_ptr->get_acceptor()->initialize_socket(data_ptr->get_sock_fd(), TIMEOUT_DELAY, data_ptr->get_port(), data_ptr->get_host());
+        data_ptr->get_acceptor()->initialize_socket(TIMEOUT_DELAY, data_ptr->get_host());
 
         data_ptr->set_listener_thread(std::make_unique<std::thread>(&ud_server_utils::listen, std::ref(*data_ptr)));
         data_ptr->get_listener_thread()->join();

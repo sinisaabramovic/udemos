@@ -501,12 +501,16 @@ CMakeFiles/udemos.dir/main.cpp.o: main.cpp \
   src/ud_server/common/ud_result_failure.hpp \
   src/ud_server/common/ud_result_success.hpp \
   src/ud_server/socket/ud_socket_wrapper.hpp \
+  src/ud_server/acceptor/ud_acceptor_data.hpp \
+  src/ud_server/acceptor/ud_acceptor_util.hpp \
   src/ud_server/connection/ud_http_connection.hpp \
   src/ud_server/common/ud_http_defines.h \
   src/ud_server/router/ud_http_router.hpp \
   src/ud_server/socket/ud_http_socket.hpp \
   src/ud_server/socket/ud_socket.hpp \
   src/ud_server/common/result/ud_common_result.hpp \
+  src/ud_server/connection/ud_http_connection_data.hpp \
+  src/ud_server/connection/ud_http_connection_util.hpp \
   src/ud_server/router/ud_http_router.hpp \
   src/ud_server/common/ud_http_thread_pool.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/queue \
@@ -733,8 +737,6 @@ CMakeFiles/udemos.dir/main.cpp.o: main.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/queue.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/os/base.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/mach/arm/vm_types.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/mach/machine/vm_types.h:
@@ -783,9 +785,17 @@ src/ud_server/server/ud_server_utils.hpp:
 
 src/ud_server/common/ud_http_thread_pool.hpp:
 
+src/ud_server/connection/ud_http_connection_util.hpp:
+
+src/ud_server/connection/ud_http_connection_data.hpp:
+
 src/ud_server/socket/ud_http_socket.hpp:
 
 src/ud_server/connection/ud_http_connection.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/os/base.h:
+
+src/ud_server/acceptor/ud_acceptor_util.hpp:
 
 src/ud_server/socket/ud_socket_wrapper.hpp:
 
@@ -1434,6 +1444,8 @@ src/ud_server/acceptor/ud_http_acceptor.hpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/pthread/pthread_impl.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/locale.h:
+
+src/ud_server/acceptor/ud_acceptor_data.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/perfect_forward.h:
 
