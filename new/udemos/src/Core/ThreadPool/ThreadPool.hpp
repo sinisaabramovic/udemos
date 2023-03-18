@@ -70,5 +70,4 @@ void ThreadPool::enqueue(const std::function<void()>& task) {
     tasks_cv_.notify_one();
 }
 
-
 #endif /* ThreadPool_hpp */

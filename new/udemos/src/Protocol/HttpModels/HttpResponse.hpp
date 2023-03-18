@@ -5,8 +5,8 @@
 //  Created by Sinisa Abramovic on 17.03.2023..
 //
 
-#ifndef UdHttpResponse_hpp
-#define UdHttpResponse_hpp
+#ifndef HttpResponse_hpp
+#define HttpResponse_hpp
 
 #include <string>
 #include <utility>
@@ -70,5 +70,5 @@ private:
     std::string getStatusDescription(HttpResponseStatus code) const;
 };
 
-#endif // UdHttpResponse_hpp
+#endif // HttpResponse_hpp
 

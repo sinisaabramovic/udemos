@@ -5,10 +5,7 @@
 //  Created by Sinisa Abramovic on 17.03.2023..
 //
 
-#ifdef DEBUG
-#include <gtest/gtest.h>
-#endif
-
+#include <thread>
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -18,37 +15,43 @@
 #include "HttpProtocolHandler.h"
 #include "RouteHandlerFactory.hpp"
 #include "GetRouteHandler.hpp"
+#include "HttpMethod.hpp"
+#include "Logger.hpp"
+#include "ServiceType.hpp"
 
 int main(int argc, char **argv) {
-    //#ifdef DEBUG
-    //    ::testing::InitGoogleTest(&argc, argv);
-    //    return RUN_ALL_TESTS();
-    //#endif
-    //
     
-    std::cout << "Server started" << std::endl;
+    Logger::getInstance().log(LogLevel::Info, "Server started");
     
-    RouteHandlerFactory::getInstance().registerHandler(std::make_shared<GetRouteHandler>("GET", "/api"));
+    RouteHandlerFactory::getInstance().registerHandler(std::make_shared<GetRouteHandler>(HttpMethod::GET, "/api"));
     
     Configuration& config = Configuration::getInstance();
     config.set("host", "127.0.0.1");
     config.set("port", 8080);
     
-    BaseService service(config);
-    service.registerProtocolHandler("http", std::make_unique<HttpProtocolHandler>());
+    HttpService service(config);
+    service.registerProtocolHandler(ServiceType::HTTP, std::make_unique<HttpProtocolHandler>());
     
-    service.run();
+    // Start the service in a separate thread
+    std::thread service_thread([&service]() {
+        service.run();
+    });
     
-    std::cout << "Server is running. Press 'q' and Enter to stop the server." << std::endl;
+    Logger::getInstance().log(LogLevel::Info, "Server is running. Press 'q' and Enter to stop the server.");
     
+    // Wait for user input in the main thread
     char input;
     do {
         std::cin >> input;
     } while (input != 'q');
     
-    std::cout << "Stopping the server..." << std::endl;
-//    service.stop();
-    std::cout << "Server stopped." << std::endl;
+    Logger::getInstance().log(LogLevel::Info, "Stopping the server...");
+    
+    // Stop the service and wait for the service thread to finish
+    service.stop();
+    service_thread.join();
+    
+    Logger::getInstance().log(LogLevel::Info, "Server stopped");
     
     return 0;
 }

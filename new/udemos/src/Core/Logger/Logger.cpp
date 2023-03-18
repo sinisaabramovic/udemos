@@ -6,6 +6,9 @@
 //
 
 #include "Logger.hpp"
+#include <iostream>
+#include <ctime>
+#include <string>
 
 Logger::Logger() : logLevel_(LogLevel::Info) {}
 
@@ -28,7 +31,10 @@ void Logger::log(LogLevel level, const std::string& message) {
     if (logFile_) {
         (*logFile_) << message << std::endl;
     } else {
-        std::cout << message << std::endl;
+        std::time_t now = std::time(nullptr);
+        std::string time_string = std::ctime(&now);
+        time_string.erase(time_string.length() - 1);
+        std::cout << "[" << time_string << "] : " << "[" << message << "]" << std::endl;
     }
 }
 

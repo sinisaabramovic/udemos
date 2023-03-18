@@ -16,6 +16,7 @@
 #include <thread>
 #include <iostream>
 #include "Socket.hpp"
+#include "Logger.hpp"
 
 Socket::Socket(EventLoop& loop, int fd) : loop_(loop), socket_fd_(fd) {
     
@@ -27,7 +28,6 @@ Socket::Socket(EventLoop& loop) : loop_(loop) {
         throw std::runtime_error("Failed to create socket");
     }
     
-    // Set the socket to non-blocking mode
 #ifdef __linux__
     int flags = fcntl(socket_fd_, F_GETFL, 0);
     fcntl(socket_fd_, F_SETFL, flags | O_NONBLOCK);
@@ -50,7 +50,7 @@ void Socket::bind(const std::string& address, uint16_t port) {
     addr_.sin_addr.s_addr = inet_addr(address.c_str());
     addr_.sin_port = htons(port);
     
-    constexpr int maxRetries = 128;
+    constexpr int maxRetries = 8;
     int attempts = 0;
     
     while (attempts < maxRetries) {
@@ -60,7 +60,7 @@ void Socket::bind(const std::string& address, uint16_t port) {
         }
         
         attempts++;
-        std::cerr << "Failed to bind socket, attempt " << attempts << ": " << strerror(errno) << std::endl;
+        Logger::getInstance().log(LogLevel::Error, "accept() error: " + std::string(strerror(errno)));
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
     

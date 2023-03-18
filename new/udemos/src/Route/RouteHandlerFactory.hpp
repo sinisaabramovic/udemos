@@ -18,11 +18,9 @@
 
 class RouteHandlerFactory {
 public:
-    // Delete copy constructor and assignment operator
     RouteHandlerFactory(const RouteHandlerFactory&) = delete;
     RouteHandlerFactory& operator=(const RouteHandlerFactory&) = delete;
 
-    // Get the singleton instance
     static RouteHandlerFactory& getInstance() {
         static RouteHandlerFactory instance;
         return instance;
@@ -43,7 +41,6 @@ public:
     }
 
 private:
-    // Make the constructor private
     RouteHandlerFactory() {}
 
     std::unordered_map<std::string, std::shared_ptr<RouteHandler>> handlers;

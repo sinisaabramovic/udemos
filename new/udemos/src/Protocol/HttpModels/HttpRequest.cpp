@@ -7,6 +7,7 @@
 
 #include <stdio.h>
 #include "HttpRequest.hpp"
+#include "Logger.hpp"
 
 HttpRequest::HttpRequest(const std::string &request)
 {
@@ -14,22 +15,18 @@ HttpRequest::HttpRequest(const std::string &request)
     this->handleMultipartFormData();
 }
 
-HttpRequest::~HttpRequest()
-{
-}
+HttpRequest::~HttpRequest() {}
 
 void HttpRequest::parseHttpRequest(const std::string &request)
 {
     std::istringstream iss(request);
     std::string line;
     
-    // Parse the first line of the request (e.g., "GET / HTTP/1.1")
     std::getline(iss, line);
     std::istringstream firstLineIss(line);
     std::string method, path, httpVersion;
     firstLineIss >> method >> path >> httpVersion;
     
-    // Parse the headers of the request
     std::unordered_map<std::string, std::string> headers;
     while (std::getline(iss, line) && line != "\r")
     {
@@ -40,7 +37,6 @@ void HttpRequest::parseHttpRequest(const std::string &request)
         headers[headerName] = headerValue;
     }
     
-    // Parse the query string (if any)
     std::string queryString;
     size_t queryStringStart = path.find('?');
     if (queryStringStart != std::string::npos)
@@ -49,7 +45,6 @@ void HttpRequest::parseHttpRequest(const std::string &request)
         path = path.substr(0, queryStringStart);
     }
     
-    // Parse the URL parameters (if any)
     std::unordered_map<std::string, std::string> params;
     std::istringstream paramIss(queryString);
     std::string paramPair;
@@ -62,7 +57,6 @@ void HttpRequest::parseHttpRequest(const std::string &request)
         params[key] = value;
     }
     
-    // Parse the body of the request (if any)
     std::string body;
     if (headers.count("Content-Length"))
     {
@@ -70,7 +64,6 @@ void HttpRequest::parseHttpRequest(const std::string &request)
         body = request.substr(request.size() - contentLength);
     }
     
-    // Extract the authentication token from the Authorization header (if present)
     std::string authToken;
     if (headers.count("Authorization"))
     {
@@ -81,9 +74,7 @@ void HttpRequest::parseHttpRequest(const std::string &request)
             authToken = authHeader.substr(spacePos + 1);
         }
     }
-    
-    // ...
-    // Extract cookies from the Cookie header (if present)
+
     std::unordered_map<std::string, std::string> cookies;
     if (headers.count("Cookie"))
     {
@@ -109,7 +100,6 @@ void HttpRequest::parseHttpRequest(const std::string &request)
         }
     }
     
-    // Store the parsed values in the object's member variables
     this->mMethod = method;
     this->mPath = path;
     this->mHeaders = headers;
@@ -182,10 +172,9 @@ bool HttpRequest::isValidJson(const std::string &jsonStr) const
     }
     catch (const nlohmann::json::parse_error &e)
     {
-        std::cout << "JSON parse error: " << e.what() << std::endl;
+        Logger::getInstance().log(LogLevel::Info, "JSON parse error: " + std::string(e.what()));
         return false;
     }
     
-    // Successfully parsed as JSON
     return true;
 }

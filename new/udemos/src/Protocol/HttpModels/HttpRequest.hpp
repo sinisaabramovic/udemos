@@ -47,6 +47,10 @@ public:
         return this->mFileUploads;
     }
     
+    std::unordered_map<std::string, std::string> getHeaders() const {
+        return this->mHeaders;
+    }
+    
     bool isValidJson(const std::string &jsonStr) const;
     
 private:

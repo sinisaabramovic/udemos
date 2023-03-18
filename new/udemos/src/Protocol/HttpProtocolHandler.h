@@ -18,7 +18,6 @@ public:
     
 private:
     std::string readRequest(Connection& connection);
-    std::string generateResponse(const std::string& requestHeaders);
     void sendResponse(Connection& connection, const std::string& response);
 };
 

@@ -13,8 +13,18 @@ Connection::Connection(EventLoop& loop, int fd)
 
 Connection::Connection(EventLoop& loop, const std::string& host, uint16_t port)
 : loop_(loop) {
-    socket_ = std::make_shared<Socket>(loop);
-    auto addresses = AddressResolver::resolve(host);
+    try {
+        socket_ = std::make_shared<Socket>(loop);
+    } catch (const std::exception& ex) {
+        throw std::runtime_error("Failed to create socket: " + std::string(ex.what()));
+    }
+    
+    std::vector<std::string> addresses;
+    try {
+        addresses = AddressResolver::resolve(host);
+    } catch (const std::exception& ex) {
+        throw std::runtime_error("Failed to resolve address: " + std::string(ex.what()));
+    }
     
     if (addresses.empty()) {
         throw std::runtime_error("No IP addresses found for host");
@@ -26,14 +36,17 @@ Connection::Connection(EventLoop& loop, const std::string& host, uint16_t port)
         addr.sin_port = htons(port);
         inet_pton(AF_INET, address.c_str(), &addr.sin_addr);
         
-        if (socket_->connect(reinterpret_cast<const sockaddr*>(&addr), sizeof(addr)) == 0) {
-            return;
+        try {
+            if (socket_->connect(reinterpret_cast<const sockaddr*>(&addr), sizeof(addr)) == 0) {
+                return;
+            }
+        } catch (const std::exception& ex) {
+            throw std::runtime_error("Failed to connect to socket: " + std::string(ex.what()));
         }
+        
     }
     
-    // If connect() has failed for all resolved addresses, throw an error with a detailed message
     throw std::runtime_error("Failed to connect socket: " + std::string(strerror(errno)));
 }
 
-Connection::~Connection() {
-}
+Connection::~Connection() {}

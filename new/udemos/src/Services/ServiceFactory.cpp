@@ -7,12 +7,12 @@
 
 #include "ServiceFactory.hpp"
 #include "HttpProtocolHandler.h"
+#include "ServiceType.hpp"
 
-std::unique_ptr<BaseService> ServiceFactory::createService(const Configuration& config) {
-    auto service = std::make_unique<BaseService>(config);
+std::unique_ptr<HttpService> ServiceFactory::createService(const Configuration& config) {
+    auto service = std::make_unique<HttpService>(config);
 
-    // Register the HTTP protocol handler.
-    service->registerProtocolHandler("http", std::make_unique<HttpProtocolHandler>());
+    service->registerProtocolHandler(ServiceType::HTTP, std::make_unique<HttpProtocolHandler>());
 
     // Register other protocol handlers here as needed, e.g., HTTPS, FTP, FTPS, RPC, and RPCS.
 

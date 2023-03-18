@@ -27,8 +27,6 @@ public:
     int connect(const sockaddr* addr, socklen_t addrlen);
     void close();
     int fd() const;
-    
-    // Non-copyable
     Socket(const Socket&) = delete;
     Socket& operator=(const Socket&) = delete;
     
