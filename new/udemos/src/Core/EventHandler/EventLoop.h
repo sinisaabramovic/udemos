@@ -28,9 +28,9 @@ private:
     void processEvent(EventPtr event);
     
     std::function<void(EventPtr)> process_event_callback_;
+    std::unique_ptr<std::thread> event_loop_thread_;
     
     std::atomic<bool> running_;
-    std::thread event_loop_thread_;
     EventQueue event_queue_;
 };
 

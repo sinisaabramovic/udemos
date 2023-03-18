@@ -8,6 +8,8 @@
 #ifndef ProtocolHandler_h
 #define ProtocolHandler_h
 
+#include <experimental/coroutine>
+#include <future>
 #include "Connection.hpp"
 
 class ProtocolHandler {

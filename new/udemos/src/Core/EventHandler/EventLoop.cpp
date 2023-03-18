@@ -15,7 +15,7 @@ EventLoop::~EventLoop() {
 
 void EventLoop::run() {
     running_ = true;
-    event_loop_thread_ = std::thread([this]() {
+    event_loop_thread_ = std::make_unique<std::thread>([this]() {
         while (running_) {
             EventPtr event = event_queue_.pop();
             if (event != nullptr) {
@@ -29,7 +29,8 @@ void EventLoop::stop() {
     if (running_) {
         running_ = false;
         event_queue_.push(nullptr);
-        event_loop_thread_.join();
+        event_loop_thread_->join();
+        event_loop_thread_.reset(); // Release the thread object
     }
 }
 

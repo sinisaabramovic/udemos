@@ -19,6 +19,7 @@
 class Socket {
 public:
     Socket(EventLoop& loop);
+    Socket(EventLoop& loop, int fd);
     ~Socket();
     
     void bind(const std::string& address, uint16_t port);

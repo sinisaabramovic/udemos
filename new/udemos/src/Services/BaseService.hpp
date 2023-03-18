@@ -21,7 +21,7 @@ public:
     ~BaseService();
     void run();
     void registerProtocolHandler(const std::string& protocol, std::unique_ptr<ProtocolHandler> handler);
-    std::unique_ptr<ProtocolHandler> getProtocolHandler(const std::string& protocol);
+    ProtocolHandler* getProtocolHandler(const std::string& protocol);
     
 private:
     Configuration& config_;

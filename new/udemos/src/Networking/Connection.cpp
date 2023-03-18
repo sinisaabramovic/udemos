@@ -7,6 +7,10 @@
 
 #include "Connection.hpp"
 
+Connection::Connection(EventLoop& loop, int fd)
+: loop_(loop), socket_(std::make_shared<Socket>(loop, fd)) {
+}
+
 Connection::Connection(EventLoop& loop, const std::string& host, uint16_t port)
 : loop_(loop) {
     socket_ = std::make_shared<Socket>(loop);

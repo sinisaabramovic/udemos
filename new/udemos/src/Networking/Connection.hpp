@@ -20,8 +20,10 @@
 class Connection {
 public:
     Connection(EventLoop& loop, const std::string& host, uint16_t port);
+    Connection(EventLoop& loop, int fd);
     ~Connection();
 
+    Socket& socket() { return *socket_; }
     // Non-copyable
     Connection(const Connection&) = delete;
     Connection& operator=(const Connection&) = delete;

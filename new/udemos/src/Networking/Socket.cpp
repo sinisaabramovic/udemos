@@ -12,8 +12,14 @@
 #include <stdexcept>
 #include <sys/socket.h>
 #include <arpa/inet.h>
+#include <chrono>
+#include <thread>
+#include <iostream>
 #include "Socket.hpp"
 
+Socket::Socket(EventLoop& loop, int fd) : loop_(loop), socket_fd_(fd) {
+    
+}
 
 Socket::Socket(EventLoop& loop) : loop_(loop) {
     socket_fd_ = socket(AF_INET, SOCK_STREAM, 0);
@@ -44,9 +50,21 @@ void Socket::bind(const std::string& address, uint16_t port) {
     addr_.sin_addr.s_addr = inet_addr(address.c_str());
     addr_.sin_port = htons(port);
     
-    if (::bind(socket_fd_, (struct sockaddr*)&addr_, sizeof(addr_)) < 0) {
-        throw std::runtime_error("Failed to bind socket");
+    constexpr int maxRetries = 128;
+    int attempts = 0;
+    
+    while (attempts < maxRetries) {
+        int bindResult = ::bind(socket_fd_, (struct sockaddr*)&addr_, sizeof(addr_));
+        if (bindResult >= 0) {
+            return;
+        }
+        
+        attempts++;
+        std::cerr << "Failed to bind socket, attempt " << attempts << ": " << strerror(errno) << std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
     }
+    
+    throw std::runtime_error("Failed to bind socket after " + std::to_string(maxRetries) + " attempts");
 }
 
 void Socket::listen(int backlog) {
@@ -57,11 +75,11 @@ void Socket::listen(int backlog) {
 
 int Socket::connect(const sockaddr* addr, socklen_t addrlen) {
     int result = ::connect(socket_fd_, addr, addrlen);
-
+    
     if (result < 0 && errno != EINPROGRESS) {
         throw std::runtime_error("Failed to connect socket: " + std::string(strerror(errno)));
     }
-
+    
     return result;
 }
 

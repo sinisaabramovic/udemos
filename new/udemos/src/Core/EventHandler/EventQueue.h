@@ -13,6 +13,7 @@
 #include <condition_variable>
 #include "Event.h"
 
+
 class EventQueue {
 public:
     void push(EventPtr event);

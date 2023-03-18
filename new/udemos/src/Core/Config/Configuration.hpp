@@ -29,8 +29,10 @@ public:
     template<typename T>
     void set(const std::string& key, const T& value);
     
+    void set(const std::string& key, const char* value);
+    
 private:
-    Configuration() = default;    
+    Configuration() = default;
     nlohmann::json config_;
 };
 
