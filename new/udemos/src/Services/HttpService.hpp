@@ -28,9 +28,8 @@ public:
 private:
     bool stop_flag_;
     Configuration& config_;
-    EventLoop event_loop_;
+    std::shared_ptr<EventLoop> event_loop_;
     std::shared_ptr<Socket> server_socket_;
-//    ThreadPool thread_pool(num_worker_threads);
     std::shared_ptr<ThreadPool> thread_pool_;
     std::unordered_map<std::string, std::unique_ptr<ProtocolHandler>> protocol_handlers_;
 };

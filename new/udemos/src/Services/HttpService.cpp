@@ -23,13 +23,14 @@
 
 HttpService::HttpService(const Configuration& config) : config_(config.getInstance())
 {
+    this->event_loop_ = std::make_shared<EventLoop>();
     try {
-        this->server_socket_ = std::make_shared<Socket>(this->event_loop_);
+        this->server_socket_ = std::make_shared<Socket>(*this->event_loop_);
     } catch (const std::exception& ex) {
         Logger::getInstance().log(LogLevel::Error, "Failed to create BaseService: " + std::string(ex.what()));
     }
     this->stop_flag_ = false;
-    this->thread_pool_ = std::make_shared<ThreadPool>(4);
+    this->thread_pool_ = std::make_shared<ThreadPool>(8);
 }
 HttpService::~HttpService() {}
 
@@ -56,7 +57,7 @@ void HttpService::run() {
         FD_SET(this->server_socket_->fd(), &read_fds);
         
         timeval timeout;
-        timeout.tv_sec = 1; // 1 second timeout
+        timeout.tv_sec = 30; // 1 second timeout
         timeout.tv_usec = 0;
         
         int nfds = select(max_fd + 1, &read_fds, nullptr, nullptr, &timeout);
@@ -72,7 +73,8 @@ void HttpService::run() {
             int client_fd = accept(this->server_socket_->fd(), (struct sockaddr *)&address, &addrlen);
             if (client_fd >= 0) {
                 try {
-                    auto connection_ptr = std::make_shared<Connection>(event_loop_, client_fd);
+                    std::shared_ptr<EventLoop> connection_event = std::make_shared<EventLoop>();
+                    auto connection_ptr = std::make_shared<Connection>(*connection_event, client_fd);
                     this->thread_pool_->enqueue([connection_ptr, &http_handler]() {
                         http_handler.handleRequest(*connection_ptr);
                     });

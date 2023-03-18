@@ -8,20 +8,22 @@
 #ifndef ThreadPool_hpp
 #define ThreadPool_hpp
 
-#include <vector>
-#include <queue>
-#include <thread>
-#include <mutex>
+#include <atomic>
 #include <condition_variable>
 #include <functional>
-#include <atomic>
+#include <mutex>
+#include <queue>
+#include <thread>
+#include <vector>
 
 class ThreadPool {
 public:
-    ThreadPool(size_t num_threads);
+    explicit ThreadPool(size_t num_threads);
     ~ThreadPool();
     
-    void enqueue(const std::function<void()>& task);
+    template<typename F, typename... Args>
+    auto enqueue(F&& f, Args&&... args)
+    -> std::future<typename std::result_of<F(Args...)>::type>;
     
 private:
     std::vector<std::thread> workers_;
@@ -62,12 +64,24 @@ ThreadPool::~ThreadPool() {
     }
 }
 
-void ThreadPool::enqueue(const std::function<void()>& task) {
+template<typename F, typename... Args>
+auto ThreadPool::enqueue(F&& f, Args&&... args)
+-> std::future<typename std::result_of<F(Args...)>::type>
+{
+    using return_type = typename std::result_of<F(Args...)>::type;
+    
+    auto task = std::make_shared<std::packaged_task<return_type()>>(std::bind(std::forward<F>(f), std::forward<Args>(args)...));
+    
+    std::future<return_type> result = task->get_future();
     {
         std::lock_guard<std::mutex> lock(tasks_mutex_);
-        tasks_.push(task);
+        if (stop_) {
+            throw std::runtime_error("ThreadPool is stopped");
+        }
+        tasks_.emplace([task]() { (*task)(); });
     }
     tasks_cv_.notify_one();
+    return result;
 }
 
 #endif /* ThreadPool_hpp */

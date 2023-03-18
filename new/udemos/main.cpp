@@ -29,12 +29,12 @@ int main(int argc, char **argv) {
     config.set("host", "127.0.0.1");
     config.set("port", 8080);
     
-    HttpService service(config);
-    service.registerProtocolHandler(ServiceType::HTTP, std::make_unique<HttpProtocolHandler>());
+    std::shared_ptr<HttpService> httpService = std::make_shared<HttpService>(config);
+    httpService->registerProtocolHandler(ServiceType::HTTP, std::make_unique<HttpProtocolHandler>());
     
     // Start the service in a separate thread
-    std::thread service_thread([&service]() {
-        service.run();
+    std::thread service_thread([&httpService]() {
+        httpService->run();
     });
     
     Logger::getInstance().log(LogLevel::Info, "Server is running. Press 'q' and Enter to stop the server.");
@@ -48,7 +48,7 @@ int main(int argc, char **argv) {
     Logger::getInstance().log(LogLevel::Info, "Stopping the server...");
     
     // Stop the service and wait for the service thread to finish
-    service.stop();
+    httpService->stop();
     service_thread.join();
     
     Logger::getInstance().log(LogLevel::Info, "Server stopped");

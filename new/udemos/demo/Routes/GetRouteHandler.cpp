@@ -15,7 +15,7 @@ GetRouteHandler::GetRouteHandler(const std::string& method, const std::string& p
 std::shared_ptr<HttpResponse> GetRouteHandler::handleRequest(const HttpRequest& request) {
     auto response = std::make_shared<HttpResponse>();
     response->setStatusCode(HttpResponseStatus::OK);
-    response->addHeader("Content-Type", "text/plain");
+    response->addHeader("Content-Type", "application/json");
     response->setBody("Hello, World!");
     
     return response;
