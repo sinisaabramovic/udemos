@@ -8,80 +8,105 @@
 #ifndef ThreadPool_hpp
 #define ThreadPool_hpp
 
-#include <atomic>
-#include <condition_variable>
-#include <functional>
-#include <mutex>
+#include <vector>
 #include <queue>
 #include <thread>
-#include <vector>
+#include <mutex>
+#include <condition_variable>
+#include <functional>
 
-class ThreadPool {
+class ThreadPool
+{
 public:
-    explicit ThreadPool(size_t num_threads);
+    ThreadPool(uint32_t num_threads);
     ~ThreadPool();
     
-    template<typename F, typename... Args>
-    auto enqueue(F&& f, Args&&... args)
-    -> std::future<typename std::result_of<F(Args...)>::type>;
+    template <typename F, typename... Args>
+    void enqueue(F &&f, Args &&...args);
+    void stop();
     
 private:
-    std::vector<std::thread> workers_;
-    std::queue<std::function<void()>> tasks_;
-    std::mutex tasks_mutex_;
-    std::condition_variable tasks_cv_;
-    std::atomic<bool> stop_;
+    std::vector<std::thread> m_threads;
+    std::queue<std::function<void()>> m_tasks;
+    std::mutex m_tasks_mutex;
+    std::condition_variable m_tasks_cv;
+    bool m_stop;
+    
+    void worker();
 };
 
-ThreadPool::ThreadPool(size_t num_threads) : stop_(false) {
-    for (size_t i = 0; i < num_threads; ++i) {
-        workers_.emplace_back([this]() {
-            while (true) {
-                std::function<void()> task;
-                {
-                    std::unique_lock<std::mutex> lock(tasks_mutex_);
-                    tasks_cv_.wait(lock, [this]() { return !tasks_.empty() || stop_; });
-                    
-                    if (stop_ && tasks_.empty()) {
-                        return;
-                    }
-                    
-                    task = std::move(tasks_.front());
-                    tasks_.pop();
-                }
-                task();
-            }
-        });
-    }
-}
-
-ThreadPool::~ThreadPool() {
-    stop_ = true;
-    tasks_cv_.notify_all();
-    
-    for (auto& worker : workers_) {
-        worker.join();
-    }
-}
-
-template<typename F, typename... Args>
-auto ThreadPool::enqueue(F&& f, Args&&... args)
--> std::future<typename std::result_of<F(Args...)>::type>
+ThreadPool::ThreadPool(uint32_t num_threads) : m_stop(false)
 {
-    using return_type = typename std::result_of<F(Args...)>::type;
-    
-    auto task = std::make_shared<std::packaged_task<return_type()>>(std::bind(std::forward<F>(f), std::forward<Args>(args)...));
-    
-    std::future<return_type> result = task->get_future();
+    for (uint32_t i = 0; i < num_threads; ++i)
     {
-        std::lock_guard<std::mutex> lock(tasks_mutex_);
-        if (stop_) {
-            throw std::runtime_error("ThreadPool is stopped");
-        }
-        tasks_.emplace([task]() { (*task)(); });
+        m_threads.emplace_back([this]()
+                               { worker(); });
     }
-    tasks_cv_.notify_one();
-    return result;
+}
+
+ThreadPool::~ThreadPool()
+{
+    {
+        std::unique_lock<std::mutex> lock(m_tasks_mutex);
+        m_stop = true;
+    }
+    m_tasks_cv.notify_all();
+    for (auto &thread : m_threads)
+    {
+        thread.join();
+    }
+}
+
+template <typename F, typename... Args>
+void ThreadPool::enqueue(F &&f, Args &&...args)
+{
+    auto task = std::make_shared<std::function<void()>>(std::bind(std::forward<F>(f), std::forward<Args>(args)...));
+    {
+        std::unique_lock<std::mutex> lock(m_tasks_mutex);
+        // Wait until there's space in the queue
+        m_tasks_cv.wait(lock, [this]()
+                        { return m_stop || m_tasks.size() < 100U; });
+        if (m_stop)
+        {
+            throw std::runtime_error("Thread pool has stopped");
+        }
+        m_tasks.emplace([task]()
+                        { (*task)(); });
+    }
+    m_tasks_cv.notify_one();
+}
+
+void ThreadPool::worker()
+{
+    while (true)
+    {
+        std::function<void()> task;
+        {
+            std::unique_lock<std::mutex> lock(m_tasks_mutex);
+            m_tasks_cv.wait(lock, [this]()
+                            { return m_stop || !m_tasks.empty(); });
+            if (m_stop && m_tasks.empty())
+            {
+                return;
+            }
+            task = std::move(m_tasks.front());
+            m_tasks.pop();
+        }
+        task();
+    }
+}
+
+void ThreadPool::stop()
+{
+    {
+        std::unique_lock<std::mutex> lock(m_tasks_mutex);
+        m_stop = true;
+    }
+    m_tasks_cv.notify_all();
+    for (auto &thread : m_threads)
+    {
+        thread.join();
+    }
 }
 
 #endif /* ThreadPool_hpp */

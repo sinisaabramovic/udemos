@@ -6,8 +6,8 @@
 //
 
 #include <stdio.h>
-#include "HttpResponse.hpp"
-#include "HttpRequest.hpp"
+#include "../../src/Protocol/HttpModels/HttpResponse.hpp"
+#include "../../src/Protocol/HttpModels/HttpRequest.hpp"
 #include "GetRouteHandler.hpp"
 
 GetRouteHandler::GetRouteHandler(const std::string& method, const std::string& path) : RouteHandler(method, path) {}

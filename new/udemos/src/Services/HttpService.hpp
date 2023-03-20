@@ -8,14 +8,14 @@
 #ifndef BaseService_hpp
 #define BaseService_hpp
 
-#include "ProtocolHandler.h"
-#include "Configuration.hpp"
-#include "EventLoop.h"
-#include "Connection.hpp"
 #include <unordered_map>
 #include <memory>
+#include "../Protocol/ProtocolHandler.h"
+#include "../Core/Config/Configuration.hpp"
+#include "../Networking/Connection.hpp"
 
-class ThreadPool;
+class HttpProtocolHandler;
+class ConnectionPool;
 
 class HttpService {
 public:
@@ -26,11 +26,15 @@ public:
     void registerProtocolHandler(const std::string& protocol, std::unique_ptr<ProtocolHandler> handler);
     
 private:
+    void prepareServerSocket();
+    void processNewConnection(ConnectionPool &connection_pool, ProtocolHandler &http_handler, std::vector<std::future<void>> &connection_futures);
+    void cleanUpConnectionFutures(std::vector<std::future<void>> &connection_futures);
+
+    
+private:
     bool stop_flag_;
     Configuration& config_;
-    std::shared_ptr<EventLoop> event_loop_;
     std::shared_ptr<Socket> server_socket_;
-    std::shared_ptr<ThreadPool> thread_pool_;
     std::unordered_map<std::string, std::unique_ptr<ProtocolHandler>> protocol_handlers_;
 };
 

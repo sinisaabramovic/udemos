@@ -68,11 +68,6 @@ void Configuration::set(const std::string& key, const char* value) {
     config_[key] = std::string(value);
 }
 
-// Configuration.cpp
-
-// ...
-
-// Explicit template instantiations for supported types
 template int Configuration::get<int>(const std::string&) const;
 template std::string Configuration::get<std::string>(const std::string&) const;
 template bool Configuration::get<bool>(const std::string&) const;
@@ -81,7 +76,6 @@ template void Configuration::set<int>(const std::string&, const int&);
 template void Configuration::set<std::string>(const std::string&, const std::string&);
 template void Configuration::set<bool>(const std::string&, const bool&);
 
-// Add these lines to the end of your Configuration class implementation
 template uint16_t Configuration::get<uint16_t>(const std::string&) const;
 template void Configuration::set<uint16_t>(const std::string&, const uint16_t&);
 

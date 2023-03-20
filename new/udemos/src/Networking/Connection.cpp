@@ -7,14 +7,13 @@
 
 #include "Connection.hpp"
 
-Connection::Connection(EventLoop& loop, int fd)
-: loop_(loop), socket_(std::make_shared<Socket>(loop, fd)) {
+Connection::Connection(int fd)
+: socket_(std::make_shared<Socket>(fd)), keep_alive_(false)  {
 }
 
-Connection::Connection(EventLoop& loop, const std::string& host, uint16_t port)
-: loop_(loop) {
+Connection::Connection(const std::string& host, uint16_t port) {
     try {
-        socket_ = std::make_shared<Socket>(loop);
+        socket_ = std::make_shared<Socket>();
     } catch (const std::exception& ex) {
         throw std::runtime_error("Failed to create socket: " + std::string(ex.what()));
     }
@@ -47,6 +46,14 @@ Connection::Connection(EventLoop& loop, const std::string& host, uint16_t port)
     }
     
     throw std::runtime_error("Failed to connect socket: " + std::string(strerror(errno)));
+}
+
+void Connection::setKeepAlive(bool keep_alive) {
+    keep_alive_ = keep_alive;
+}
+
+bool Connection::keepAlive() const {
+    return keep_alive_;
 }
 
 Connection::~Connection() {}

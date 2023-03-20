@@ -7,13 +7,15 @@
 
 #include <stdio.h>
 #include "HttpRequest.hpp"
-#include "Logger.hpp"
+#include "../../Core/Logger/Logger.hpp"
+#include "../../Core/Utils/StringUtils.hpp"
 
 HttpRequest::HttpRequest(const std::string &request)
 {
     this->parseHttpRequest(request);
-    this->handleMultipartFormData();
 }
+
+HttpRequest::HttpRequest() {}
 
 HttpRequest::~HttpRequest() {}
 
@@ -74,7 +76,7 @@ void HttpRequest::parseHttpRequest(const std::string &request)
             authToken = authHeader.substr(spacePos + 1);
         }
     }
-
+    
     std::unordered_map<std::string, std::string> cookies;
     if (headers.count("Cookie"))
     {
@@ -106,6 +108,8 @@ void HttpRequest::parseHttpRequest(const std::string &request)
     this->mBody = body;
     this->mAuthToken = authToken;
     this->mCookies = cookies;
+    
+    this->handleMultipartFormData();
 }
 
 void HttpRequest::handleMultipartFormData()
@@ -113,7 +117,7 @@ void HttpRequest::handleMultipartFormData()
     if (mHeaders.count("Content-Type") && mHeaders["Content-Type"].find("multipart/form-data") != std::string::npos)
     {
         std::string boundary = "--" + mHeaders["Content-Type"].substr(mHeaders["Content-Type"].find("boundary=") + 9);
-
+        
         std::vector<std::string> parts;
         size_t pos = 0;
         while ((pos = mBody.find(boundary, pos)) != std::string::npos)
@@ -121,11 +125,11 @@ void HttpRequest::handleMultipartFormData()
             size_t nextPos = mBody.find(boundary, pos + boundary.length());
             if (nextPos == std::string::npos)
                 nextPos = mBody.size();
-
+            
             parts.push_back(mBody.substr(pos + boundary.length(), nextPos - pos - boundary.length() - 2));
             pos = nextPos;
         }
-
+        
         std::unordered_map<std::string, std::string> formFields;
         std::unordered_map<std::string, std::string> fileUploads;
         for (const auto &part : parts)
@@ -137,19 +141,19 @@ void HttpRequest::handleMultipartFormData()
                 partBody = partBody.substr(0, endOfBody);
             }
             std::istringstream partIss(part.substr(0, part.find("\r\n\r\n")));
-
+            
             std::string headersLine;
             std::getline(partIss, headersLine, '\r');
             partIss.ignore(1, '\n'); // Skip the '\n' after '\r'
-
+            
             std::string fieldName = headersLine.substr(headersLine.find("name=\"") + 6);
             fieldName = fieldName.substr(0, fieldName.find("\""));
-
+            
             if (headersLine.find("filename=\"") != std::string::npos)
             {
                 std::string fileName = headersLine.substr(headersLine.find("filename=\"") + 10);
                 fileName = fileName.substr(0, fileName.find("\""));
-
+                
                 fileUploads[fieldName] = partBody;
                 this->mFileUploads[fileName] = partBody;
             }
@@ -158,7 +162,7 @@ void HttpRequest::handleMultipartFormData()
                 formFields[fieldName] = partBody;
             }
         }
-
+        
         this->mFormFields = formFields;
     }
 }
@@ -177,4 +181,25 @@ bool HttpRequest::isValidJson(const std::string &jsonStr) const
     }
     
     return true;
+}
+
+bool HttpRequest::keepAlive() const {
+    std::string connection_value = getHeaderValue("Connection");
+    return !connection_value.empty() && StringUtils::trim(connection_value) == "keep-alive";
+}
+
+std::string HttpRequest::getHeaderValue(const std::string& key) const {
+    std::string lowercase_key = key;
+    std::transform(lowercase_key.begin(), lowercase_key.end(), lowercase_key.begin(), ::tolower);
+    
+    for (const auto& header : mHeaders) {
+        std::string header_key = header.first;
+        std::transform(header_key.begin(), header_key.end(), header_key.begin(), ::tolower);
+        
+        if (header_key == lowercase_key) {
+            return header.second;
+        }
+    }
+    
+    return ""; // Return an empty string if the key is not found
 }

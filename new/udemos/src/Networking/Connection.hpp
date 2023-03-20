@@ -11,26 +11,28 @@
 #include <memory>
 #include <string>
 #include <stdexcept>
-#include <cstring> // For strerror
-#include <cerrno>  // For errno
+#include <cstring>
+#include <cerrno>
+
 #include "Socket.hpp"
 #include "AddressResolver.hpp"
-#include "EventLoop.h"
 
 class Connection {
 public:
-    Connection(EventLoop& loop, const std::string& host, uint16_t port);
-    Connection(EventLoop& loop, int fd);
+    Connection(const std::string& host, uint16_t port);
+    Connection(int fd);
     ~Connection();
 
     Socket& socket() { return *socket_; }
+    void setKeepAlive(bool keep_alive);
+    bool keepAlive() const;
     // Non-copyable
     Connection(const Connection&) = delete;
     Connection& operator=(const Connection&) = delete;
 
 private:
-    EventLoop& loop_;
     std::shared_ptr<Socket> socket_;
+    bool keep_alive_;
 };
 
 #endif /* Connection_hpp */

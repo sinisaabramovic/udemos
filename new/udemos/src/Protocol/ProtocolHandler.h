@@ -10,7 +10,7 @@
 
 #include <experimental/coroutine>
 #include <future>
-#include "Connection.hpp"
+#include "../Networking/Connection.hpp"
 
 class ProtocolHandler {
 public:

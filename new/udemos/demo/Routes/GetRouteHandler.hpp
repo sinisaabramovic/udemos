@@ -9,7 +9,7 @@
 #define GetBaseRouteHandler_hpp
 
 #include <stdio.h>
-#include "RouteHandler.hpp"
+#include "../../src/Route/RouteHandler.hpp"
 
 class HttpRequest;
 class HttpResponse;

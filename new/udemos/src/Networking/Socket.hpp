@@ -14,16 +14,15 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <unistd.h>
-#include "EventLoop.h"
 
 class Socket {
 public:
-    Socket(EventLoop& loop);
-    Socket(EventLoop& loop, int fd);
+    Socket();
+    Socket(int fd);
     ~Socket();
     
     void bind(const std::string& address, uint16_t port);
-    void listen(int backlog = 5);
+    void listen(int backlog = SOMAXCONN);
     int connect(const sockaddr* addr, socklen_t addrlen);
     void close();
     int fd() const;
@@ -31,7 +30,6 @@ public:
     Socket& operator=(const Socket&) = delete;
     
 private:
-    EventLoop& loop_;
     int socket_fd_;
     struct sockaddr_in addr_;
 };

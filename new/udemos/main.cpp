@@ -10,14 +10,15 @@
 #include <string>
 #include <fstream>
 #include <cstdio>
-#include "Configuration.hpp"
-#include "ServiceFactory.hpp"
-#include "HttpProtocolHandler.h"
-#include "RouteHandlerFactory.hpp"
-#include "GetRouteHandler.hpp"
-#include "HttpMethod.hpp"
-#include "Logger.hpp"
-#include "ServiceType.hpp"
+
+#include "src/Core/Config/Configuration.hpp"
+#include "src/Protocol/HttpProtocolHandler.h"
+#include "src/Route/RouteHandlerFactory.hpp"
+#include "demo/Routes/GetRouteHandler.hpp"
+#include "src/Protocol/HttpModels/HttpMethod.hpp"
+#include "src/Core/Logger/Logger.hpp"
+#include "src/Services/ServiceType.hpp"
+#include "src/Services/HttpService.hpp"
 
 int main(int argc, char **argv) {
     

@@ -18,7 +18,7 @@ public:
     
 private:
     std::string readRequest(Connection& connection);
-    void sendResponse(Connection& connection, const std::string& response);
+    void sendResponse(Connection& connection, const std::string& response);    
 };
 
 #endif /* HttpProtocolHandler_h */

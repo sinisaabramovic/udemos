@@ -18,6 +18,7 @@ class HttpRequest
 {
 public:
     HttpRequest(const std::string &request);
+    HttpRequest();
     ~HttpRequest();
     
     std::string getPath() const
@@ -51,6 +52,10 @@ public:
         return this->mHeaders;
     }
     
+    bool keepAlive() const;
+    
+    void parseHttpRequest(const std::string &request);
+    
     bool isValidJson(const std::string &jsonStr) const;
     
 private:
@@ -64,9 +69,9 @@ private:
     std::string mAuthToken;
     std::unordered_map<std::string, std::string> mFormFields;
     std::unordered_map<std::string, std::string> mFileUploads;
-    
-    void parseHttpRequest(const std::string &request);
+        
     void handleMultipartFormData();
+    std::string getHeaderValue(const std::string& key) const;
     
 };
 

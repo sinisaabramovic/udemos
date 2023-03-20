@@ -6,23 +6,24 @@
 //
 
 #include <fcntl.h>
-#include <unistd.h> // For close
-#include <fcntl.h>  // For fcntl
-#include <cstring>  // For strerror
+#include <unistd.h>
+#include <fcntl.h>
+#include <cstring>
 #include <stdexcept>
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <chrono>
 #include <thread>
 #include <iostream>
-#include "Socket.hpp"
-#include "Logger.hpp"
 
-Socket::Socket(EventLoop& loop, int fd) : loop_(loop), socket_fd_(fd) {
+#include "Socket.hpp"
+#include "../Core/Logger/Logger.hpp"
+
+Socket::Socket(int fd) : socket_fd_(fd) {
     
 }
 
-Socket::Socket(EventLoop& loop) : loop_(loop) {
+Socket::Socket() {
     socket_fd_ = socket(AF_INET, SOCK_STREAM, 0);
     if (socket_fd_ < 0) {
         throw std::runtime_error("Failed to create socket");
