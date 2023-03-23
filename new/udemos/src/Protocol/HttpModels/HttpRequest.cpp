@@ -9,6 +9,7 @@
 #include "HttpRequest.hpp"
 #include "../../Core/Logger/Logger.hpp"
 #include "../../Core/Utils/StringUtils.hpp"
+#include <zlib.h>
 
 HttpRequest::HttpRequest(const std::string &request)
 {
@@ -58,13 +59,67 @@ void HttpRequest::parseHttpRequest(const std::string &request)
         std::getline(keyValueIss, value);
         params[key] = value;
     }
-    
+
     std::string body;
     if (headers.count("Content-Length"))
     {
         int contentLength = std::stoi(headers["Content-Length"]);
-        body = request.substr(request.size() - contentLength);
+        
+        // Check for compressed content
+        bool compressed = false;
+        if (headers.count("Content-Encoding"))
+        {
+            std::string encoding = headers["Content-Encoding"];
+            if (encoding.find("gzip") != std::string::npos || encoding.find("deflate") != std::string::npos)
+            {
+                compressed = true;
+            }
+        }
+        
+        // Extract body from request string
+        size_t bodyStartPos = request.find("\r\n\r\n");
+        if (bodyStartPos != std::string::npos)
+        {
+            body = request.substr(bodyStartPos + 4);
+        }
+        
+        // Decompress body if necessary
+        if (compressed)
+        {
+            // Allocate memory for decompressed data
+            const size_t BUFFER_SIZE = 4096;
+            unsigned char buffer[BUFFER_SIZE];
+            std::string decompressedBody;
+            
+            // Create zlib decompression context
+            z_stream stream;
+            stream.zalloc = Z_NULL;
+            stream.zfree = Z_NULL;
+            stream.opaque = Z_NULL;
+            stream.avail_in = 0;
+            stream.next_in = Z_NULL;
+            int ret = inflateInit2(&stream, MAX_WBITS + 16);
+            
+            // Decompress data
+            stream.avail_in = body.size();
+            stream.next_in = (Bytef*) body.data();
+            do {
+                stream.avail_out = BUFFER_SIZE;
+                stream.next_out = buffer;
+                ret = inflate(&stream, Z_NO_FLUSH);
+                if (ret == Z_OK || ret == Z_STREAM_END)
+                {
+                    decompressedBody.append((char*) buffer, BUFFER_SIZE - stream.avail_out);
+                }
+            } while (ret == Z_OK);
+            
+            // Clean up zlib context
+            inflateEnd(&stream);
+            
+            body = decompressedBody;
+        }
     }
+    
     
     std::string authToken;
     if (headers.count("Authorization"))

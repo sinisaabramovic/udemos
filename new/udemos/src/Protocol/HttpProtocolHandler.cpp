@@ -12,6 +12,14 @@
 #include <fcntl.h>
 #include <sys/select.h>
 #include <map>
+#include <thread>
+#include <chrono>
+#include <atomic>
+#include <random>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 
 #include "HttpProtocolHandler.h"
 #include "../Networking/Connection.hpp"
@@ -29,7 +37,14 @@
 
 void HttpProtocolHandler::handleRequest(Connection& connection) {
     HttpRequest request{};
-    std::string requestHeaders = readRequest(connection);
+    std::string requestHeaders = "";
+    try {
+        requestHeaders = readRequest(connection);
+    } catch (const std::exception& ex) {
+        Logger::getInstance().log(LogLevel::Error, "Failed to handleRequest: " + std::string(ex.what()));
+        throw std::runtime_error(std::string(ex.what()));
+    }
+    
     if (!requestHeaders.empty()) {
         Logger::getInstance().log(LogLevel::Info, requestHeaders);
         
@@ -53,6 +68,10 @@ void HttpProtocolHandler::handleRequest(Connection& connection) {
         if (!connection.keepAlive()) {
             return;
         }
+    } else {
+        std::shared_ptr<HttpResponse> response;
+        response = std::make_shared<HttpResponse>(HttpResponseStatus::BAD_GATEWAY, "text/plain", "Not Found");
+        sendResponse(connection, response->toString());
     }
 }
 
@@ -79,28 +98,49 @@ std::string HttpProtocolHandler::readRequest(Connection& connection) {
     EV_SET(&evSet, connection.socket().fd(), EVFILT_READ, EV_ADD, 0, 0, nullptr);
 #endif
     
-    while (requestHeaders.str().find("\r\n\r\n") == std::string::npos) {
-        int nfds;
-        
+    int nfds;
+    
 #ifdef __linux__
-        nfds = epoll_wait(epoll_fd, events, 1, 1000);
-#elif __APPLE__
-        struct timespec timeout = {1, 0};
-        nfds = kevent(kq, &evSet, 1, evList, 1, &timeout);
-#endif
-        
-        if (nfds <= 0) {
-            break;
+    nfds = epoll_wait(epoll_fd, events, 5, 1000);
+    
+    if (nfds == -1) {
+        throw std::runtime_error("Failed to read connection");
+    } else if (nfds == 0) {
+        throw std::runtime_error("Timeout reached");
+    } else {
+        if (events[0].events & EPOLLIN) {
+            std::this_thread::sleep_for(std::chrono::milliseconds(5));
+            ssize_t bytesRead = read(connection.socket().fd(), buffer, bufferSize - 1);
+            if (bytesRead <= 0) {
+                throw std::runtime_error("Failed to read connection + epoll_wait/kevent failed");
+            }
+            buffer[bytesRead] = '\0';
+        } else {
+            throw std::runtime_error("The socket is not ready for reading");
         }
-        
-        ssize_t bytesRead = read(connection.socket().fd(), buffer, bufferSize - 1);
-        if (bytesRead <= 0) {
-            break;
-        }
-        
-        buffer[bytesRead] = '\0';
-        requestHeaders << buffer;
     }
+#elif __APPLE__
+    struct timespec timeout = {5, 0};
+    nfds = kevent(kq, &evSet, 1, evList, 1, &timeout);
+    
+    if (nfds == -1) {
+        perror("kevent failed");
+        throw std::runtime_error("kevent failed");
+    } else if (nfds == 0) {
+        throw std::runtime_error("Timeout reached");
+    } else {
+        if (evList[0].flags & EVFILT_READ) {
+            std::this_thread::sleep_for(std::chrono::milliseconds(5));
+            ssize_t bytesRead = read(connection.socket().fd(), buffer, bufferSize - 1);
+            if (bytesRead <= 0) {
+                throw std::runtime_error("Failed to read connection + epoll_wait/kevent failed");
+            }
+            buffer[bytesRead] = '\0';
+        } else {
+            return "";
+        }
+    }
+#endif
     
 #ifdef __linux__
     close(epoll_fd);
@@ -108,7 +148,8 @@ std::string HttpProtocolHandler::readRequest(Connection& connection) {
     close(kq);
 #endif
     
-    return requestHeaders.str();
+    std::string bufferString(buffer);
+    return bufferString;
 }
 
 void HttpProtocolHandler::sendResponse(Connection& connection, const std::string& response) {
@@ -138,7 +179,7 @@ void HttpProtocolHandler::sendResponse(Connection& connection, const std::string
 #ifdef __linux__
         nfds = epoll_wait(epoll_fd, events, 1, 1000);
 #elif __APPLE__
-        struct timespec timeout = {1, 0};
+        struct timespec timeout = {5, 0};
         nfds = kevent(kq, &evSet, 1, evList, 1, &timeout);
 #endif
         

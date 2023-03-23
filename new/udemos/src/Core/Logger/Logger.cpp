@@ -34,7 +34,11 @@ void Logger::log(LogLevel level, const std::string& message) {
         std::time_t now = std::time(nullptr);
         std::string time_string = std::ctime(&now);
         time_string.erase(time_string.length() - 1);
-        std::cout << "[" << time_string << "] : " << "[" << message << "]" << std::endl;
+        std::cout << "=========================== Log - Begin =========================" << std::endl;
+        std::cout << "At      : " << time_string << std::endl;
+        std::cout << "Message : "<< message << std::endl;
+        std::cout << "=========================== Log - End ===========================" << std::endl;
+        std::cout << std::endl;
     }
 }
 

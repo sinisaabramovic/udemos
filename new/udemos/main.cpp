@@ -14,7 +14,10 @@
 #include "src/Core/Config/Configuration.hpp"
 #include "src/Protocol/HttpProtocolHandler.h"
 #include "src/Route/RouteHandlerFactory.hpp"
+
 #include "demo/Routes/GetRouteHandler.hpp"
+#include "demo/Routes/GetSecretRouteHandler.hpp"
+
 #include "src/Protocol/HttpModels/HttpMethod.hpp"
 #include "src/Core/Logger/Logger.hpp"
 #include "src/Services/ServiceType.hpp"
@@ -24,7 +27,9 @@ int main(int argc, char **argv) {
     
     Logger::getInstance().log(LogLevel::Info, "Server started");
     
-    RouteHandlerFactory::getInstance().registerHandler(std::make_shared<GetRouteHandler>(HttpMethod::GET, "/api"));
+    RouteHandlerFactory::getInstance().registerHandler(std::make_shared<GetRouteHandler>(HttpMethod::POST, "/api/simple"));
+    RouteHandlerFactory::getInstance().registerHandler(std::make_shared<GetSecretRouteHandler>(HttpMethod::GET, "/api/secret"));
+    RouteHandlerFactory::getInstance().registerHandler(std::make_shared<GetSecretRouteHandler>(HttpMethod::POST, "/api/secret"));
     
     Configuration& config = Configuration::getInstance();
     config.set("host", "127.0.0.1");

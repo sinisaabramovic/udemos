@@ -108,7 +108,11 @@ void HttpService::processNewConnection(ConnectionPool &connection_pool, Protocol
             // Handle the request asynchronously
             connection_futures.push_back(std::async(std::launch::async, [&http_handler, &connection_pool]() {
                 auto connection = connection_pool.getConnection();
-                http_handler.handleRequest(*connection);
+                try {
+                    http_handler.handleRequest(*connection);
+                } catch (const std::exception& ex) {
+                    connection->socket().close();
+                }                
             }));
         } catch (const std::exception& ex) {
             Logger::getInstance().log(LogLevel::Error, "Failed to create connection: " + std::string(ex.what()));
