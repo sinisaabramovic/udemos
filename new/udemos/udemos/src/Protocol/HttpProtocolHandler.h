@@ -18,7 +18,11 @@ public:
     
 private:
     std::string readRequest(Connection& connection);
-    void sendResponse(Connection& connection, const std::string& response);    
+    void sendResponse(Connection& connection, const std::string& response);
+    void setSocketNonBlocking(Socket& socket);
+    int waitForSocketRead(int kq, int socket_fd);
+    std::string readSocketData(Socket& socket, int bufferSize);
+    std::string readRequestFromSocket(Socket& socket, int bufferSize);
 };
 
 #endif /* HttpProtocolHandler_h */

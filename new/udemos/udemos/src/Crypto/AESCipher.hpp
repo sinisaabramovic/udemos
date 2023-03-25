@@ -44,7 +44,7 @@ static constexpr size_t ivLength = 16;
 
 class AESCipher {
 public:
-    AESCipher(const std::string& password);
+    AESCipher(const std::string& privateKeyPath);
     ~AESCipher();
     std::vector<byte> encrypt(const byte* plaintext, size_t plaintextLength);
     std::vector<byte> decrypt(const byte* ciphertext, size_t ciphertextLength);
@@ -54,6 +54,7 @@ public:
 private:
     AESCipher(const std::string& password, const EVP_CIPHER* cipher);
     std::unique_ptr<EVP_CIPHER_CTX, decltype(&::EVP_CIPHER_CTX_free)> ctx;
+    std::string readPrivateKey(const std::string& keypath);
     std::vector<byte> key;
     std::vector<byte> iv;
 };

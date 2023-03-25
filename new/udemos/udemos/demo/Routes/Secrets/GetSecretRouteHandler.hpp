@@ -9,7 +9,7 @@
 #define GetSecretRouteHandler_hpp
 
 #include <stdio.h>
-#include "../../src/Route/RouteHandler.hpp"
+#include "../../../src/Route/RouteHandler.hpp"
 
 class HttpRequest;
 class HttpResponse;

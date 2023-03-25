@@ -13,11 +13,15 @@
 #include <ctime>
 #include <sstream>
 
-#include "../../src/Protocol/HttpModels/HttpResponse.hpp"
-#include "../../src/Protocol/HttpModels/HttpRequest.hpp"
+#include "../../../src/Protocol/HttpModels/HttpResponse.hpp"
+#include "../../../src/Protocol/HttpModels/HttpRequest.hpp"
 #include "GetSecretRouteHandler.hpp"
-#include "../../src/Crypto/AESCipher.hpp"
-#include "../../src/Core/Logger/Logger.hpp"
+#include "../../../src/Crypto/AESCipher.hpp"
+#include "../../../src/Core/Logger/Logger.hpp"
+
+#include <iostream>
+#include <nlohmann/json.hpp>
+#include "Models/SecretMessage.hpp"
 
 GetSecretRouteHandler::GetSecretRouteHandler(const std::string& method, const std::string& path) : RouteHandler(method, path) {}
 
@@ -27,18 +31,14 @@ std::shared_ptr<HttpResponse> GetSecretRouteHandler::handleRequest(const HttpReq
     response->setStatusCode(HttpResponseStatus::OK);
     response->addHeader("Content-Type", "application/json");
     
-    auto t = std::time(nullptr);
-    auto tm = *std::localtime(&t);
-    
-    std::ostringstream oss;
-    oss << std::put_time(&tm, "%d-%m-%Y %H-%M-%S");
-    auto strTime = oss.str();
-    
     OpenSSL_add_all_algorithms();
     
-    const std::string plaintext = "{ message: World " + strTime + "}";
+    SecretMessage secretMessage("Hello. Some simple text: Leave blank or .listStyle(.automatic) yield the same result in iOS. 1234567890[]{}");
+    json secretMessageJson = secretMessage;
+    
+    const std::string plaintext = secretMessageJson.dump();
     try {
-        AESCipher cipher("setecastronomy");
+        AESCipher cipher("usr/share/keys/private_key.pem");
         auto responsePayload = cipher.encrypt(reinterpret_cast<const byte*>(plaintext.data()), plaintext.size());
         std::stringstream chiperHexString;
         for (const auto& byte : responsePayload) {
@@ -55,7 +55,7 @@ std::shared_ptr<HttpResponse> GetSecretRouteHandler::handleRequest(const HttpReq
         response->setBody(encodedPayload);
         
     } catch (const std::exception& ex) {
-        Logger::getInstance().log(LogLevel::Error, "Failed to create AESCipher: " + std::string(ex.what()));
+        Logger::getInstance().log(LogLevel::Error, "Failed in AESCipher: " + std::string(ex.what()));
         response->setStatusCode(HttpResponseStatus::BAD_REQUEST);
         response->setBody("Failed to create payload");
     }

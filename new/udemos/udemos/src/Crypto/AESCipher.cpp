@@ -6,17 +6,22 @@
 //
 
 #include <string>
-#include <vector>
 #include <sstream>
 #include <algorithm>
+#include <fstream>
+#include <sstream>
+#include <vector>
+#include <iostream>
+#include <iomanip>
+#include <openssl/sha.h>
 
 #include "AESCipher.hpp"
 #include "AESUtil.h"
 
-AESCipher::AESCipher(const std::string& password) : AESCipher(password, EVP_aes_256_cbc()) {}
+AESCipher::AESCipher(const std::string& privateKeyPath) : AESCipher(privateKeyPath, EVP_aes_256_cbc()) {}
 AESCipher::~AESCipher() {}
 
-AESCipher::AESCipher(const std::string& password, const EVP_CIPHER* cipher)
+AESCipher::AESCipher(const std::string& privateKeyPath, const EVP_CIPHER* cipher)
 : ctx(EVP_CIPHER_CTX_new(), &::EVP_CIPHER_CTX_free),
 key(keyLength),
 iv(ivLength) {
@@ -24,17 +29,25 @@ iv(ivLength) {
         throw std::runtime_error("Failed to create cipher context.");
     }
     
-    //    if (!generate_key_iv_from_password(password, key.data(), keyLength, iv.data(), ivLength)) {
-    //        throw std::runtime_error("Failed to generate key and IV from password.");
-    //    }
-    
-    if (!generate_testable_key_iv(password, key.data(), keyLength, iv.data(), ivLength)) {
-        throw std::runtime_error("Failed to generate key and IV from password.");
+    std::string privateKeyPem = this->readPrivateKey(privateKeyPath);
+    if (!generateKeyIVFromPrivateKeyPEM(privateKeyPem, key.data(), key.size(), iv.data(), iv.size())) {
+        throw std::runtime_error("Failed to generate AES key and IV");
     }
-    
+        
     if (EVP_EncryptInit_ex(ctx.get(), cipher, nullptr, key.data(), iv.data()) != 1) {
         throw std::runtime_error("Failed to initialize encryption operation.");
     }
+    
+    EVP_CIPHER_CTX_set_padding(ctx.get(), 1);
+
+}
+
+std::string AESCipher::readPrivateKey(const std::string& keypath) {
+    std::ifstream privateKeyFile(keypath);
+    std::stringstream privateKeyBuffer;
+    privateKeyBuffer << privateKeyFile.rdbuf();
+    std::string privateKeyPem = privateKeyBuffer.str();
+    return privateKeyPem;
 }
 
 std::vector<byte> AESCipher::encrypt(const byte* plaintext, size_t plaintextLength) {
