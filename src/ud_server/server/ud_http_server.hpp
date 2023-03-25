@@ -40,12 +40,14 @@ public:
     void stop_listen()
     {
         data_ptr->set_stop_flag(true);
-        data_ptr->set_stoped(true);
+        data_ptr->set_stoped(true);   
+        data_ptr->close();     
+
+        data_ptr->get_thread_pool()->stop();
         if (data_ptr->get_listener_thread())
         {
             data_ptr->get_listener_thread()->join();
-        }
-        data_ptr->get_thread_pool()->stop();
+        }        
     }
 
     bool is_running()
