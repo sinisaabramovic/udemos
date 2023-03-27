@@ -2,79 +2,83 @@ cmake_minimum_required(VERSION 3.0.0)
 project(udemos
   VERSION 0.1.0 
   DESCRIPTION "udemos"
-  # HOMEPAGE_URL ""
   LANGUAGES CXX
 )
 
+# Set build type
+set(CMAKE_BUILD_TYPE Debug)
+
+# Set C++ language options
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-conversion")
 
-string(APPEND CMAKE_CXX_FLAGS " -Wall")
-string(APPEND CMAKE_CXX_FLAGS " -Wbuiltin-macro-redefined")
-string(APPEND CMAKE_CXX_FLAGS " -pedantic")
-# string(APPEND CMAKE_CXX_FLAGS " -Werror")
-
-# if(NOT LINUX) should work, too, if you need that
-if(UNIX AND NOT APPLE) 
-    message(STATUS ">>> LINUX")
-    # linux stuff here
-    INCLUDE_DIRECTORIES(
-        /opt/vcpkg/installed/x64-linux/include/
-    )
-
-    LINK_DIRECTORIES(
-        /opt/vcpkg/installed/x64-linux/lib/
-    )  
-    set(CMAKE_CXX_FLAGS "-pthread")  
-else()
-    message(STATUS ">>> APPLE")
-    # stuff that should happen not on Linux 
-    INCLUDE_DIRECTORIES(
-        # Uncomment this on M1 Mac
-        /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/
-
-        # Uncomment this on iMac - Intel
-        #/Users/sinomac/Projects/externals/vcpkg/installed/x64-osx/include/
-    )
-
-    LINK_DIRECTORIES(
-        # Uncomment this on M1 Mac
-        /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/lib/
-
-        # Uncomment this on iMac - Intel
-        #/Users/sinomac/projects/externals/vcpkg/installed/x64-osx/lib/
-    )
+# Set compiler options
+if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DOPENSSL_API_COMPAT=0x10100000L")
+    set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0")
+elseif(CMAKE_CXX_COMPILER_ID MATCHES "GNU")
+    set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Og")
 endif()
 
-file(GLOB_RECURSE SOURCES "main.cpp" "src/*.cpp" "src/*.h" "src/*.hpp" "demo/*.cpp" "demo/*.h" "demo/*.hpp")
+set(CMAKE_TOOLCHAIN_FILE "/Users/sinisaabramovic/projects/externals/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
-
-add_executable(${PROJECT_NAME} ${SOURCES})
-
-if(UNIX AND NOT APPLE)
-    message(STATUS ">>> LINUX")
-    #/opt/vcpkg/installed/
-    set(CMAKE_PREFIX_PATH "/opt/vcpkg/installed/x64-linux/")
-else()
-    message(STATUS ">>> APPLE")
-    set(CMAKE_PREFIX_PATH "/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/")
-endif()
-
+# Find required libraries
 find_package(OpenSSL REQUIRED)
 find_package(ZLIB REQUIRED)
 find_package(RapidJSON CONFIG REQUIRED)
 find_package(rxcpp CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
 
-set(Boost_USE_STATIC_LIBS        ON)  # only find static libs
-set(Boost_USE_DEBUG_LIBS        OFF)  # ignore debug libs and
-set(Boost_USE_RELEASE_LIBS       ON)  # only find release libs
-set(Boost_USE_MULTITHREADED      ON)
-set(Boost_USE_STATIC_RUNTIME     ON)  # link Boost Static libraries
+# Set include and link directories
+if(UNIX AND NOT APPLE)
+    message(STATUS ">>> LINUX")
+    # Linux specific settings
+    include_directories(
+        /opt/vcpkg/installed/x64-linux/include/
+    )
+    link_directories(
+        /opt/vcpkg/installed/x64-linux/lib/
+    )  
+    set(CMAKE_CXX_FLAGS "-pthread")  
+else()
+    message(STATUS ">>> APPLE")
+    # Apple specific settings
+    include_directories(
+        # Uncomment this on M1 Mac
+        /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/
 
-#find_package(Boost CONFIG REQUIRED)
-#include_directories(${Boost_INCLUDE_DIRS})
+        # Uncomment this on iMac - Intel
+        #/Users/sinomac/Projects/externals/vcpkg/installed/x64-osx/include/
+    )
+    link_directories(
+        # Uncomment this on M1 Mac
+        /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/lib/
 
-target_link_libraries(${PROJECT_NAME} OpenSSL::SSL ZLIB::ZLIB rapidjson rxcpp nlohmann_json::nlohmann_json)
+        # Uncomment this on iMac - Intel
+        #/Users/sinomac/projects/externals/vcpkg/installed/x64-osx/lib/
+    )
+    if(CMAKE_OSX_ARCHITECTURES MATCHES "arm64")
+        set(ARCH_FLAGS "-arch arm64")
+    else()
+        set(ARCH_FLAGS "-arch x86_64")
+    endif()
+endif()
+
+# Add source files
+file(GLOB_RECURSE SOURCES "main.cpp" "src/*.cpp" "src/*.h" "src/*.hpp" "demo/*.cpp" "demo/*.h" "demo/*.hpp")
+
+# Set output directory
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
+
+# Create executable
+add_executable(${PROJECT_NAME} ${SOURCES})
+
+# Set compiler options for the executable
+target_compile_options(${PROJECT_NAME} PRIVATE ${ARCH_FLAGS})
+target_compile_options(${PROJECT_NAME} PRIVATE -Wno-shorten-64-to-32)
+
+# Link required libraries
+target_link_libraries(${PROJECT_NAME} PRIVATE -lcrypto -lz OpenSSL::SSL ZLIB::ZLIB rapidjson rxcpp nlohmann_json::nlohmann_json)
+

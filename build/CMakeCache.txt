@@ -438,8 +438,17 @@ gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 //The directory containing a CMake configuration file for nlohmann_json.
 nlohmann_json_DIR:PATH=/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/nlohmann_json
 
+//Path to a library.
+pkgcfg_lib__OPENSSL_crypto:FILEPATH=/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/libcrypto.a
+
+//Path to a library.
+pkgcfg_lib__OPENSSL_ssl:FILEPATH=/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/libssl.a
+
 //The directory containing a CMake configuration file for rxcpp.
 rxcpp_DIR:PATH=/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rxcpp
+
+//The directory containing a CMake configuration file for sodium.
+sodium_DIR:PATH=sodium_DIR-NOTFOUND
 
 //Value Computed by CMake
 udemos_BINARY_DIR:STATIC=/Users/sinisaabramovic/projects/udemos/build
@@ -458,6 +467,12 @@ udemos_project_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 udemos_project_SOURCE_DIR:STATIC=/Users/sinisaabramovic/projects/udemos
+
+//The directory containing a CMake configuration file for unofficial-sodium.
+unofficial-sodium_DIR:PATH=/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/share/unofficial-sodium
+
+//The directory containing a CMake configuration file for unofficial::sodium.
+"unofficial::sodium_DIR":PATH=unofficial::sodium_DIR-NOTFOUND
 
 
 ########################
@@ -677,27 +692,37 @@ Z_VCPKG_CHECK_MANIFEST_MODE:INTERNAL=OFF
 Z_VCPKG_ROOT_DIR:INTERNAL=/Users/sinisaabramovic/Projects/externals/vcpkg
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
-_OPENSSL_CFLAGS:INTERNAL=
+_OPENSSL_CFLAGS:INTERNAL=-I/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/pkgconfig/../../../include
 _OPENSSL_CFLAGS_I:INTERNAL=
 _OPENSSL_CFLAGS_OTHER:INTERNAL=
-_OPENSSL_FOUND:INTERNAL=
-_OPENSSL_INCLUDEDIR:INTERNAL=
-_OPENSSL_LIBDIR:INTERNAL=
+_OPENSSL_FOUND:INTERNAL=1
+_OPENSSL_INCLUDEDIR:INTERNAL=/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/pkgconfig/../../../include
+_OPENSSL_INCLUDE_DIRS:INTERNAL=/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/pkgconfig/../../../include
+_OPENSSL_LDFLAGS:INTERNAL=-L/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/pkgconfig/../../lib;-lssl;-lcrypto
+_OPENSSL_LDFLAGS_OTHER:INTERNAL=
+_OPENSSL_LIBDIR:INTERNAL=/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/pkgconfig/../../lib
+_OPENSSL_LIBRARIES:INTERNAL=ssl;crypto
+_OPENSSL_LIBRARY_DIRS:INTERNAL=/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/pkgconfig/../../lib
 _OPENSSL_LIBS:INTERNAL=
 _OPENSSL_LIBS_L:INTERNAL=
 _OPENSSL_LIBS_OTHER:INTERNAL=
 _OPENSSL_LIBS_PATHS:INTERNAL=
-_OPENSSL_MODULE_NAME:INTERNAL=
-_OPENSSL_PREFIX:INTERNAL=
-_OPENSSL_STATIC_CFLAGS:INTERNAL=
+_OPENSSL_MODULE_NAME:INTERNAL=openssl
+_OPENSSL_PREFIX:INTERNAL=/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/pkgconfig/../..
+_OPENSSL_STATIC_CFLAGS:INTERNAL=-I/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/pkgconfig/../../../include
 _OPENSSL_STATIC_CFLAGS_I:INTERNAL=
 _OPENSSL_STATIC_CFLAGS_OTHER:INTERNAL=
+_OPENSSL_STATIC_INCLUDE_DIRS:INTERNAL=/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/pkgconfig/../../../include
+_OPENSSL_STATIC_LDFLAGS:INTERNAL=-L/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/pkgconfig/../../lib;-lssl;-lcrypto
+_OPENSSL_STATIC_LDFLAGS_OTHER:INTERNAL=
 _OPENSSL_STATIC_LIBDIR:INTERNAL=
+_OPENSSL_STATIC_LIBRARIES:INTERNAL=ssl;crypto
+_OPENSSL_STATIC_LIBRARY_DIRS:INTERNAL=/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/pkgconfig/../../lib
 _OPENSSL_STATIC_LIBS:INTERNAL=
 _OPENSSL_STATIC_LIBS_L:INTERNAL=
 _OPENSSL_STATIC_LIBS_OTHER:INTERNAL=
 _OPENSSL_STATIC_LIBS_PATHS:INTERNAL=
-_OPENSSL_VERSION:INTERNAL=
+_OPENSSL_VERSION:INTERNAL=3.0.8
 _OPENSSL_openssl_INCLUDEDIR:INTERNAL=
 _OPENSSL_openssl_LIBDIR:INTERNAL=
 _OPENSSL_openssl_PREFIX:INTERNAL=
@@ -707,6 +732,7 @@ _Python_EXECUTABLE:INTERNAL=/opt/homebrew/bin/python3.11
 //Python Properties
 _Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;11;1;64;;cpython-311-darwin;/opt/homebrew/opt/python@3.11/Frameworks/Python.framework/Versions/3.11/lib/python3.11;/opt/homebrew/opt/python@3.11/Frameworks/Python.framework/Versions/3.11/lib/python3.11;/opt/homebrew/opt/python@3.11/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages;/opt/homebrew/opt/python@3.11/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages
 _Python_INTERPRETER_SIGNATURE:INTERNAL=c6ecbc86b0b9583b714498e76361185a
+__pkg_config_arguments__OPENSSL:INTERNAL=QUIET;openssl
 __pkg_config_checked__OPENSSL:INTERNAL=1
 //ADVANCED property for variable: boost_headers_DIR
 boost_headers_DIR-ADVANCED:INTERNAL=1
@@ -724,5 +750,10 @@ gtest_disable_pthreads-ADVANCED:INTERNAL=1
 gtest_force_shared_crt-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: gtest_hide_internal_symbols
 gtest_hide_internal_symbols-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib__OPENSSL_crypto
+pkgcfg_lib__OPENSSL_crypto-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib__OPENSSL_ssl
+pkgcfg_lib__OPENSSL_ssl-ADVANCED:INTERNAL=1
+prefix_result:INTERNAL=/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/pkgconfig/../../lib
 targets_export_name:INTERNAL=GTestTargets
 

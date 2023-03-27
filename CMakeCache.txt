@@ -22,7 +22,7 @@ CMAKE_AR:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDef
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -240,6 +240,9 @@ nlohmann_json_DIR:PATH=/Users/sinisaabramovic/projects/externals/vcpkg/installed
 //The directory containing a CMake configuration file for rxcpp.
 rxcpp_DIR:PATH=/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rxcpp
 
+//The directory containing a CMake configuration file for sodium.
+sodium_DIR:PATH=sodium_DIR-NOTFOUND
+
 //Value Computed by CMake
 udemos_BINARY_DIR:STATIC=/Users/sinisaabramovic/projects/udemos
 
@@ -249,14 +252,11 @@ udemos_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 udemos_SOURCE_DIR:STATIC=/Users/sinisaabramovic/projects/udemos
 
-//Value Computed by CMake
-udemos_project_BINARY_DIR:STATIC=/Users/sinisaabramovic/projects/udemos
+//The directory containing a CMake configuration file for unofficial-sodium.
+unofficial-sodium_DIR:PATH=unofficial-sodium_DIR-NOTFOUND
 
-//Value Computed by CMake
-udemos_project_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-udemos_project_SOURCE_DIR:STATIC=/Users/sinisaabramovic/projects/udemos
+//The directory containing a CMake configuration file for unofficial::sodium.
+"unofficial::sodium_DIR":PATH=unofficial::sodium_DIR-NOTFOUND
 
 
 ########################
