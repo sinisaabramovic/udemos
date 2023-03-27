@@ -6,12 +6,13 @@
 //
 
 #include "AddressResolver.hpp"
+#include <string.h>
 
 std::vector<std::string> AddressResolver::resolve(const std::string& hostname) {
     std::vector<std::string> addresses;
     struct addrinfo hints, *res, *p;
 
-    memset(&hints, 0, sizeof(hints));
+    std::memset(&hints, 0, sizeof(hints));
     hints.ai_family = AF_UNSPEC; // Use IPv4 or IPv6
     hints.ai_socktype = SOCK_STREAM;
 
