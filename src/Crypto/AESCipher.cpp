@@ -92,7 +92,7 @@ std::vector<byte> AESCipher::decrypt(const byte *ciphertext, size_t ciphertextLe
         throw std::runtime_error("Decryption failed on update");
     }
 
-    if (!EVP_DecryptFinalq_ex(ctx.get(), plaintext.data() + outLength1, &outLength2))
+    if (!EVP_DecryptFinal_ex(ctx.get(), plaintext.data() + outLength1, &outLength2))
     {
         throw std::runtime_error("Decryption failed on final");
     }

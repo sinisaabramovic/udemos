@@ -22,13 +22,11 @@ elseif(CMAKE_CXX_COMPILER_ID MATCHES "GNU")
     set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Og")
 endif()
 
-set(CMAKE_TOOLCHAIN_FILE "/Users/sinisaabramovic/projects/externals/vcpkg/scripts/buildsystems/vcpkg.cmake")
+# set(CMAKE_TOOLCHAIN_FILE "/Users/sinisaabramovic/projects/externals/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
 # Find required libraries
 find_package(OpenSSL REQUIRED)
 find_package(ZLIB REQUIRED)
-find_package(RapidJSON CONFIG REQUIRED)
-find_package(rxcpp CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
 
 # Set include and link directories
@@ -80,5 +78,5 @@ target_compile_options(${PROJECT_NAME} PRIVATE ${ARCH_FLAGS})
 target_compile_options(${PROJECT_NAME} PRIVATE -Wno-shorten-64-to-32)
 
 # Link required libraries
-target_link_libraries(${PROJECT_NAME} PRIVATE -lcrypto -lz OpenSSL::SSL ZLIB::ZLIB rapidjson rxcpp nlohmann_json::nlohmann_json)
+target_link_libraries(${PROJECT_NAME} PRIVATE -lcrypto -lz OpenSSL::SSL ZLIB::ZLIB nlohmann_json::nlohmann_json)
 
