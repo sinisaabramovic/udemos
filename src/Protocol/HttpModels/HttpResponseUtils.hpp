@@ -15,6 +15,7 @@
 #include <stdexcept>
 #include <map>
 #include <string.h>
+#include <cstring>
 
 class HttpResponseUtils
 {
@@ -27,7 +28,7 @@ public:
     static std::string compressPayload(const std::string &data)
     {
         z_stream zs;
-        std::memset(&zs, 0, sizeof(zs));
+        memset(&zs, 0, sizeof(zs));
 
         if (deflateInit2(&zs, Z_DEFAULT_COMPRESSION, Z_DEFLATED, 15 | 16, 8, Z_DEFAULT_STRATEGY) != Z_OK)
         {
