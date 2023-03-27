@@ -129,6 +129,78 @@ udemos/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/build
 .PHONY : udemos/fast
 
+demo/Routes/GetLongResponseRouteHandler.o: demo/Routes/GetLongResponseRouteHandler.cpp.o
+.PHONY : demo/Routes/GetLongResponseRouteHandler.o
+
+# target to build an object file
+demo/Routes/GetLongResponseRouteHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.o
+.PHONY : demo/Routes/GetLongResponseRouteHandler.cpp.o
+
+demo/Routes/GetLongResponseRouteHandler.i: demo/Routes/GetLongResponseRouteHandler.cpp.i
+.PHONY : demo/Routes/GetLongResponseRouteHandler.i
+
+# target to preprocess a source file
+demo/Routes/GetLongResponseRouteHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.i
+.PHONY : demo/Routes/GetLongResponseRouteHandler.cpp.i
+
+demo/Routes/GetLongResponseRouteHandler.s: demo/Routes/GetLongResponseRouteHandler.cpp.s
+.PHONY : demo/Routes/GetLongResponseRouteHandler.s
+
+# target to generate assembly for a file
+demo/Routes/GetLongResponseRouteHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.s
+.PHONY : demo/Routes/GetLongResponseRouteHandler.cpp.s
+
+demo/Routes/GetRouteHandler.o: demo/Routes/GetRouteHandler.cpp.o
+.PHONY : demo/Routes/GetRouteHandler.o
+
+# target to build an object file
+demo/Routes/GetRouteHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.o
+.PHONY : demo/Routes/GetRouteHandler.cpp.o
+
+demo/Routes/GetRouteHandler.i: demo/Routes/GetRouteHandler.cpp.i
+.PHONY : demo/Routes/GetRouteHandler.i
+
+# target to preprocess a source file
+demo/Routes/GetRouteHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.i
+.PHONY : demo/Routes/GetRouteHandler.cpp.i
+
+demo/Routes/GetRouteHandler.s: demo/Routes/GetRouteHandler.cpp.s
+.PHONY : demo/Routes/GetRouteHandler.s
+
+# target to generate assembly for a file
+demo/Routes/GetRouteHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.s
+.PHONY : demo/Routes/GetRouteHandler.cpp.s
+
+demo/Routes/Secrets/GetSecretRouteHandler.o: demo/Routes/Secrets/GetSecretRouteHandler.cpp.o
+.PHONY : demo/Routes/Secrets/GetSecretRouteHandler.o
+
+# target to build an object file
+demo/Routes/Secrets/GetSecretRouteHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.o
+.PHONY : demo/Routes/Secrets/GetSecretRouteHandler.cpp.o
+
+demo/Routes/Secrets/GetSecretRouteHandler.i: demo/Routes/Secrets/GetSecretRouteHandler.cpp.i
+.PHONY : demo/Routes/Secrets/GetSecretRouteHandler.i
+
+# target to preprocess a source file
+demo/Routes/Secrets/GetSecretRouteHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.i
+.PHONY : demo/Routes/Secrets/GetSecretRouteHandler.cpp.i
+
+demo/Routes/Secrets/GetSecretRouteHandler.s: demo/Routes/Secrets/GetSecretRouteHandler.cpp.s
+.PHONY : demo/Routes/Secrets/GetSecretRouteHandler.s
+
+# target to generate assembly for a file
+demo/Routes/Secrets/GetSecretRouteHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.s
+.PHONY : demo/Routes/Secrets/GetSecretRouteHandler.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -153,6 +225,462 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/Core/Config/Configuration.o: src/Core/Config/Configuration.cpp.o
+.PHONY : src/Core/Config/Configuration.o
+
+# target to build an object file
+src/Core/Config/Configuration.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.o
+.PHONY : src/Core/Config/Configuration.cpp.o
+
+src/Core/Config/Configuration.i: src/Core/Config/Configuration.cpp.i
+.PHONY : src/Core/Config/Configuration.i
+
+# target to preprocess a source file
+src/Core/Config/Configuration.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.i
+.PHONY : src/Core/Config/Configuration.cpp.i
+
+src/Core/Config/Configuration.s: src/Core/Config/Configuration.cpp.s
+.PHONY : src/Core/Config/Configuration.s
+
+# target to generate assembly for a file
+src/Core/Config/Configuration.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.s
+.PHONY : src/Core/Config/Configuration.cpp.s
+
+src/Core/CoreMemory/MemoryPool.o: src/Core/CoreMemory/MemoryPool.cpp.o
+.PHONY : src/Core/CoreMemory/MemoryPool.o
+
+# target to build an object file
+src/Core/CoreMemory/MemoryPool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.o
+.PHONY : src/Core/CoreMemory/MemoryPool.cpp.o
+
+src/Core/CoreMemory/MemoryPool.i: src/Core/CoreMemory/MemoryPool.cpp.i
+.PHONY : src/Core/CoreMemory/MemoryPool.i
+
+# target to preprocess a source file
+src/Core/CoreMemory/MemoryPool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.i
+.PHONY : src/Core/CoreMemory/MemoryPool.cpp.i
+
+src/Core/CoreMemory/MemoryPool.s: src/Core/CoreMemory/MemoryPool.cpp.s
+.PHONY : src/Core/CoreMemory/MemoryPool.s
+
+# target to generate assembly for a file
+src/Core/CoreMemory/MemoryPool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.s
+.PHONY : src/Core/CoreMemory/MemoryPool.cpp.s
+
+src/Core/Logger/Logger.o: src/Core/Logger/Logger.cpp.o
+.PHONY : src/Core/Logger/Logger.o
+
+# target to build an object file
+src/Core/Logger/Logger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/Logger/Logger.cpp.o
+.PHONY : src/Core/Logger/Logger.cpp.o
+
+src/Core/Logger/Logger.i: src/Core/Logger/Logger.cpp.i
+.PHONY : src/Core/Logger/Logger.i
+
+# target to preprocess a source file
+src/Core/Logger/Logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/Logger/Logger.cpp.i
+.PHONY : src/Core/Logger/Logger.cpp.i
+
+src/Core/Logger/Logger.s: src/Core/Logger/Logger.cpp.s
+.PHONY : src/Core/Logger/Logger.s
+
+# target to generate assembly for a file
+src/Core/Logger/Logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/Logger/Logger.cpp.s
+.PHONY : src/Core/Logger/Logger.cpp.s
+
+src/Core/Utils/ErrorUtils.o: src/Core/Utils/ErrorUtils.cpp.o
+.PHONY : src/Core/Utils/ErrorUtils.o
+
+# target to build an object file
+src/Core/Utils/ErrorUtils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/Utils/ErrorUtils.cpp.o
+.PHONY : src/Core/Utils/ErrorUtils.cpp.o
+
+src/Core/Utils/ErrorUtils.i: src/Core/Utils/ErrorUtils.cpp.i
+.PHONY : src/Core/Utils/ErrorUtils.i
+
+# target to preprocess a source file
+src/Core/Utils/ErrorUtils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/Utils/ErrorUtils.cpp.i
+.PHONY : src/Core/Utils/ErrorUtils.cpp.i
+
+src/Core/Utils/ErrorUtils.s: src/Core/Utils/ErrorUtils.cpp.s
+.PHONY : src/Core/Utils/ErrorUtils.s
+
+# target to generate assembly for a file
+src/Core/Utils/ErrorUtils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/Utils/ErrorUtils.cpp.s
+.PHONY : src/Core/Utils/ErrorUtils.cpp.s
+
+src/Core/Utils/FileUtils.o: src/Core/Utils/FileUtils.cpp.o
+.PHONY : src/Core/Utils/FileUtils.o
+
+# target to build an object file
+src/Core/Utils/FileUtils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/Utils/FileUtils.cpp.o
+.PHONY : src/Core/Utils/FileUtils.cpp.o
+
+src/Core/Utils/FileUtils.i: src/Core/Utils/FileUtils.cpp.i
+.PHONY : src/Core/Utils/FileUtils.i
+
+# target to preprocess a source file
+src/Core/Utils/FileUtils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/Utils/FileUtils.cpp.i
+.PHONY : src/Core/Utils/FileUtils.cpp.i
+
+src/Core/Utils/FileUtils.s: src/Core/Utils/FileUtils.cpp.s
+.PHONY : src/Core/Utils/FileUtils.s
+
+# target to generate assembly for a file
+src/Core/Utils/FileUtils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/Utils/FileUtils.cpp.s
+.PHONY : src/Core/Utils/FileUtils.cpp.s
+
+src/Core/Utils/StringUtils.o: src/Core/Utils/StringUtils.cpp.o
+.PHONY : src/Core/Utils/StringUtils.o
+
+# target to build an object file
+src/Core/Utils/StringUtils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/Utils/StringUtils.cpp.o
+.PHONY : src/Core/Utils/StringUtils.cpp.o
+
+src/Core/Utils/StringUtils.i: src/Core/Utils/StringUtils.cpp.i
+.PHONY : src/Core/Utils/StringUtils.i
+
+# target to preprocess a source file
+src/Core/Utils/StringUtils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/Utils/StringUtils.cpp.i
+.PHONY : src/Core/Utils/StringUtils.cpp.i
+
+src/Core/Utils/StringUtils.s: src/Core/Utils/StringUtils.cpp.s
+.PHONY : src/Core/Utils/StringUtils.s
+
+# target to generate assembly for a file
+src/Core/Utils/StringUtils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/Utils/StringUtils.cpp.s
+.PHONY : src/Core/Utils/StringUtils.cpp.s
+
+src/Core/Utils/TimeUtils.o: src/Core/Utils/TimeUtils.cpp.o
+.PHONY : src/Core/Utils/TimeUtils.o
+
+# target to build an object file
+src/Core/Utils/TimeUtils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/Utils/TimeUtils.cpp.o
+.PHONY : src/Core/Utils/TimeUtils.cpp.o
+
+src/Core/Utils/TimeUtils.i: src/Core/Utils/TimeUtils.cpp.i
+.PHONY : src/Core/Utils/TimeUtils.i
+
+# target to preprocess a source file
+src/Core/Utils/TimeUtils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/Utils/TimeUtils.cpp.i
+.PHONY : src/Core/Utils/TimeUtils.cpp.i
+
+src/Core/Utils/TimeUtils.s: src/Core/Utils/TimeUtils.cpp.s
+.PHONY : src/Core/Utils/TimeUtils.s
+
+# target to generate assembly for a file
+src/Core/Utils/TimeUtils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Core/Utils/TimeUtils.cpp.s
+.PHONY : src/Core/Utils/TimeUtils.cpp.s
+
+src/Crypto/AESCipher.o: src/Crypto/AESCipher.cpp.o
+.PHONY : src/Crypto/AESCipher.o
+
+# target to build an object file
+src/Crypto/AESCipher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.o
+.PHONY : src/Crypto/AESCipher.cpp.o
+
+src/Crypto/AESCipher.i: src/Crypto/AESCipher.cpp.i
+.PHONY : src/Crypto/AESCipher.i
+
+# target to preprocess a source file
+src/Crypto/AESCipher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.i
+.PHONY : src/Crypto/AESCipher.cpp.i
+
+src/Crypto/AESCipher.s: src/Crypto/AESCipher.cpp.s
+.PHONY : src/Crypto/AESCipher.s
+
+# target to generate assembly for a file
+src/Crypto/AESCipher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.s
+.PHONY : src/Crypto/AESCipher.cpp.s
+
+src/Networking/AddressResolver.o: src/Networking/AddressResolver.cpp.o
+.PHONY : src/Networking/AddressResolver.o
+
+# target to build an object file
+src/Networking/AddressResolver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Networking/AddressResolver.cpp.o
+.PHONY : src/Networking/AddressResolver.cpp.o
+
+src/Networking/AddressResolver.i: src/Networking/AddressResolver.cpp.i
+.PHONY : src/Networking/AddressResolver.i
+
+# target to preprocess a source file
+src/Networking/AddressResolver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Networking/AddressResolver.cpp.i
+.PHONY : src/Networking/AddressResolver.cpp.i
+
+src/Networking/AddressResolver.s: src/Networking/AddressResolver.cpp.s
+.PHONY : src/Networking/AddressResolver.s
+
+# target to generate assembly for a file
+src/Networking/AddressResolver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Networking/AddressResolver.cpp.s
+.PHONY : src/Networking/AddressResolver.cpp.s
+
+src/Networking/Connection.o: src/Networking/Connection.cpp.o
+.PHONY : src/Networking/Connection.o
+
+# target to build an object file
+src/Networking/Connection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Networking/Connection.cpp.o
+.PHONY : src/Networking/Connection.cpp.o
+
+src/Networking/Connection.i: src/Networking/Connection.cpp.i
+.PHONY : src/Networking/Connection.i
+
+# target to preprocess a source file
+src/Networking/Connection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Networking/Connection.cpp.i
+.PHONY : src/Networking/Connection.cpp.i
+
+src/Networking/Connection.s: src/Networking/Connection.cpp.s
+.PHONY : src/Networking/Connection.s
+
+# target to generate assembly for a file
+src/Networking/Connection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Networking/Connection.cpp.s
+.PHONY : src/Networking/Connection.cpp.s
+
+src/Networking/ConnectionPool.o: src/Networking/ConnectionPool.cpp.o
+.PHONY : src/Networking/ConnectionPool.o
+
+# target to build an object file
+src/Networking/ConnectionPool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Networking/ConnectionPool.cpp.o
+.PHONY : src/Networking/ConnectionPool.cpp.o
+
+src/Networking/ConnectionPool.i: src/Networking/ConnectionPool.cpp.i
+.PHONY : src/Networking/ConnectionPool.i
+
+# target to preprocess a source file
+src/Networking/ConnectionPool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Networking/ConnectionPool.cpp.i
+.PHONY : src/Networking/ConnectionPool.cpp.i
+
+src/Networking/ConnectionPool.s: src/Networking/ConnectionPool.cpp.s
+.PHONY : src/Networking/ConnectionPool.s
+
+# target to generate assembly for a file
+src/Networking/ConnectionPool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Networking/ConnectionPool.cpp.s
+.PHONY : src/Networking/ConnectionPool.cpp.s
+
+src/Networking/Socket.o: src/Networking/Socket.cpp.o
+.PHONY : src/Networking/Socket.o
+
+# target to build an object file
+src/Networking/Socket.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Networking/Socket.cpp.o
+.PHONY : src/Networking/Socket.cpp.o
+
+src/Networking/Socket.i: src/Networking/Socket.cpp.i
+.PHONY : src/Networking/Socket.i
+
+# target to preprocess a source file
+src/Networking/Socket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Networking/Socket.cpp.i
+.PHONY : src/Networking/Socket.cpp.i
+
+src/Networking/Socket.s: src/Networking/Socket.cpp.s
+.PHONY : src/Networking/Socket.s
+
+# target to generate assembly for a file
+src/Networking/Socket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Networking/Socket.cpp.s
+.PHONY : src/Networking/Socket.cpp.s
+
+src/Protocol/HttpModels/HttpMethod.o: src/Protocol/HttpModels/HttpMethod.cpp.o
+.PHONY : src/Protocol/HttpModels/HttpMethod.o
+
+# target to build an object file
+src/Protocol/HttpModels/HttpMethod.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpMethod.cpp.o
+.PHONY : src/Protocol/HttpModels/HttpMethod.cpp.o
+
+src/Protocol/HttpModels/HttpMethod.i: src/Protocol/HttpModels/HttpMethod.cpp.i
+.PHONY : src/Protocol/HttpModels/HttpMethod.i
+
+# target to preprocess a source file
+src/Protocol/HttpModels/HttpMethod.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpMethod.cpp.i
+.PHONY : src/Protocol/HttpModels/HttpMethod.cpp.i
+
+src/Protocol/HttpModels/HttpMethod.s: src/Protocol/HttpModels/HttpMethod.cpp.s
+.PHONY : src/Protocol/HttpModels/HttpMethod.s
+
+# target to generate assembly for a file
+src/Protocol/HttpModels/HttpMethod.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpMethod.cpp.s
+.PHONY : src/Protocol/HttpModels/HttpMethod.cpp.s
+
+src/Protocol/HttpModels/HttpRequest.o: src/Protocol/HttpModels/HttpRequest.cpp.o
+.PHONY : src/Protocol/HttpModels/HttpRequest.o
+
+# target to build an object file
+src/Protocol/HttpModels/HttpRequest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpRequest.cpp.o
+.PHONY : src/Protocol/HttpModels/HttpRequest.cpp.o
+
+src/Protocol/HttpModels/HttpRequest.i: src/Protocol/HttpModels/HttpRequest.cpp.i
+.PHONY : src/Protocol/HttpModels/HttpRequest.i
+
+# target to preprocess a source file
+src/Protocol/HttpModels/HttpRequest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpRequest.cpp.i
+.PHONY : src/Protocol/HttpModels/HttpRequest.cpp.i
+
+src/Protocol/HttpModels/HttpRequest.s: src/Protocol/HttpModels/HttpRequest.cpp.s
+.PHONY : src/Protocol/HttpModels/HttpRequest.s
+
+# target to generate assembly for a file
+src/Protocol/HttpModels/HttpRequest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpRequest.cpp.s
+.PHONY : src/Protocol/HttpModels/HttpRequest.cpp.s
+
+src/Protocol/HttpModels/HttpResponse.o: src/Protocol/HttpModels/HttpResponse.cpp.o
+.PHONY : src/Protocol/HttpModels/HttpResponse.o
+
+# target to build an object file
+src/Protocol/HttpModels/HttpResponse.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpResponse.cpp.o
+.PHONY : src/Protocol/HttpModels/HttpResponse.cpp.o
+
+src/Protocol/HttpModels/HttpResponse.i: src/Protocol/HttpModels/HttpResponse.cpp.i
+.PHONY : src/Protocol/HttpModels/HttpResponse.i
+
+# target to preprocess a source file
+src/Protocol/HttpModels/HttpResponse.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpResponse.cpp.i
+.PHONY : src/Protocol/HttpModels/HttpResponse.cpp.i
+
+src/Protocol/HttpModels/HttpResponse.s: src/Protocol/HttpModels/HttpResponse.cpp.s
+.PHONY : src/Protocol/HttpModels/HttpResponse.s
+
+# target to generate assembly for a file
+src/Protocol/HttpModels/HttpResponse.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpResponse.cpp.s
+.PHONY : src/Protocol/HttpModels/HttpResponse.cpp.s
+
+src/Protocol/HttpProtocolHandler.o: src/Protocol/HttpProtocolHandler.cpp.o
+.PHONY : src/Protocol/HttpProtocolHandler.o
+
+# target to build an object file
+src/Protocol/HttpProtocolHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Protocol/HttpProtocolHandler.cpp.o
+.PHONY : src/Protocol/HttpProtocolHandler.cpp.o
+
+src/Protocol/HttpProtocolHandler.i: src/Protocol/HttpProtocolHandler.cpp.i
+.PHONY : src/Protocol/HttpProtocolHandler.i
+
+# target to preprocess a source file
+src/Protocol/HttpProtocolHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Protocol/HttpProtocolHandler.cpp.i
+.PHONY : src/Protocol/HttpProtocolHandler.cpp.i
+
+src/Protocol/HttpProtocolHandler.s: src/Protocol/HttpProtocolHandler.cpp.s
+.PHONY : src/Protocol/HttpProtocolHandler.s
+
+# target to generate assembly for a file
+src/Protocol/HttpProtocolHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Protocol/HttpProtocolHandler.cpp.s
+.PHONY : src/Protocol/HttpProtocolHandler.cpp.s
+
+src/Route/RouteHandler.o: src/Route/RouteHandler.cpp.o
+.PHONY : src/Route/RouteHandler.o
+
+# target to build an object file
+src/Route/RouteHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Route/RouteHandler.cpp.o
+.PHONY : src/Route/RouteHandler.cpp.o
+
+src/Route/RouteHandler.i: src/Route/RouteHandler.cpp.i
+.PHONY : src/Route/RouteHandler.i
+
+# target to preprocess a source file
+src/Route/RouteHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Route/RouteHandler.cpp.i
+.PHONY : src/Route/RouteHandler.cpp.i
+
+src/Route/RouteHandler.s: src/Route/RouteHandler.cpp.s
+.PHONY : src/Route/RouteHandler.s
+
+# target to generate assembly for a file
+src/Route/RouteHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Route/RouteHandler.cpp.s
+.PHONY : src/Route/RouteHandler.cpp.s
+
+src/Services/HttpService.o: src/Services/HttpService.cpp.o
+.PHONY : src/Services/HttpService.o
+
+# target to build an object file
+src/Services/HttpService.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Services/HttpService.cpp.o
+.PHONY : src/Services/HttpService.cpp.o
+
+src/Services/HttpService.i: src/Services/HttpService.cpp.i
+.PHONY : src/Services/HttpService.i
+
+# target to preprocess a source file
+src/Services/HttpService.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Services/HttpService.cpp.i
+.PHONY : src/Services/HttpService.cpp.i
+
+src/Services/HttpService.s: src/Services/HttpService.cpp.s
+.PHONY : src/Services/HttpService.s
+
+# target to generate assembly for a file
+src/Services/HttpService.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Services/HttpService.cpp.s
+.PHONY : src/Services/HttpService.cpp.s
+
+src/Services/ServiceType.o: src/Services/ServiceType.cpp.o
+.PHONY : src/Services/ServiceType.o
+
+# target to build an object file
+src/Services/ServiceType.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Services/ServiceType.cpp.o
+.PHONY : src/Services/ServiceType.cpp.o
+
+src/Services/ServiceType.i: src/Services/ServiceType.cpp.i
+.PHONY : src/Services/ServiceType.i
+
+# target to preprocess a source file
+src/Services/ServiceType.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Services/ServiceType.cpp.i
+.PHONY : src/Services/ServiceType.cpp.i
+
+src/Services/ServiceType.s: src/Services/ServiceType.cpp.s
+.PHONY : src/Services/ServiceType.s
+
+# target to generate assembly for a file
+src/Services/ServiceType.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/src/Services/ServiceType.cpp.s
+.PHONY : src/Services/ServiceType.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +690,75 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... udemos"
+	@echo "... demo/Routes/GetLongResponseRouteHandler.o"
+	@echo "... demo/Routes/GetLongResponseRouteHandler.i"
+	@echo "... demo/Routes/GetLongResponseRouteHandler.s"
+	@echo "... demo/Routes/GetRouteHandler.o"
+	@echo "... demo/Routes/GetRouteHandler.i"
+	@echo "... demo/Routes/GetRouteHandler.s"
+	@echo "... demo/Routes/Secrets/GetSecretRouteHandler.o"
+	@echo "... demo/Routes/Secrets/GetSecretRouteHandler.i"
+	@echo "... demo/Routes/Secrets/GetSecretRouteHandler.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/Core/Config/Configuration.o"
+	@echo "... src/Core/Config/Configuration.i"
+	@echo "... src/Core/Config/Configuration.s"
+	@echo "... src/Core/CoreMemory/MemoryPool.o"
+	@echo "... src/Core/CoreMemory/MemoryPool.i"
+	@echo "... src/Core/CoreMemory/MemoryPool.s"
+	@echo "... src/Core/Logger/Logger.o"
+	@echo "... src/Core/Logger/Logger.i"
+	@echo "... src/Core/Logger/Logger.s"
+	@echo "... src/Core/Utils/ErrorUtils.o"
+	@echo "... src/Core/Utils/ErrorUtils.i"
+	@echo "... src/Core/Utils/ErrorUtils.s"
+	@echo "... src/Core/Utils/FileUtils.o"
+	@echo "... src/Core/Utils/FileUtils.i"
+	@echo "... src/Core/Utils/FileUtils.s"
+	@echo "... src/Core/Utils/StringUtils.o"
+	@echo "... src/Core/Utils/StringUtils.i"
+	@echo "... src/Core/Utils/StringUtils.s"
+	@echo "... src/Core/Utils/TimeUtils.o"
+	@echo "... src/Core/Utils/TimeUtils.i"
+	@echo "... src/Core/Utils/TimeUtils.s"
+	@echo "... src/Crypto/AESCipher.o"
+	@echo "... src/Crypto/AESCipher.i"
+	@echo "... src/Crypto/AESCipher.s"
+	@echo "... src/Networking/AddressResolver.o"
+	@echo "... src/Networking/AddressResolver.i"
+	@echo "... src/Networking/AddressResolver.s"
+	@echo "... src/Networking/Connection.o"
+	@echo "... src/Networking/Connection.i"
+	@echo "... src/Networking/Connection.s"
+	@echo "... src/Networking/ConnectionPool.o"
+	@echo "... src/Networking/ConnectionPool.i"
+	@echo "... src/Networking/ConnectionPool.s"
+	@echo "... src/Networking/Socket.o"
+	@echo "... src/Networking/Socket.i"
+	@echo "... src/Networking/Socket.s"
+	@echo "... src/Protocol/HttpModels/HttpMethod.o"
+	@echo "... src/Protocol/HttpModels/HttpMethod.i"
+	@echo "... src/Protocol/HttpModels/HttpMethod.s"
+	@echo "... src/Protocol/HttpModels/HttpRequest.o"
+	@echo "... src/Protocol/HttpModels/HttpRequest.i"
+	@echo "... src/Protocol/HttpModels/HttpRequest.s"
+	@echo "... src/Protocol/HttpModels/HttpResponse.o"
+	@echo "... src/Protocol/HttpModels/HttpResponse.i"
+	@echo "... src/Protocol/HttpModels/HttpResponse.s"
+	@echo "... src/Protocol/HttpProtocolHandler.o"
+	@echo "... src/Protocol/HttpProtocolHandler.i"
+	@echo "... src/Protocol/HttpProtocolHandler.s"
+	@echo "... src/Route/RouteHandler.o"
+	@echo "... src/Route/RouteHandler.i"
+	@echo "... src/Route/RouteHandler.s"
+	@echo "... src/Services/HttpService.o"
+	@echo "... src/Services/HttpService.i"
+	@echo "... src/Services/HttpService.s"
+	@echo "... src/Services/ServiceType.o"
+	@echo "... src/Services/ServiceType.i"
+	@echo "... src/Services/ServiceType.s"
 .PHONY : help
 
 

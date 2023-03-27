@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(udemos_project
+project(udemos
   VERSION 0.1.0 
   DESCRIPTION "udemos"
   # HOMEPAGE_URL ""
@@ -46,19 +46,12 @@ else()
         #/Users/sinomac/projects/externals/vcpkg/installed/x64-osx/lib/
     )
 endif()
- 
+
+file(GLOB_RECURSE SOURCES "main.cpp" "src/*.cpp" "src/*.h" "src/*.hpp" "demo/*.cpp" "demo/*.h" "demo/*.hpp")
+
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
-set(SOURCES main.cpp             
-            src/ud_server/models/request/ud_http_request.hpp
-            src/ud_server/models/response/util/ud_http_response_utils.hpp
-            src/ud_server/common/ud_http_thread_pool.hpp
-            src/ud_server/common/ud_http_time.hpp
-            src/ud_server/common/ud_result.hpp
-            src/ud_server/common/ud_result_success.hpp
-            src/ud_server/common/ud_result_failure.hpp
-            src/ud_server/acceptor/ud_http_acceptor.hpp
-    )
-add_executable(udemos ${SOURCES})
+
+add_executable(${PROJECT_NAME} ${SOURCES})
 
 if(UNIX AND NOT APPLE)
     message(STATUS ">>> LINUX")
@@ -73,6 +66,7 @@ find_package(OpenSSL REQUIRED)
 find_package(ZLIB REQUIRED)
 find_package(RapidJSON CONFIG REQUIRED)
 find_package(rxcpp CONFIG REQUIRED)
+find_package(nlohmann_json CONFIG REQUIRED)
 
 set(Boost_USE_STATIC_LIBS        ON)  # only find static libs
 set(Boost_USE_DEBUG_LIBS        OFF)  # ignore debug libs and
@@ -83,4 +77,4 @@ set(Boost_USE_STATIC_RUNTIME     ON)  # link Boost Static libraries
 #find_package(Boost CONFIG REQUIRED)
 #include_directories(${Boost_INCLUDE_DIRS})
 
-target_link_libraries(udemos OpenSSL::SSL ZLIB::ZLIB rapidjson rxcpp)
+target_link_libraries(${PROJECT_NAME} OpenSSL::SSL ZLIB::ZLIB rapidjson rxcpp nlohmann_json::nlohmann_json)
