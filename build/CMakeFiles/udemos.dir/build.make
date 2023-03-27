@@ -69,10 +69,52 @@ include CMakeFiles/udemos.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/udemos.dir/flags.make
 
+CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.o: /Users/sinisaabramovic/projects/udemos/demo/Routes/GetLongResponseRouteHandler.cpp
+CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.o -MF CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.o.d -o CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.o -c /Users/sinisaabramovic/projects/udemos/demo/Routes/GetLongResponseRouteHandler.cpp
+
+CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/demo/Routes/GetLongResponseRouteHandler.cpp > CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.i
+
+CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/demo/Routes/GetLongResponseRouteHandler.cpp -o CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.s
+
+CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.o: /Users/sinisaabramovic/projects/udemos/demo/Routes/GetRouteHandler.cpp
+CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.o -MF CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.o.d -o CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.o -c /Users/sinisaabramovic/projects/udemos/demo/Routes/GetRouteHandler.cpp
+
+CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/demo/Routes/GetRouteHandler.cpp > CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.i
+
+CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/demo/Routes/GetRouteHandler.cpp -o CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.s
+
+CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.o: /Users/sinisaabramovic/projects/udemos/demo/Routes/Secrets/GetSecretRouteHandler.cpp
+CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.o -MF CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.o.d -o CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.o -c /Users/sinisaabramovic/projects/udemos/demo/Routes/Secrets/GetSecretRouteHandler.cpp
+
+CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/demo/Routes/Secrets/GetSecretRouteHandler.cpp > CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.i
+
+CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/demo/Routes/Secrets/GetSecretRouteHandler.cpp -o CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.s
+
 CMakeFiles/udemos.dir/main.cpp.o: CMakeFiles/udemos.dir/flags.make
 CMakeFiles/udemos.dir/main.cpp.o: /Users/sinisaabramovic/projects/udemos/main.cpp
 CMakeFiles/udemos.dir/main.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/udemos.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/udemos.dir/main.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/main.cpp.o -MF CMakeFiles/udemos.dir/main.cpp.o.d -o CMakeFiles/udemos.dir/main.cpp.o -c /Users/sinisaabramovic/projects/udemos/main.cpp
 
 CMakeFiles/udemos.dir/main.cpp.i: cmake_force
@@ -83,20 +125,330 @@ CMakeFiles/udemos.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/main.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/main.cpp -o CMakeFiles/udemos.dir/main.cpp.s
 
+CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.o: /Users/sinisaabramovic/projects/udemos/src/Core/Config/Configuration.cpp
+CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.o -MF CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.o.d -o CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.o -c /Users/sinisaabramovic/projects/udemos/src/Core/Config/Configuration.cpp
+
+CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/src/Core/Config/Configuration.cpp > CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.i
+
+CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/src/Core/Config/Configuration.cpp -o CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.s
+
+CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.o: /Users/sinisaabramovic/projects/udemos/src/Core/CoreMemory/MemoryPool.cpp
+CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.o -MF CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.o.d -o CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.o -c /Users/sinisaabramovic/projects/udemos/src/Core/CoreMemory/MemoryPool.cpp
+
+CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/src/Core/CoreMemory/MemoryPool.cpp > CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.i
+
+CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/src/Core/CoreMemory/MemoryPool.cpp -o CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.s
+
+CMakeFiles/udemos.dir/src/Core/Logger/Logger.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/src/Core/Logger/Logger.cpp.o: /Users/sinisaabramovic/projects/udemos/src/Core/Logger/Logger.cpp
+CMakeFiles/udemos.dir/src/Core/Logger/Logger.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/udemos.dir/src/Core/Logger/Logger.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/src/Core/Logger/Logger.cpp.o -MF CMakeFiles/udemos.dir/src/Core/Logger/Logger.cpp.o.d -o CMakeFiles/udemos.dir/src/Core/Logger/Logger.cpp.o -c /Users/sinisaabramovic/projects/udemos/src/Core/Logger/Logger.cpp
+
+CMakeFiles/udemos.dir/src/Core/Logger/Logger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/src/Core/Logger/Logger.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/src/Core/Logger/Logger.cpp > CMakeFiles/udemos.dir/src/Core/Logger/Logger.cpp.i
+
+CMakeFiles/udemos.dir/src/Core/Logger/Logger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/src/Core/Logger/Logger.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/src/Core/Logger/Logger.cpp -o CMakeFiles/udemos.dir/src/Core/Logger/Logger.cpp.s
+
+CMakeFiles/udemos.dir/src/Core/Utils/ErrorUtils.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/src/Core/Utils/ErrorUtils.cpp.o: /Users/sinisaabramovic/projects/udemos/src/Core/Utils/ErrorUtils.cpp
+CMakeFiles/udemos.dir/src/Core/Utils/ErrorUtils.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/udemos.dir/src/Core/Utils/ErrorUtils.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/src/Core/Utils/ErrorUtils.cpp.o -MF CMakeFiles/udemos.dir/src/Core/Utils/ErrorUtils.cpp.o.d -o CMakeFiles/udemos.dir/src/Core/Utils/ErrorUtils.cpp.o -c /Users/sinisaabramovic/projects/udemos/src/Core/Utils/ErrorUtils.cpp
+
+CMakeFiles/udemos.dir/src/Core/Utils/ErrorUtils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/src/Core/Utils/ErrorUtils.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/src/Core/Utils/ErrorUtils.cpp > CMakeFiles/udemos.dir/src/Core/Utils/ErrorUtils.cpp.i
+
+CMakeFiles/udemos.dir/src/Core/Utils/ErrorUtils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/src/Core/Utils/ErrorUtils.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/src/Core/Utils/ErrorUtils.cpp -o CMakeFiles/udemos.dir/src/Core/Utils/ErrorUtils.cpp.s
+
+CMakeFiles/udemos.dir/src/Core/Utils/FileUtils.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/src/Core/Utils/FileUtils.cpp.o: /Users/sinisaabramovic/projects/udemos/src/Core/Utils/FileUtils.cpp
+CMakeFiles/udemos.dir/src/Core/Utils/FileUtils.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/udemos.dir/src/Core/Utils/FileUtils.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/src/Core/Utils/FileUtils.cpp.o -MF CMakeFiles/udemos.dir/src/Core/Utils/FileUtils.cpp.o.d -o CMakeFiles/udemos.dir/src/Core/Utils/FileUtils.cpp.o -c /Users/sinisaabramovic/projects/udemos/src/Core/Utils/FileUtils.cpp
+
+CMakeFiles/udemos.dir/src/Core/Utils/FileUtils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/src/Core/Utils/FileUtils.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/src/Core/Utils/FileUtils.cpp > CMakeFiles/udemos.dir/src/Core/Utils/FileUtils.cpp.i
+
+CMakeFiles/udemos.dir/src/Core/Utils/FileUtils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/src/Core/Utils/FileUtils.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/src/Core/Utils/FileUtils.cpp -o CMakeFiles/udemos.dir/src/Core/Utils/FileUtils.cpp.s
+
+CMakeFiles/udemos.dir/src/Core/Utils/StringUtils.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/src/Core/Utils/StringUtils.cpp.o: /Users/sinisaabramovic/projects/udemos/src/Core/Utils/StringUtils.cpp
+CMakeFiles/udemos.dir/src/Core/Utils/StringUtils.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/udemos.dir/src/Core/Utils/StringUtils.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/src/Core/Utils/StringUtils.cpp.o -MF CMakeFiles/udemos.dir/src/Core/Utils/StringUtils.cpp.o.d -o CMakeFiles/udemos.dir/src/Core/Utils/StringUtils.cpp.o -c /Users/sinisaabramovic/projects/udemos/src/Core/Utils/StringUtils.cpp
+
+CMakeFiles/udemos.dir/src/Core/Utils/StringUtils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/src/Core/Utils/StringUtils.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/src/Core/Utils/StringUtils.cpp > CMakeFiles/udemos.dir/src/Core/Utils/StringUtils.cpp.i
+
+CMakeFiles/udemos.dir/src/Core/Utils/StringUtils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/src/Core/Utils/StringUtils.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/src/Core/Utils/StringUtils.cpp -o CMakeFiles/udemos.dir/src/Core/Utils/StringUtils.cpp.s
+
+CMakeFiles/udemos.dir/src/Core/Utils/TimeUtils.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/src/Core/Utils/TimeUtils.cpp.o: /Users/sinisaabramovic/projects/udemos/src/Core/Utils/TimeUtils.cpp
+CMakeFiles/udemos.dir/src/Core/Utils/TimeUtils.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/udemos.dir/src/Core/Utils/TimeUtils.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/src/Core/Utils/TimeUtils.cpp.o -MF CMakeFiles/udemos.dir/src/Core/Utils/TimeUtils.cpp.o.d -o CMakeFiles/udemos.dir/src/Core/Utils/TimeUtils.cpp.o -c /Users/sinisaabramovic/projects/udemos/src/Core/Utils/TimeUtils.cpp
+
+CMakeFiles/udemos.dir/src/Core/Utils/TimeUtils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/src/Core/Utils/TimeUtils.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/src/Core/Utils/TimeUtils.cpp > CMakeFiles/udemos.dir/src/Core/Utils/TimeUtils.cpp.i
+
+CMakeFiles/udemos.dir/src/Core/Utils/TimeUtils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/src/Core/Utils/TimeUtils.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/src/Core/Utils/TimeUtils.cpp -o CMakeFiles/udemos.dir/src/Core/Utils/TimeUtils.cpp.s
+
+CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.o: /Users/sinisaabramovic/projects/udemos/src/Crypto/AESCipher.cpp
+CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.o -MF CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.o.d -o CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.o -c /Users/sinisaabramovic/projects/udemos/src/Crypto/AESCipher.cpp
+
+CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/src/Crypto/AESCipher.cpp > CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.i
+
+CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/src/Crypto/AESCipher.cpp -o CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.s
+
+CMakeFiles/udemos.dir/src/Networking/AddressResolver.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/src/Networking/AddressResolver.cpp.o: /Users/sinisaabramovic/projects/udemos/src/Networking/AddressResolver.cpp
+CMakeFiles/udemos.dir/src/Networking/AddressResolver.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/udemos.dir/src/Networking/AddressResolver.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/src/Networking/AddressResolver.cpp.o -MF CMakeFiles/udemos.dir/src/Networking/AddressResolver.cpp.o.d -o CMakeFiles/udemos.dir/src/Networking/AddressResolver.cpp.o -c /Users/sinisaabramovic/projects/udemos/src/Networking/AddressResolver.cpp
+
+CMakeFiles/udemos.dir/src/Networking/AddressResolver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/src/Networking/AddressResolver.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/src/Networking/AddressResolver.cpp > CMakeFiles/udemos.dir/src/Networking/AddressResolver.cpp.i
+
+CMakeFiles/udemos.dir/src/Networking/AddressResolver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/src/Networking/AddressResolver.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/src/Networking/AddressResolver.cpp -o CMakeFiles/udemos.dir/src/Networking/AddressResolver.cpp.s
+
+CMakeFiles/udemos.dir/src/Networking/Connection.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/src/Networking/Connection.cpp.o: /Users/sinisaabramovic/projects/udemos/src/Networking/Connection.cpp
+CMakeFiles/udemos.dir/src/Networking/Connection.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/udemos.dir/src/Networking/Connection.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/src/Networking/Connection.cpp.o -MF CMakeFiles/udemos.dir/src/Networking/Connection.cpp.o.d -o CMakeFiles/udemos.dir/src/Networking/Connection.cpp.o -c /Users/sinisaabramovic/projects/udemos/src/Networking/Connection.cpp
+
+CMakeFiles/udemos.dir/src/Networking/Connection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/src/Networking/Connection.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/src/Networking/Connection.cpp > CMakeFiles/udemos.dir/src/Networking/Connection.cpp.i
+
+CMakeFiles/udemos.dir/src/Networking/Connection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/src/Networking/Connection.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/src/Networking/Connection.cpp -o CMakeFiles/udemos.dir/src/Networking/Connection.cpp.s
+
+CMakeFiles/udemos.dir/src/Networking/ConnectionPool.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/src/Networking/ConnectionPool.cpp.o: /Users/sinisaabramovic/projects/udemos/src/Networking/ConnectionPool.cpp
+CMakeFiles/udemos.dir/src/Networking/ConnectionPool.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/udemos.dir/src/Networking/ConnectionPool.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/src/Networking/ConnectionPool.cpp.o -MF CMakeFiles/udemos.dir/src/Networking/ConnectionPool.cpp.o.d -o CMakeFiles/udemos.dir/src/Networking/ConnectionPool.cpp.o -c /Users/sinisaabramovic/projects/udemos/src/Networking/ConnectionPool.cpp
+
+CMakeFiles/udemos.dir/src/Networking/ConnectionPool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/src/Networking/ConnectionPool.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/src/Networking/ConnectionPool.cpp > CMakeFiles/udemos.dir/src/Networking/ConnectionPool.cpp.i
+
+CMakeFiles/udemos.dir/src/Networking/ConnectionPool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/src/Networking/ConnectionPool.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/src/Networking/ConnectionPool.cpp -o CMakeFiles/udemos.dir/src/Networking/ConnectionPool.cpp.s
+
+CMakeFiles/udemos.dir/src/Networking/Socket.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/src/Networking/Socket.cpp.o: /Users/sinisaabramovic/projects/udemos/src/Networking/Socket.cpp
+CMakeFiles/udemos.dir/src/Networking/Socket.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/udemos.dir/src/Networking/Socket.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/src/Networking/Socket.cpp.o -MF CMakeFiles/udemos.dir/src/Networking/Socket.cpp.o.d -o CMakeFiles/udemos.dir/src/Networking/Socket.cpp.o -c /Users/sinisaabramovic/projects/udemos/src/Networking/Socket.cpp
+
+CMakeFiles/udemos.dir/src/Networking/Socket.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/src/Networking/Socket.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/src/Networking/Socket.cpp > CMakeFiles/udemos.dir/src/Networking/Socket.cpp.i
+
+CMakeFiles/udemos.dir/src/Networking/Socket.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/src/Networking/Socket.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/src/Networking/Socket.cpp -o CMakeFiles/udemos.dir/src/Networking/Socket.cpp.s
+
+CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpMethod.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpMethod.cpp.o: /Users/sinisaabramovic/projects/udemos/src/Protocol/HttpModels/HttpMethod.cpp
+CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpMethod.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpMethod.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpMethod.cpp.o -MF CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpMethod.cpp.o.d -o CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpMethod.cpp.o -c /Users/sinisaabramovic/projects/udemos/src/Protocol/HttpModels/HttpMethod.cpp
+
+CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpMethod.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpMethod.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/src/Protocol/HttpModels/HttpMethod.cpp > CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpMethod.cpp.i
+
+CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpMethod.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpMethod.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/src/Protocol/HttpModels/HttpMethod.cpp -o CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpMethod.cpp.s
+
+CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpRequest.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpRequest.cpp.o: /Users/sinisaabramovic/projects/udemos/src/Protocol/HttpModels/HttpRequest.cpp
+CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpRequest.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpRequest.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpRequest.cpp.o -MF CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpRequest.cpp.o.d -o CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpRequest.cpp.o -c /Users/sinisaabramovic/projects/udemos/src/Protocol/HttpModels/HttpRequest.cpp
+
+CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpRequest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpRequest.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/src/Protocol/HttpModels/HttpRequest.cpp > CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpRequest.cpp.i
+
+CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpRequest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpRequest.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/src/Protocol/HttpModels/HttpRequest.cpp -o CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpRequest.cpp.s
+
+CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpResponse.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpResponse.cpp.o: /Users/sinisaabramovic/projects/udemos/src/Protocol/HttpModels/HttpResponse.cpp
+CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpResponse.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpResponse.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpResponse.cpp.o -MF CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpResponse.cpp.o.d -o CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpResponse.cpp.o -c /Users/sinisaabramovic/projects/udemos/src/Protocol/HttpModels/HttpResponse.cpp
+
+CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpResponse.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpResponse.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/src/Protocol/HttpModels/HttpResponse.cpp > CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpResponse.cpp.i
+
+CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpResponse.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpResponse.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/src/Protocol/HttpModels/HttpResponse.cpp -o CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpResponse.cpp.s
+
+CMakeFiles/udemos.dir/src/Protocol/HttpProtocolHandler.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/src/Protocol/HttpProtocolHandler.cpp.o: /Users/sinisaabramovic/projects/udemos/src/Protocol/HttpProtocolHandler.cpp
+CMakeFiles/udemos.dir/src/Protocol/HttpProtocolHandler.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/udemos.dir/src/Protocol/HttpProtocolHandler.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/src/Protocol/HttpProtocolHandler.cpp.o -MF CMakeFiles/udemos.dir/src/Protocol/HttpProtocolHandler.cpp.o.d -o CMakeFiles/udemos.dir/src/Protocol/HttpProtocolHandler.cpp.o -c /Users/sinisaabramovic/projects/udemos/src/Protocol/HttpProtocolHandler.cpp
+
+CMakeFiles/udemos.dir/src/Protocol/HttpProtocolHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/src/Protocol/HttpProtocolHandler.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/src/Protocol/HttpProtocolHandler.cpp > CMakeFiles/udemos.dir/src/Protocol/HttpProtocolHandler.cpp.i
+
+CMakeFiles/udemos.dir/src/Protocol/HttpProtocolHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/src/Protocol/HttpProtocolHandler.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/src/Protocol/HttpProtocolHandler.cpp -o CMakeFiles/udemos.dir/src/Protocol/HttpProtocolHandler.cpp.s
+
+CMakeFiles/udemos.dir/src/Route/RouteHandler.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/src/Route/RouteHandler.cpp.o: /Users/sinisaabramovic/projects/udemos/src/Route/RouteHandler.cpp
+CMakeFiles/udemos.dir/src/Route/RouteHandler.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/udemos.dir/src/Route/RouteHandler.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/src/Route/RouteHandler.cpp.o -MF CMakeFiles/udemos.dir/src/Route/RouteHandler.cpp.o.d -o CMakeFiles/udemos.dir/src/Route/RouteHandler.cpp.o -c /Users/sinisaabramovic/projects/udemos/src/Route/RouteHandler.cpp
+
+CMakeFiles/udemos.dir/src/Route/RouteHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/src/Route/RouteHandler.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/src/Route/RouteHandler.cpp > CMakeFiles/udemos.dir/src/Route/RouteHandler.cpp.i
+
+CMakeFiles/udemos.dir/src/Route/RouteHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/src/Route/RouteHandler.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/src/Route/RouteHandler.cpp -o CMakeFiles/udemos.dir/src/Route/RouteHandler.cpp.s
+
+CMakeFiles/udemos.dir/src/Services/HttpService.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/src/Services/HttpService.cpp.o: /Users/sinisaabramovic/projects/udemos/src/Services/HttpService.cpp
+CMakeFiles/udemos.dir/src/Services/HttpService.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/udemos.dir/src/Services/HttpService.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/src/Services/HttpService.cpp.o -MF CMakeFiles/udemos.dir/src/Services/HttpService.cpp.o.d -o CMakeFiles/udemos.dir/src/Services/HttpService.cpp.o -c /Users/sinisaabramovic/projects/udemos/src/Services/HttpService.cpp
+
+CMakeFiles/udemos.dir/src/Services/HttpService.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/src/Services/HttpService.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/src/Services/HttpService.cpp > CMakeFiles/udemos.dir/src/Services/HttpService.cpp.i
+
+CMakeFiles/udemos.dir/src/Services/HttpService.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/src/Services/HttpService.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/src/Services/HttpService.cpp -o CMakeFiles/udemos.dir/src/Services/HttpService.cpp.s
+
+CMakeFiles/udemos.dir/src/Services/ServiceType.cpp.o: CMakeFiles/udemos.dir/flags.make
+CMakeFiles/udemos.dir/src/Services/ServiceType.cpp.o: /Users/sinisaabramovic/projects/udemos/src/Services/ServiceType.cpp
+CMakeFiles/udemos.dir/src/Services/ServiceType.cpp.o: CMakeFiles/udemos.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/udemos.dir/src/Services/ServiceType.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/udemos.dir/src/Services/ServiceType.cpp.o -MF CMakeFiles/udemos.dir/src/Services/ServiceType.cpp.o.d -o CMakeFiles/udemos.dir/src/Services/ServiceType.cpp.o -c /Users/sinisaabramovic/projects/udemos/src/Services/ServiceType.cpp
+
+CMakeFiles/udemos.dir/src/Services/ServiceType.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udemos.dir/src/Services/ServiceType.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sinisaabramovic/projects/udemos/src/Services/ServiceType.cpp > CMakeFiles/udemos.dir/src/Services/ServiceType.cpp.i
+
+CMakeFiles/udemos.dir/src/Services/ServiceType.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udemos.dir/src/Services/ServiceType.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sinisaabramovic/projects/udemos/src/Services/ServiceType.cpp -o CMakeFiles/udemos.dir/src/Services/ServiceType.cpp.s
+
 # Object files for target udemos
 udemos_OBJECTS = \
-"CMakeFiles/udemos.dir/main.cpp.o"
+"CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.o" \
+"CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.o" \
+"CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.o" \
+"CMakeFiles/udemos.dir/main.cpp.o" \
+"CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.o" \
+"CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.o" \
+"CMakeFiles/udemos.dir/src/Core/Logger/Logger.cpp.o" \
+"CMakeFiles/udemos.dir/src/Core/Utils/ErrorUtils.cpp.o" \
+"CMakeFiles/udemos.dir/src/Core/Utils/FileUtils.cpp.o" \
+"CMakeFiles/udemos.dir/src/Core/Utils/StringUtils.cpp.o" \
+"CMakeFiles/udemos.dir/src/Core/Utils/TimeUtils.cpp.o" \
+"CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.o" \
+"CMakeFiles/udemos.dir/src/Networking/AddressResolver.cpp.o" \
+"CMakeFiles/udemos.dir/src/Networking/Connection.cpp.o" \
+"CMakeFiles/udemos.dir/src/Networking/ConnectionPool.cpp.o" \
+"CMakeFiles/udemos.dir/src/Networking/Socket.cpp.o" \
+"CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpMethod.cpp.o" \
+"CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpRequest.cpp.o" \
+"CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpResponse.cpp.o" \
+"CMakeFiles/udemos.dir/src/Protocol/HttpProtocolHandler.cpp.o" \
+"CMakeFiles/udemos.dir/src/Route/RouteHandler.cpp.o" \
+"CMakeFiles/udemos.dir/src/Services/HttpService.cpp.o" \
+"CMakeFiles/udemos.dir/src/Services/ServiceType.cpp.o"
 
 # External object files for target udemos
 udemos_EXTERNAL_OBJECTS =
 
+bin/udemos: CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.o
 bin/udemos: CMakeFiles/udemos.dir/main.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/src/Core/Logger/Logger.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/src/Core/Utils/ErrorUtils.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/src/Core/Utils/FileUtils.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/src/Core/Utils/StringUtils.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/src/Core/Utils/TimeUtils.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/src/Networking/AddressResolver.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/src/Networking/Connection.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/src/Networking/ConnectionPool.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/src/Networking/Socket.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpMethod.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpRequest.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/src/Protocol/HttpModels/HttpResponse.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/src/Protocol/HttpProtocolHandler.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/src/Route/RouteHandler.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/src/Services/HttpService.cpp.o
+bin/udemos: CMakeFiles/udemos.dir/src/Services/ServiceType.cpp.o
 bin/udemos: CMakeFiles/udemos.dir/build.make
 bin/udemos: /Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/libssl.a
 bin/udemos: /Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/libz.a
 bin/udemos: /Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/libcrypto.a
 bin/udemos: CMakeFiles/udemos.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bin/udemos"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX executable bin/udemos"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/udemos.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

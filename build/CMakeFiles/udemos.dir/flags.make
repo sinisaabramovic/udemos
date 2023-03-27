@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include -isystem /Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/include -isystem /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rapidjson/../../include -isystem /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rxcpp
+CXX_INCLUDES = -isystem /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include -isystem /Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/include -isystem /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rapidjson/../../include -isystem /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/rxcpp
 
 CXX_FLAGSarm64 =  -Wall -Wbuiltin-macro-redefined -pedantic -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -std=c++20
 

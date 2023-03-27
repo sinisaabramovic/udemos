@@ -199,7 +199,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=udemos
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=udemos_project
+CMAKE_PROJECT_NAME:STATIC=udemos
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=0.1.0
@@ -435,8 +435,20 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
+//The directory containing a CMake configuration file for nlohmann_json.
+nlohmann_json_DIR:PATH=/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/nlohmann_json
+
 //The directory containing a CMake configuration file for rxcpp.
 rxcpp_DIR:PATH=/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rxcpp
+
+//Value Computed by CMake
+udemos_BINARY_DIR:STATIC=/Users/sinisaabramovic/projects/udemos/build
+
+//Value Computed by CMake
+udemos_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+udemos_SOURCE_DIR:STATIC=/Users/sinisaabramovic/projects/udemos
 
 //Value Computed by CMake
 udemos_project_BINARY_DIR:STATIC=/Users/sinisaabramovic/projects/udemos/build
@@ -631,6 +643,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/opt/homebrew/bin/python3.11][cfou
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding ZLIB
 FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/lib/libz.a;debug;/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/libz.a][/Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/include][v1.2.13()]
+//Details about finding nlohmann_json
+FIND_PACKAGE_MESSAGE_DETAILS_nlohmann_json:INTERNAL=[/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/nlohmann_json/nlohmann_jsonConfig.cmake][v3.11.2()]
 //ADVANCED property for variable: OPENSSL_CRYPTO_LIBRARY
 OPENSSL_CRYPTO_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENSSL_INCLUDE_DIR

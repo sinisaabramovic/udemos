@@ -128,7 +128,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=udemos
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=udemos_project
+CMAKE_PROJECT_NAME:STATIC=udemos
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=0.1.0
@@ -207,9 +207,6 @@ CMAKE_STRIP:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/Xcode
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//The directory containing a CMake configuration file for EnTT.
-EnTT_DIR:PATH=/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/entt
-
 //Path to a library.
 OPENSSL_CRYPTO_LIBRARY:FILEPATH=/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/lib/libcrypto.a
 
@@ -237,8 +234,20 @@ ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
 //Path to a library.
 ZLIB_LIBRARY_RELEASE:FILEPATH=/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/lib/libz.a
 
+//The directory containing a CMake configuration file for nlohmann_json.
+nlohmann_json_DIR:PATH=/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/nlohmann_json
+
 //The directory containing a CMake configuration file for rxcpp.
 rxcpp_DIR:PATH=/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/rxcpp
+
+//Value Computed by CMake
+udemos_BINARY_DIR:STATIC=/Users/sinisaabramovic/projects/udemos
+
+//Value Computed by CMake
+udemos_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+udemos_SOURCE_DIR:STATIC=/Users/sinisaabramovic/projects/udemos
 
 //Value Computed by CMake
 udemos_project_BINARY_DIR:STATIC=/Users/sinisaabramovic/projects/udemos
@@ -383,6 +392,8 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/lib/libcrypto.a][/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include][c ][v3.0.8()]
 //Details about finding ZLIB
 FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/lib/libz.a][/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include][v1.2.13()]
+//Details about finding nlohmann_json
+FIND_PACKAGE_MESSAGE_DETAILS_nlohmann_json:INTERNAL=[/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/share/nlohmann_json/nlohmann_jsonConfig.cmake][v3.11.2()]
 //ADVANCED property for variable: OPENSSL_CRYPTO_LIBRARY
 OPENSSL_CRYPTO_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENSSL_INCLUDE_DIR

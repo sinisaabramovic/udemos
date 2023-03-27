@@ -1,56 +1,64 @@
+//
+//  main.cpp
+//  udemos
+//
+//  Created by Sinisa Abramovic on 17.03.2023..
+//
+
+#include <thread>
 #include <iostream>
-#include <cstdlib>
+#include <string>
+#include <fstream>
+#include <cstdio>
 
-#include "src/ud_server/router/ud_http_route.hpp"
-#include "src/ud_server/router/ud_http_router.hpp"
-#include "src/ud_server/router/ud_http_route.hpp"
-#include "src/ud_server/server/ud_http_server.hpp"
+#include "src/Core/Config/Configuration.hpp"
+#include "src/Protocol/HttpProtocolHandler.h"
+#include "src/Route/RouteHandlerFactory.hpp"
 
-#include "src/api/home/home_controller.hpp"
-#include "src/api/home/home_view.hpp"
+#include "demo/Routes/GetRouteHandler.hpp"
+#include "demo/Routes/Secrets/GetSecretRouteHandler.hpp"
+#include "demo/Routes/GetLongResponseRouteHandler.hpp"
 
-int main()
-{
+#include "src/Protocol/HttpModels/HttpMethod.hpp"
+#include "src/Core/Logger/Logger.hpp"
+#include "src/Services/ServiceType.hpp"
+#include "src/Services/HttpService.hpp"
 
-    std::cout << "  " << std::endl;
-    std::cout << "  _    _ _____  ______ __  __  ____   _____     " << std::endl;
-    std::cout << " | |  | |  __ \\|  ____|  \\/  |/ __ \\ / ____| " << std::endl;
-    std::cout << " | |  | | |  | | |__  | \\  / | |  | | (___     " << std::endl;
-    std::cout << " | |  | | |  | |  __| | |\\/| | |  | |\\___ \\  " << std::endl;
-    std::cout << " | |__| | |__| | |____| |  | | |__| |____) |   " << std::endl;
-    std::cout << "  \\____/|_____/|______|_|  |_|\\____/|_____/    " << std::endl;
-    std::cout << "  " << std::endl;
-    std::cout << "  " << std::endl;
-
-    std::shared_ptr<home_view> home_v = std::make_shared<home_view>();
-    std::shared_ptr<home_controller> home_ctrl = std::make_shared<home_controller>(home_v);
-    std::shared_ptr<ud_http_route> home_route = std::make_shared<ud_http_route>("/", "GET", home_ctrl);
-    std::shared_ptr<ud_http_route> user_route = std::make_shared<ud_http_route>("/user", "GET", home_ctrl);
-    std::shared_ptr<ud_http_route> timer_route = std::make_shared<ud_http_route>("/time", "GET", home_ctrl);
-    std::shared_ptr<ud_http_route> html_route = std::make_shared<ud_http_route>("/html", "GET", home_ctrl);
-    std::shared_ptr<ud_http_route> performance_route = std::make_shared<ud_http_route>("/performance", "GET", home_ctrl);
-    std::shared_ptr<ud_http_route> heavy_compute_route = std::make_shared<ud_http_route>("/strong", "GET", home_ctrl);
-
-    std::shared_ptr<ud_http_router> router = std::make_shared<ud_http_router>();
-    router->add_route(home_route);
-    router->add_route(user_route);
-    router->add_route(timer_route);
-    router->add_route(html_route);
-    router->add_route(performance_route);
-    router->add_route(heavy_compute_route);    
-
-    ud_http_server server(8080, "0.0.0.0");
-
-    // Start listening for connections
-    std::cout << "Server start listening for connections..." << std::endl;    
-    server.start_listen(router);
-
-    // Wait for user input to stop the server
-    std::cout << "Press Enter to stop the server..." << std::endl;
-    std::cin.ignore();
-
-    // Stop the server
-    server.stop_listen();
-
+int main(int argc, char **argv) {
+    
+    Logger::getInstance().log(LogLevel::Info, "Server started");
+    
+    RouteHandlerFactory::getInstance().registerHandler(std::make_shared<GetRouteHandler>(HttpMethod::POST, "/api/simple"));
+    RouteHandlerFactory::getInstance().registerHandler(std::make_shared<GetSecretRouteHandler>(HttpMethod::POST, "/api/secret"));
+    RouteHandlerFactory::getInstance().registerHandler(std::make_shared<GetLongResponseRouteHandler>(HttpMethod::GET, "/api/long"));
+    
+    Configuration& config = Configuration::getInstance();
+    config.set("host", "127.0.0.1");
+    config.set("port", 8080);
+    
+    std::shared_ptr<HttpService> httpService = std::make_shared<HttpService>(config);
+    httpService->registerProtocolHandler(ServiceType::HTTP, std::make_unique<HttpProtocolHandler>());
+    
+    // Start the service in a separate thread
+    std::thread service_thread([&httpService]() {
+        httpService->run();
+    });
+    
+    Logger::getInstance().log(LogLevel::Info, "Server is running. Press 'q' and Enter to stop the server.");
+    
+    // Wait for user input in the main thread
+    char input;
+    do {
+        std::cin >> input;
+    } while (input != 'q');
+    
+    Logger::getInstance().log(LogLevel::Info, "Stopping the server...");
+    
+    // Stop the service and wait for the service thread to finish
+    httpService->stop();
+    service_thread.join();
+    
+    Logger::getInstance().log(LogLevel::Info, "Server stopped");
+    
     return 0;
 }
