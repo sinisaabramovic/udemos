@@ -29,7 +29,7 @@ find_package(nlohmann_json CONFIG REQUIRED)
 
 # Find required libraries for Linux
 if(UNIX AND NOT APPLE)
-    find_package(Boost 1.75 REQUIRED COMPONENTS filesystem system)
+    find_package(Boost 1.74 REQUIRED COMPONENTS filesystem system)
 
     include_directories(${Boost_INCLUDE_DIRS})
     target_link_libraries(your_project ${Boost_LIBRARIES})
