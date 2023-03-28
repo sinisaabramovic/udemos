@@ -11,18 +11,22 @@
 #include <future>
 #include "ProtocolHandler.h"
 
-class HttpProtocolHandler : public ProtocolHandler {
+class HttpProtocolHandler : public ProtocolHandler
+{
 public:
-    void handleRequest(Connection& connection) override;
-    
+    void handleRequest(Connection &connection) override;
+
 private:
-    std::string readRequest(Connection& connection);
-    void sendResponse(Connection& connection, const std::string& response);
-    void setSocketNonBlocking(Socket& socket);
+    std::string readRequest(Connection &connection);
+    void sendResponse(Connection &connection, const std::string &response);
+    void setSocketNonBlocking(Socket &socket);
     int waitForSocketRead(int kq, int socket_fd);
-    std::string readSocketData(Socket& socket, int bufferSize);
+#ifdef __APPLE__
+    std::string readSocketData(Socket &socket, int bufferSize);
+#elif __linux__
     std::string readSocketData(int socket_fd, int bufferSize);
-    std::string readRequestFromSocket(Socket& socket, int bufferSize);
+#endif
+    std::string readRequestFromSocket(Socket &socket, int bufferSize);
 };
 
 #endif /* HttpProtocolHandler_h */

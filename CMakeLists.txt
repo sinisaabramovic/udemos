@@ -79,12 +79,13 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 # Set compiler options for the executable
-target_compile_options(${PROJECT_NAME} PRIVATE ${ARCH_FLAGS})
-target_compile_options(${PROJECT_NAME} PRIVATE -Wno-shorten-64-to-32)
+
 
 # Link required libraries
 if(UNIX AND NOT APPLE)
-    target_link_libraries(${PROJECT_NAME} PRIVATE -lcrypto -lz nlohmann_json::nlohmann_json Boost::filesystem Boost::system)
+    target_link_libraries(${PROJECT_NAME} PRIVATE -lcrypto -lz uuid nlohmann_json::nlohmann_json Boost::filesystem Boost::system)
 else()
+    target_compile_options(${PROJECT_NAME} PRIVATE ${ARCH_FLAGS})
+    target_compile_options(${PROJECT_NAME} PRIVATE -Wno-shorten-64-to-32)
     target_link_libraries(${PROJECT_NAME} PRIVATE -lcrypto -lz nlohmann_json::nlohmann_json)
 endif()
