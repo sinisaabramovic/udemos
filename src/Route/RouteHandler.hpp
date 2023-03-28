@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include "RouteMatcher.hpp"
+#include <memory>
 
 class HttpResponse;
 class HttpRequest;
