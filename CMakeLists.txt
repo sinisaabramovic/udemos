@@ -31,8 +31,7 @@ find_package(nlohmann_json CONFIG REQUIRED)
 if(UNIX AND NOT APPLE)
     find_package(Boost 1.74 REQUIRED COMPONENTS filesystem system)
 
-    include_directories(${Boost_INCLUDE_DIRS})
-    target_link_libraries(your_project ${Boost_LIBRARIES})
+    include_directories(${Boost_INCLUDE_DIRS})    
 endif()
 
 # Set include and link directories

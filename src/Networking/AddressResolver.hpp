@@ -12,6 +12,7 @@
 #include <vector>
 #include <netdb.h>
 #include <arpa/inet.h>
+#include <stdexcept>
 
 class AddressResolver {
 public:

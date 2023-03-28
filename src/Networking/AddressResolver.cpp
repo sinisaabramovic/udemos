@@ -8,7 +8,7 @@
 #include "AddressResolver.hpp"
 #include <string.h>
 #include <cstring>
-
+#include <stdexcept>
 
 std::vector<std::string> AddressResolver::resolve(const std::string& hostname) {
     std::vector<std::string> addresses;
