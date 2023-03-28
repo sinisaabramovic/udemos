@@ -2058,6 +2058,8 @@ CMakeFiles/udemos.dir/main.cpp.o: main.cpp \
   demo/Routes/Secrets/GetSecretRouteHandler.hpp \
   src/Route/RouteHandler.hpp \
   demo/Routes/GetLongResponseRouteHandler.hpp \
+  demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.hpp \
+  src/Route/RouteHandler.hpp \
   src/Protocol/HttpModels/HttpMethod.hpp \
   src/Core/Logger/Logger.hpp \
   src/Services/ServiceType.hpp \
@@ -4985,19 +4987,20 @@ CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.o: src/Crypto/AESCipher.cpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/configuration.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/opensslv.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/e_os2.h \
-  src/Crypto/AESCipher.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/conf.h \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/bio.h \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/crypto.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/err.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/types.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/safestack.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/stack.h \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/types.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/bio.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/crypto.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/cryptoerr.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/symhacks.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/cryptoerr_legacy.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/core.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/bioerr.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/lhash.h \
+  src/Crypto/AESCipher.hpp \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/conf.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/conferr.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/conftypes.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/aes.h \
@@ -5015,7 +5018,6 @@ CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.o: src/Crypto/AESCipher.cpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/asn1err.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/objectserr.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/kdf.h \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/err.h \
   src/Crypto/AESUtil.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/buffer.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/buffererr.h \
@@ -10836,6 +10838,8 @@ src/Protocol/HttpModels/HttpResponseUtils.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/is_transparent.h:
 
+demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__locale:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/detail/output/serializer.hpp:
@@ -11153,12 +11157,6 @@ src/Protocol/HttpModels/HttpResponse.hpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/upper_bound.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/sort_heap.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_u_short.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/_stdio.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_scalar.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_pthread/_pthread_attr_t.h:
 
@@ -11703,6 +11701,12 @@ src/Core/Utils/StringUtils.hpp:
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cstddef:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_scalar.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_u_short.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/_stdio.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_u_int64_t.h:
 

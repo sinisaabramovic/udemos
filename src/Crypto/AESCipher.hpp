@@ -30,6 +30,14 @@
 #include <cstring>
 #include <string>
 
+#include <vector>
+#include <string>
+#include <cctype>
+#include <cstdint>
+
+#include <iostream>
+#include <iomanip>
+
 using byte = unsigned char;
 
 static constexpr size_t keyLength = 32;
@@ -40,14 +48,16 @@ public:
     AESCipher(const std::string& privateKeyPath);
     ~AESCipher();
     std::vector<byte> encrypt(const byte* plaintext, size_t plaintextLength);
-    std::vector<byte> decrypt(const byte* ciphertext, size_t ciphertextLength);
+    std::vector<std::uint8_t> decrypt(const byte* ciphertext, size_t ciphertextLength);
     std::string base64Encode(const std::vector<byte>& data);
     std::vector<byte> base64Decode(const std::string& data);
     
 private:
     AESCipher(const std::string& password, const EVP_CIPHER* cipher);
-    std::unique_ptr<EVP_CIPHER_CTX, decltype(&::EVP_CIPHER_CTX_free)> ctx;
+    std::unique_ptr<EVP_CIPHER_CTX, decltype(&::EVP_CIPHER_CTX_free)> decryptCtx;
+    std::unique_ptr<EVP_CIPHER_CTX, decltype(&::EVP_CIPHER_CTX_free)> encryptCtx;
     std::string readPrivateKey(const std::string& keypath);
+    void print_ciphertext(const byte* ciphertext, size_t length);
     std::vector<byte> key;
     std::vector<byte> iv;
 };

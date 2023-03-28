@@ -2062,6 +2062,8 @@ CMakeFiles/udemos.dir/main.cpp.o
  /Users/sinisaabramovic/projects/udemos/demo/Routes/Secrets/GetSecretRouteHandler.hpp
  /Users/sinisaabramovic/projects/udemos/src/Route/RouteHandler.hpp
  /Users/sinisaabramovic/projects/udemos/demo/Routes/GetLongResponseRouteHandler.hpp
+ /Users/sinisaabramovic/projects/udemos/demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.hpp
+ /Users/sinisaabramovic/projects/udemos/src/Route/RouteHandler.hpp
  /Users/sinisaabramovic/projects/udemos/src/Protocol/HttpModels/HttpMethod.hpp
  /Users/sinisaabramovic/projects/udemos/src/Core/Logger/Logger.hpp
  /Users/sinisaabramovic/projects/udemos/src/Services/ServiceType.hpp
@@ -4997,19 +4999,20 @@ CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.o
  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/configuration.h
  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/opensslv.h
  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/e_os2.h
- /Users/sinisaabramovic/projects/udemos/src/Crypto/AESCipher.hpp
- /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/conf.h
- /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/bio.h
- /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/crypto.h
+ /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/err.h
+ /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/types.h
  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/safestack.h
  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/stack.h
- /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/types.h
+ /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/bio.h
+ /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/crypto.h
  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/cryptoerr.h
  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/symhacks.h
  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/cryptoerr_legacy.h
  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/core.h
  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/bioerr.h
  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/lhash.h
+ /Users/sinisaabramovic/projects/udemos/src/Crypto/AESCipher.hpp
+ /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/conf.h
  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/conferr.h
  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/conftypes.h
  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/aes.h
@@ -5027,7 +5030,6 @@ CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.o
  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/asn1err.h
  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/objectserr.h
  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/kdf.h
- /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/err.h
  /Users/sinisaabramovic/projects/udemos/src/Crypto/AESUtil.h
  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/buffer.h
  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/buffererr.h

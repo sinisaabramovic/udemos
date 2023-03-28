@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.o.d"
   "CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.o"
   "CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.o.d"
+  "CMakeFiles/udemos.dir/demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.cpp.o"
+  "CMakeFiles/udemos.dir/demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.cpp.o.d"
   "CMakeFiles/udemos.dir/main.cpp.o"
   "CMakeFiles/udemos.dir/main.cpp.o.d"
   "CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.o"

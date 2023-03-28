@@ -517,6 +517,8 @@ CMakeFiles/udemos.dir/main.cpp.o: \
   /Users/sinisaabramovic/projects/udemos/demo/Routes/Secrets/GetSecretRouteHandler.hpp \
   /Users/sinisaabramovic/projects/udemos/demo/Routes/Secrets/../../../src/Route/RouteHandler.hpp \
   /Users/sinisaabramovic/projects/udemos/demo/Routes/GetLongResponseRouteHandler.hpp \
+  /Users/sinisaabramovic/projects/udemos/demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.hpp \
+  /Users/sinisaabramovic/projects/udemos/demo/Routes/SimpleSecrets/../../../src/Route/RouteHandler.hpp \
   /Users/sinisaabramovic/projects/udemos/src/Protocol/HttpModels/HttpMethod.hpp \
   /Users/sinisaabramovic/projects/udemos/src/Core/Logger/Logger.hpp \
   /Users/sinisaabramovic/projects/udemos/src/Services/ServiceType.hpp \
