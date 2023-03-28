@@ -21,6 +21,7 @@ private:
     void setSocketNonBlocking(Socket& socket);
     int waitForSocketRead(int kq, int socket_fd);
     std::string readSocketData(Socket& socket, int bufferSize);
+    std::string readSocketData(int socket_fd, int bufferSize);
     std::string readRequestFromSocket(Socket& socket, int bufferSize);
 };
 
