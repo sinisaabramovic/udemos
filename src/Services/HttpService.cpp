@@ -13,7 +13,6 @@
 #include <thread>
 #include <arpa/inet.h>
 #include <poll.h>
-#include <sys/event.h>
 #include <sys/time.h>
 #include <sys/select.h>
 #include <iostream>
@@ -21,6 +20,10 @@
 #include <vector>
 #include <algorithm>
 #include <chrono>
+
+#ifdef __APPLE__
+#include <sys/event.h>
+#endif
 
 #include "../Core/Logger/Logger.hpp"
 #include "ServiceType.hpp"
