@@ -8,7 +8,6 @@
 #ifndef HttpProtocolHandler_h
 #define HttpProtocolHandler_h
 
-#include <experimental/coroutine>
 #include <future>
 #include "ProtocolHandler.h"
 

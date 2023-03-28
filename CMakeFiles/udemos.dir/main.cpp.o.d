@@ -484,8 +484,6 @@ CMakeFiles/udemos.dir/main.cpp.o: \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/detail/macro_unscope.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
   /Users/sinisaabramovic/projects/udemos/src/Protocol/HttpProtocolHandler.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/experimental/coroutine \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/experimental/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/future \
   /Users/sinisaabramovic/projects/udemos/src/Protocol/ProtocolHandler.h \
   /Users/sinisaabramovic/projects/udemos/src/Protocol/../Networking/Connection.hpp \
