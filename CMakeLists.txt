@@ -84,4 +84,8 @@ target_compile_options(${PROJECT_NAME} PRIVATE ${ARCH_FLAGS})
 target_compile_options(${PROJECT_NAME} PRIVATE -Wno-shorten-64-to-32)
 
 # Link required libraries
-target_link_libraries(${PROJECT_NAME} PRIVATE -lcrypto -lz nlohmann_json::nlohmann_json)
+if(UNIX AND NOT APPLE)
+    target_link_libraries(${PROJECT_NAME} PRIVATE -lcrypto -lz nlohmann_json::nlohmann_json Boost::filesystem Boost::system)
+else()
+    target_link_libraries(${PROJECT_NAME} PRIVATE -lcrypto -lz nlohmann_json::nlohmann_json)
+endif()
