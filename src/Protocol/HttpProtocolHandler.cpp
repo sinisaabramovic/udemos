@@ -182,7 +182,11 @@ std::string HttpProtocolHandler::readRequestFromSocket(Socket &socket, int buffe
     }
 
     std::this_thread::sleep_for(std::chrono::milliseconds(5));
+#ifdef __linux__
+    std::string data = readSocketData(socket.fd(), bufferSize);
+#elif __APPLE__
     std::string data = readSocketData(socket, bufferSize);
+#endif
     return data;
 }
 
