@@ -90,7 +90,7 @@ void HttpService::run() {
 
 void HttpService::prepareServerSocket() {
     try {
-        this->server_socket_->bind("127.0.0.1", 8080);
+        this->server_socket_->bind("0.0.0.0", 8080);
         this->server_socket_->listen();
     } catch (const std::exception& ex) {
         Logger::getInstance().log(LogLevel::Error, "Failed to bind and listen: " + std::string(ex.what()));

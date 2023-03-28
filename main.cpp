@@ -33,7 +33,7 @@ int main(int argc, char **argv) {
     RouteHandlerFactory::getInstance().registerHandler(std::make_shared<GetLongResponseRouteHandler>(HttpMethod::GET, "/api/long"));
     
     Configuration& config = Configuration::getInstance();
-    config.set("host", "127.0.0.1");
+    config.set("host", "0.0.0.0");
     config.set("port", 8080);
     
     std::shared_ptr<HttpService> httpService = std::make_shared<HttpService>(config);
