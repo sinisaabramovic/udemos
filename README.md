@@ -6,6 +6,24 @@ The HttpServer class is a templated class that is used to create an HTTP server.
 Generate priveate key:
 openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -out private_key.pem
 
+Linux Ubuntu Setup:
+Add the LLVM repository to your system:
+
+sudo apt-get install build-essential
+sudo apt-get install clang
+
+wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
+sudo apt-add-repository "deb http://apt.llvm.org/focal/ llvm-toolchain-focal main"
+sudo apt-get update
+
+sudo apt-get install clang-13
+
+clang++ --version
+
+
+- boost: sudo apt-get install libboost-all-dev
+- uuid: sudo apt-get install uuid-dev
+
 Public Members
 
 The public members of the HttpServer class are:
