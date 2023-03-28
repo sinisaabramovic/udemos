@@ -2025,8 +2025,6 @@ CMakeFiles/udemos.dir/main.cpp.o: main.cpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/detail/macro_unscope.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
   src/Protocol/HttpProtocolHandler.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/experimental/coroutine \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/experimental/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/future \
   src/Protocol/ProtocolHandler.h \
   src/Networking/Connection.hpp \
@@ -8738,8 +8736,6 @@ CMakeFiles/udemos.dir/src/Protocol/HttpProtocolHandler.cpp.o: src/Protocol/HttpP
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_uuid_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/gethostuuid.h \
   src/Protocol/HttpProtocolHandler.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/experimental/coroutine \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/experimental/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/future \
   src/Protocol/ProtocolHandler.h \
   src/Networking/Connection.hpp \
@@ -9638,8 +9634,6 @@ CMakeFiles/udemos.dir/src/Services/HttpService.cpp.o: src/Services/HttpService.c
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iomanip \
   src/Services/ServiceType.hpp \
   src/Protocol/HttpProtocolHandler.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/experimental/coroutine \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/experimental/__config \
   src/Protocol/ProtocolHandler.h \
   src/Networking/Connection.hpp \
   src/Networking/Socket.hpp \
@@ -10196,6 +10190,8 @@ src/Networking/Socket.cpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_volatile.hpp:
 
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_class.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/advance.h:
 
 src/Core/Config/Configuration.hpp:
@@ -10583,12 +10579,6 @@ src/Protocol/ProtocolHandler.h:
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/logical/bitor.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/future:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_class.hpp:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/arithmetic/inc.hpp:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/experimental/coroutine:
 
 src/Protocol/HttpProtocolHandler.h:
 
@@ -11164,6 +11154,12 @@ src/Protocol/HttpModels/HttpResponse.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/sort_heap.h:
 
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_u_short.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/_stdio.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_scalar.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_pthread/_pthread_attr_t.h:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/macros.h:
@@ -11488,8 +11484,6 @@ src/Services/HttpService.hpp:
 
 src/Networking/AddressResolver.hpp:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/experimental/__config:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_wint_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__ranges/enable_view.h:
@@ -11710,12 +11704,6 @@ src/Core/Utils/StringUtils.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cstddef:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_scalar.hpp:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_u_short.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/_stdio.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_u_int64_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__mbstate_t.h:
@@ -11761,6 +11749,8 @@ src/Core/Utils/StringUtils.hpp:
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/detail/select_stdlib_config.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/stdint.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/arithmetic/inc.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/limits:
 

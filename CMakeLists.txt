@@ -27,6 +27,14 @@ find_package(OpenSSL REQUIRED)
 find_package(ZLIB REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
 
+# Find required libraries for Linux
+if(UNIX AND NOT APPLE)
+    find_package(Boost 1.75 REQUIRED COMPONENTS filesystem system)
+
+    include_directories(${Boost_INCLUDE_DIRS})
+    target_link_libraries(your_project ${Boost_LIBRARIES})
+endif()
+
 # Set include and link directories
 if(UNIX AND NOT APPLE)
     message(STATUS ">>> LINUX")
