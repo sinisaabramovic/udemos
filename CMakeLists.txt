@@ -16,7 +16,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-conversion")
 
 # Set compiler options
 if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DOPENSSL_API_COMPAT=0x10100000L")
+    set(CMAKE_CXX_COMPILER "/usr/bin/clang++")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DOPENSSL_API_COMPAT=0x10100000L -std=c++20")
     set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0")
 elseif(CMAKE_CXX_COMPILER_ID MATCHES "GNU")
     set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Og")
@@ -78,5 +79,4 @@ target_compile_options(${PROJECT_NAME} PRIVATE ${ARCH_FLAGS})
 target_compile_options(${PROJECT_NAME} PRIVATE -Wno-shorten-64-to-32)
 
 # Link required libraries
-target_link_libraries(${PROJECT_NAME} PRIVATE -lcrypto -lz OpenSSL::SSL ZLIB::ZLIB nlohmann_json::nlohmann_json)
-
+target_link_libraries(${PROJECT_NAME} PRIVATE -lcrypto -lz nlohmann_json::nlohmann_json)

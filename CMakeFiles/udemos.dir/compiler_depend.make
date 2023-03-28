@@ -1535,274 +1535,6 @@ CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.o: demo/Rout
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/kdf.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/err.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/sha.h \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/archive/iterators/binary_from_base64.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/assert.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/serialization/throw_exception.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/user.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/detail/select_compiler_config.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/compiler/clang.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/compiler/clang_version.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/detail/select_stdlib_config.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/stdlib/libcpp.hpp \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/shared_mutex \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/detail/select_platform_config.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/platform/macos.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/detail/posix_features.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/detail/suffix.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/helper_macros.hpp \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/charconv \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/execution \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/barrier \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/format \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/bit \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/latch \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/span \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/numbers \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/ranges \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/semaphore \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/detail/cxx_composite.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/static_assert.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/detail/workaround.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/workaround.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/transform_iterator.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/detail/enable_if.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/detail/config_def.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/detail/config_undef.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/iterator_adaptor.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/core/use_default.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/iterator_categories.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/eval_if.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/if.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/value_wknd.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/static_cast.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/workaround.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/integral.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/msvc.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/eti.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/na_spec.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/lambda_fwd.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/void_fwd.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/adl_barrier.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/adl.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/intel.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/gcc.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/na.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/bool.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/bool_fwd.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/integral_c_tag.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/static_constant.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/na_fwd.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/ctps.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/lambda.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/ttp.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/int.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/int_fwd.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/nttp_decl.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/nttp.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/integral_wrapper.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/cat.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/config/config.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/lambda_arity_param.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/template_arity_fwd.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/arity.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/dtp.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessor/params.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/preprocessor.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/comma_if.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/punctuation/comma_if.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/control/if.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/control/iif.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/logical/bool.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/config/limits.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/logical/limits/bool_256.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/facilities/empty.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/punctuation/comma.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/repeat.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/repetition/repeat.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/debug/error.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/detail/auto_rec.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/detail/limits/auto_rec_256.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/tuple/eat.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/repetition/limits/repeat_256.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/inc.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/arithmetic/inc.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/arithmetic/limits/inc_256.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessor/enum.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/limits/arity.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/logical/and.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/logical/bitand.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/identity.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/facilities/identity.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/empty.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/arithmetic/add.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/arithmetic/dec.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/arithmetic/limits/dec_256.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/control/while.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/list/fold_left.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/list/detail/fold_left.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/control/expr_iif.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/list/adt.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/detail/is_binary.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/detail/check.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/logical/compl.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/list/detail/limits/fold_left_256.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/list/limits/fold_left_256.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/list/fold_right.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/list/detail/fold_right.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/list/reverse.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/list/detail/limits/fold_right_256.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/control/detail/while.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/control/detail/limits/while_256.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/control/limits/while_256.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/logical/bitor.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/tuple/elem.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/facilities/expand.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/facilities/overload.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/variadic/size.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/facilities/check_empty.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/variadic/has_opt.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/variadic/detail/has_opt.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/facilities/is_empty_variadic.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/punctuation/is_begin_parens.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/punctuation/detail/is_begin_parens.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/facilities/detail/is_empty.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/variadic/limits/size_64.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/tuple/rem.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/tuple/detail/is_single_return.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/variadic/elem.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/variadic/limits/elem_64.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/arithmetic/detail/is_maximum_number.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/comparison/equal.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/comparison/not_equal.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/comparison/limits/not_equal_256.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/arithmetic/detail/maximum_number.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/arithmetic/detail/is_minimum_number.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/logical/not.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/arithmetic/sub.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/overload_resolution.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/lambda_support.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/identity.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/placeholders.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/arg.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/arg_fwd.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/na_assert.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/assert.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/not.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/nested_type_wknd.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/yes_no.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/arrays.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/gpu.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/pp_counter.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/arity_spec.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/arg_typedef.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/use_preprocessed.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/include_preprocessed.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/compiler.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/stringize.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_convertible.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/intrinsics.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/detail/config.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/version.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/integral_constant.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_complete.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/declval.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/add_rvalue_reference.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_void.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_reference.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_lvalue_reference.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_rvalue_reference.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/remove_reference.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_function.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/detail/is_function_cxx_11.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/detail/yes_no_type.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_array.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/iterator_facade.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/interoperable.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/or.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/or.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/iterator_traits.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/detail/facade_iterator_category.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/and.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/and.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_same.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_const.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/detail/indirect_traits.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_pointer.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_class.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_volatile.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_member_function_pointer.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_member_pointer.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/remove_cv.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/remove_pointer.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/detail/select_type.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/core/addressof.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/add_const.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/add_pointer.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/add_lvalue_reference.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/add_reference.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/remove_const.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_pod.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_scalar.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_arithmetic.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_integral.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_floating_point.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_enum.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/always.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessor/default_params.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/apply.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/apply_fwd.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/apply_wrap.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/has_apply.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/has_xxx.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/type_wrapper.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/has_xxx.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/msvc_typename.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/array/elem.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/array/data.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/array/size.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/repetition/enum_params.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/repetition/enum_trailing_params.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/has_apply.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/msvc_never_true.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/lambda.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/bind.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/bind_fwd.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/bind.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/next.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/next_prior.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/common_name_wknd.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/protect.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/bind.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/full_lambda.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/quote.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/void.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/has_type.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/bcc.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/quote.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/template_arity.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/template_arity.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/function_traits.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/utility/result_of.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/conditional.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/type_identity.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/core/enable_if.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/utility/detail/result_of_variadic.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/archive/iterators/dataflow_exception.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/archive/iterators/transform_width.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/archive/iterators/remove_whitespace.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/filter_iterator.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/archive/iterators/ostream_iterator.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/archive/iterators/base64_from_binary.hpp \
   src/Core/Logger/Logger.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/fstream \
   demo/Routes/Secrets/Models/SecretMessage.hpp \
@@ -5286,9 +5018,12 @@ CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.o: src/Crypto/AESCipher.cpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/objectserr.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/kdf.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/err.h \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/archive/iterators/binary_from_base64.hpp \
+  src/Crypto/AESUtil.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/buffer.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/buffererr.h \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/archive/iterators/base64_from_binary.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/assert.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/serialization/throw_exception.hpp \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/transform_iterator.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/user.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/detail/select_compiler_config.hpp \
@@ -5323,14 +5058,13 @@ CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.o: src/Crypto/AESCipher.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/ranges \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/semaphore \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/detail/cxx_composite.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/static_assert.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/detail/workaround.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/workaround.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/transform_iterator.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/detail/enable_if.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/detail/config_def.hpp \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/detail/workaround.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/detail/config_undef.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/iterator_adaptor.hpp \
+  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/static_assert.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/core/use_default.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/iterator_categories.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/eval_if.hpp \
@@ -5560,13 +5294,7 @@ CMakeFiles/udemos.dir/src/Crypto/AESCipher.cpp.o: src/Crypto/AESCipher.cpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/utility/detail/result_of_variadic.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/archive/iterators/dataflow_exception.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/archive/iterators/transform_width.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/archive/iterators/remove_whitespace.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/filter_iterator.hpp \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/archive/iterators/ostream_iterator.hpp \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/archive/iterators/base64_from_binary.hpp \
-  src/Crypto/AESUtil.h \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/buffer.h \
-  /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/buffererr.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/pem.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/x509.h \
   /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/ec.h \
@@ -10394,65 +10122,7 @@ src/Networking/Connection.cpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/x509.h:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/buffererr.h:
-
-src/Crypto/AESCipher.cpp:
-
-src/Core/Utils/TimeUtils.hpp:
-
-src/Core/Utils/ErrorUtils.hpp:
-
-src/Core/Utils/ErrorUtils.cpp:
-
-src/Core/CoreMemory/MemoryPool.hpp:
-
-src/Core/CoreMemory/MemoryPool.cpp:
-
-src/Core/Config/Configuration.cpp:
-
-src/Services/HttpService.hpp:
-
-src/Services/ServiceType.hpp:
-
-src/Route/RouteHandlerFactory.hpp:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/netdb.h:
-
-src/Networking/AddressResolver.hpp:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/arpa/inet.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/buffer.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/netinet6/in6.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/netinet/in.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_iovec_t.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_socklen_t.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/machine/_param.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_o_sync.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/socket.h:
-
-src/Networking/Connection.hpp:
-
-src/Protocol/ProtocolHandler.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/future:
-
-src/Protocol/HttpProtocolHandler.h:
-
-demo/Routes/Secrets/Models/SecretMessage.hpp:
-
-src/Core/Logger/Logger.hpp:
-
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/archive/iterators/ostream_iterator.hpp:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/filter_iterator.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/archive/iterators/dataflow_exception.hpp:
 
@@ -10464,25 +10134,35 @@ src/Core/Logger/Logger.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/function_traits.hpp:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/valarray:
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/template_arity.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp:
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/template_arity.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/bcc.hpp:
 
+src/Networking/Socket.cpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/void.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/quote.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/bind.hpp:
+
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/protect.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/common_name_wknd.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/next.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/na_fwd.hpp:
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/bind.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/has_apply.hpp:
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/bind_fwd.hpp:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/readable_traits.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/repetition/enum_trailing_params.hpp:
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/repetition/enum_params.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/array/size.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/array/elem.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/msvc_typename.hpp:
 
@@ -10490,17 +10170,21 @@ src/Core/Logger/Logger.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/type_wrapper.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/array/elem.hpp:
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/has_xxx.hpp:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/exception:
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/has_apply.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/apply_wrap.hpp:
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/apply_fwd.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/always.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/iterator_traits.hpp:
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_enum.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_integral.hpp:
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_floating_point.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_arithmetic.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/shared_mutex:
 
@@ -10512,31 +10196,21 @@ src/Core/Logger/Logger.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_volatile.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_class.hpp:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/bind.hpp:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/advance.h:
 
 src/Core/Config/Configuration.hpp:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/advance.h:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/detail/indirect_traits.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/and.hpp:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/Availability.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/alloca.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/symhacks.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp:
-
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/remove_cv.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/detail/facade_iterator_category.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/bind_fwd.hpp:
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_integral.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/iterator_traits.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/or.hpp:
 
@@ -10544,15 +10218,9 @@ src/Networking/AddressResolver.cpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/iterator_facade.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_rvalue_reference.hpp:
-
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/compiler/clang_version.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_reference.hpp:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/detail/input/input_adapters.hpp:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/remove_pointer.hpp:
 
@@ -10620,11 +10288,13 @@ src/Networking/AddressResolver.cpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/comparison/limits/not_equal_256.hpp:
 
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_array.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/variadic/limits/elem_64.hpp:
+
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/punctuation/is_begin_parens.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/facilities/is_empty_variadic.hpp:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_floating_point.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/xlocale.h:
 
@@ -10642,12 +10312,6 @@ src/Networking/AddressResolver.cpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/tuple/elem.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/logical/bitor.hpp:
-
-src/Networking/Socket.cpp:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/void.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_time_t.h:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/variadic/elem.hpp:
@@ -10660,17 +10324,7 @@ src/Networking/Socket.cpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/list/reverse.hpp:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_rsize_t.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/msvc_never_true.hpp:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/logical/compl.hpp:
-
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/list/adt.hpp:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/iter_swap.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/control/expr_iif.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/control/while.hpp:
 
@@ -10698,10 +10352,6 @@ src/Networking/Socket.cpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/inc.hpp:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/compressed_pair.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/repetition/limits/repeat_256.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/operations.h:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/variadic/has_opt.hpp:
@@ -10716,10 +10366,6 @@ src/Networking/Socket.cpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/repeat.hpp:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/xlocale/_ctype.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/quote.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/forward_list:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/punctuation/comma.hpp:
@@ -10728,25 +10374,17 @@ src/Networking/Socket.cpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/logical/bool.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/common_name_wknd.hpp:
-
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/control/if.hpp:
 
 main.cpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessor/params.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/detail/conversions/from_json.hpp:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/full_lambda.hpp:
-
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/detail/string_concat.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/arity.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/lambda_arity_param.hpp:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/config/config.hpp:
 
@@ -10756,11 +10394,13 @@ main.cpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/int_fwd.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_arithmetic.hpp:
-
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/int.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/ctps.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/has_apply.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/na_fwd.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__utility/cmp.h:
 
@@ -10774,8 +10414,6 @@ src/Core/CoreMemory/MemoryBlock.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/gcc.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/repetition/enum_params.hpp:
-
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/control/limits/while_256.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/clocale:
@@ -10788,19 +10426,7 @@ src/Core/CoreMemory/MemoryBlock.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/adl_barrier.hpp:
 
-src/Networking/Socket.hpp:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/unary_function.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/lambda.hpp:
-
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/comparison/not_equal.hpp:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/lambda_fwd.hpp:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_u_int32_t.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/apply.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/config/integral.hpp:
 
@@ -10824,21 +10450,17 @@ src/Networking/Socket.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/iterator_categories.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/iterator_adaptor.hpp:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/detail/config_def.hpp:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/detail/limits/auto_rec_256.hpp:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/transform_iterator.hpp:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/workaround.hpp:
-
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iomanip:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/static_assert.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/iterator_adaptor.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/detail/config_def.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/workaround.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/detail/cxx_composite.hpp:
 
@@ -10882,13 +10504,105 @@ src/Networking/Socket.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config/user.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_array.hpp:
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/detail/limits/auto_rec_256.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/variadic/limits/elem_64.hpp:
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/iterator/transform_iterator.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/template_arity.hpp:
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/detail/is_binary.hpp:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/serialization/throw_exception.hpp:
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/archive/iterators/base64_from_binary.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/buffererr.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/netinet6/in6.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/buffer.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_o_dsync.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/bind.hpp:
+
+src/Crypto/AESUtil.h:
+
+src/Core/Utils/TimeUtils.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_rvalue_reference.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/charconv:
+
+src/Core/Utils/TimeUtils.cpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/stable_partition.h:
+
+src/Core/Utils/StringUtils.cpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/iter_swap.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/control/expr_iif.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/array/data.hpp:
+
+src/Core/Utils/FileUtils.cpp:
+
+src/Core/Utils/ErrorUtils.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/array:
+
+src/Core/Logger/Logger.cpp:
+
+src/Services/ServiceType.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types.h:
+
+src/Protocol/HttpModels/HttpMethod.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/logical/compl.hpp:
+
+src/Route/RouteHandlerFactory.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/arpa/inet.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/lambda_fwd.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/netinet/in.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/compressed_pair.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/repetition/limits/repeat_256.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_socklen_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/__wctype.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_sa_family_t.h:
+
+src/Networking/Connection.hpp:
+
+src/Protocol/ProtocolHandler.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/logical/bitor.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/future:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_class.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/arithmetic/inc.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/experimental/coroutine:
+
+src/Protocol/HttpProtocolHandler.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/json_fwd.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/unordered_map:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/uuid/uuid.h:
+
+demo/Routes/Secrets/Models/SecretMessage.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_pod.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/fstream:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/sha.h:
 
@@ -10922,7 +10636,15 @@ src/Networking/Socket.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/identity.hpp:
 
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/lambda.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/unary_function.h:
+
+src/Networking/Socket.hpp:
+
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/conftypes.h:
+
+src/Core/Config/Configuration.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/next_permutation.h:
 
@@ -10986,11 +10708,19 @@ src/Route/RouteHandler.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/is_sax.hpp:
 
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/detail/input/input_adapters.hpp:
+
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/detail/hash.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cstdint:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/byte_container_with_subtype.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/binary_function.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/arm/_param.h:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/detail/iterators/iteration_proxy.hpp:
 
@@ -11032,11 +10762,11 @@ src/Route/RouteHandler.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/detail/exceptions.hpp:
 
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/valarray:
+
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/bioerr.h:
-
-src/Core/Logger/Logger.cpp:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/array:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/adl_serializer.hpp:
 
@@ -11068,17 +10798,9 @@ src/Protocol/HttpModels/HttpRequest.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/vector:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_o_dsync.h:
-
-src/Crypto/AESUtil.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/bind.hpp:
-
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/static_cast.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/gethostuuid.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/template_arity.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_pthread/_pthread_types.h:
 
@@ -11130,6 +10852,8 @@ src/Protocol/HttpModels/HttpResponseUtils.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/map:
 
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_iovec_t.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__bsd_locale_defaults.h:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/list/detail/limits/fold_left_256.hpp:
@@ -11139,6 +10863,10 @@ src/Protocol/HttpModels/HttpResponseUtils.hpp:
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/objects.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fsfilcnt_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h:
+
+src/Core/Utils/FileUtils.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/math.h:
 
@@ -11212,10 +10940,6 @@ demo/Routes/GetLongResponseRouteHandler.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/locale:
 
-src/Core/Utils/TimeUtils.cpp:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/charconv:
-
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/detail/meta/cpp_future.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/bitset:
@@ -11260,8 +10984,6 @@ src/Core/Utils/TimeUtils.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/xlocale/__wctype.h:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/has_xxx.hpp:
-
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/safestack.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/_xlocale.h:
@@ -11292,6 +11014,14 @@ src/Protocol/HttpModels/HttpResponse.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cstdio:
 
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/Availability.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/alloca.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/symhacks.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/transform.h:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/pem.h:
@@ -11301,14 +11031,6 @@ src/Protocol/HttpModels/HttpResponse.hpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/stable_sort.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/shuffle.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/fstream:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_pod.hpp:
-
-src/Core/Utils/FileUtils.cpp:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/array/data.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/functional:
 
@@ -11396,8 +11118,6 @@ src/Core/Utils/FileUtils.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/max_element.h:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/bind.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/stdlib.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/sample.h:
@@ -11444,23 +11164,17 @@ src/Core/Utils/FileUtils.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/sort_heap.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_u_short.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/_stdio.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_scalar.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_pthread/_pthread_attr_t.h:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/macros.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/copy_n.h:
 
+src/Crypto/AESCipher.cpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/clamp.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_blksize_t.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/apply_fwd.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/arithmetic/dec.hpp:
 
@@ -11542,10 +11256,6 @@ src/Core/Utils/FileUtils.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/reverse_iterator.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/iter_swap.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessor/default_params.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/projected.h:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/obj_mac.h:
@@ -11566,6 +11276,10 @@ demo/Routes/GetRouteHandler.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/istream_iterator.h:
 
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/repetition/enum_trailing_params.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/readable_traits.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/front_insert_iterator.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/default_sentinel.h:
@@ -11585,6 +11299,10 @@ demo/Routes/GetRouteHandler.hpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/wait.h:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/config.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessor/default_params.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/iter_swap.h:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/arithmetic/detail/is_maximum_number.hpp:
 
@@ -11642,8 +11360,6 @@ demo/Routes/GetRouteHandler.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/atomic:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/archive/iterators/binary_from_base64.hpp:
-
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/list/limits/fold_left_256.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_useconds_t.h:
@@ -11654,9 +11370,9 @@ demo/Routes/GetRouteHandler.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/hash.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/constrained_ctypes.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/constrained_ctypes.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/allocator.h:
 
@@ -11678,15 +11394,9 @@ demo/Routes/GetRouteHandler.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/function.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/arm/_param.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/binary_function.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/min.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/binder1st.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/has_apply.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h:
 
@@ -11709,6 +11419,8 @@ demo/Routes/GetRouteHandler.hpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_uintptr_t.h:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/comma_if.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/netdb.h:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/openssl/bnerr.h:
 
@@ -11744,6 +11456,8 @@ demo/Routes/GetRouteHandler.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/stdio.h:
 
+src/Core/Utils/ErrorUtils.cpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/filesystem:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/rotate_copy.h:
@@ -11768,7 +11482,11 @@ demo/Routes/GetRouteHandler.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/pthread/pthread_impl.h:
 
+src/Services/HttpService.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/string.h:
+
+src/Networking/AddressResolver.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/experimental/__config:
 
@@ -11826,6 +11544,10 @@ demo/Routes/GetRouteHandler.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/cat.hpp:
 
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_o_sync.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/socket.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/copy.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_dev_t.h:
@@ -11839,12 +11561,6 @@ demo/Routes/GetRouteHandler.hpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/new:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/errno.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/uuid/uuid.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/json_fwd.hpp:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/unordered_map:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/is_heap.h:
 
@@ -11860,7 +11576,7 @@ demo/Routes/GetRouteHandler.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/libkern/_OSByteOrder.h:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/archive/iterators/remove_whitespace.hpp:
+src/Core/CoreMemory/MemoryPool.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/locale.h:
 
@@ -11892,10 +11608,6 @@ demo/Routes/GetRouteHandler.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_posix_availability.h:
 
-src/Protocol/HttpModels/HttpMethod.hpp:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/time.h:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/arithmetic/sub.hpp:
@@ -11906,15 +11618,15 @@ src/Protocol/HttpModels/HttpMethod.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/detail/input/binary_reader.hpp:
 
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/full_lambda.hpp:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/detail/conversions/from_json.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/AvailabilityVersions.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/stdio.h:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/detail/is_function_cxx_11.hpp:
-
-src/Core/Utils/StringUtils.cpp:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/stable_partition.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/_types/_uint64_t.h:
 
@@ -11927,6 +11639,10 @@ src/Core/Utils/StringUtils.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_lvalue_reference.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__utility/pair.h:
+
+src/Core/Utils/StringUtils.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional_base:
 
@@ -11944,17 +11660,23 @@ src/Core/Utils/StringUtils.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fd_copy.h:
 
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/msvc_never_true.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_rsize_t.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/move_iterator.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__thread/poll_with_backoff.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/comp_ref_type.h:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_enum.hpp:
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/apply_wrap.hpp:
 
-src/Core/Utils/StringUtils.hpp:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/exception:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__utility/pair.h:
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/quote.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/xlocale/_ctype.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/libkern/arm/OSByteOrder.h:
 
@@ -11987,6 +11709,12 @@ src/Core/Utils/StringUtils.hpp:
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cstddef:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/type_traits/is_scalar.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_u_short.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/_stdio.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_u_int64_t.h:
 
@@ -12034,23 +11762,9 @@ src/Core/Utils/StringUtils.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/stdint.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/experimental/coroutine:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/arithmetic/inc.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/limits:
 
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/archive/iterators/base64_from_binary.hpp:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/detail/is_binary.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/shift_left.h:
-
-/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/quote.hpp:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_sa_family_t.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/__wctype.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__iterator/wrap_iter.h:
 
@@ -12068,6 +11782,8 @@ src/Core/Utils/StringUtils.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/concepts:
 
+src/Core/Logger/Logger.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/uninitialized_algorithms.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/compare:
@@ -12084,11 +11800,17 @@ src/Core/Utils/StringUtils.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/mach/machine/_structs.h:
 
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/machine/_param.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_size_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/_ctype.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/is_partitioned.h:
+
+/Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/mpl/apply.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_u_int32_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/wchar.h:
 
@@ -12106,6 +11828,8 @@ demo/Routes/GetLongResponseRouteHandler.cpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/boost/preprocessor/list/detail/limits/fold_right_256.hpp:
 
+src/Core/CoreMemory/MemoryPool.cpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/machine/types.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/typeinfo:
@@ -12115,10 +11839,6 @@ demo/Routes/GetLongResponseRouteHandler.cpp:
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/detail/iterators/primitive_iterator.hpp:
 
 /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include/nlohmann/detail/output/output_adapters.hpp:
-
-src/Core/Utils/FileUtils.hpp:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include/stdint.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/replace.h:
 

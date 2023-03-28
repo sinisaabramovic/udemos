@@ -444,9 +444,6 @@ bin/udemos: CMakeFiles/udemos.dir/src/Route/RouteHandler.cpp.o
 bin/udemos: CMakeFiles/udemos.dir/src/Services/HttpService.cpp.o
 bin/udemos: CMakeFiles/udemos.dir/src/Services/ServiceType.cpp.o
 bin/udemos: CMakeFiles/udemos.dir/build.make
-bin/udemos: /Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/libssl.a
-bin/udemos: /Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/libz.a
-bin/udemos: /Users/sinisaabramovic/Projects/externals/vcpkg/installed/arm64-osx/debug/lib/libcrypto.a
 bin/udemos: CMakeFiles/udemos.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sinisaabramovic/projects/udemos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX executable bin/udemos"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/udemos.dir/link.txt --verbose=$(VERBOSE)
