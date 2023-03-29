@@ -24,6 +24,8 @@ clang++ --version
 - boost: sudo apt-get install libboost-all-dev
 - uuid: sudo apt-get install uuid-dev
 
+For Linux (Debian/Ubuntu), you can use the package manager: sudo apt-get install libsodium-dev
+
 Public Members
 
 The public members of the HttpServer class are:
