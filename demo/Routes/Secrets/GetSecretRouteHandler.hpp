@@ -8,6 +8,10 @@
 #ifndef GetSecretRouteHandler_hpp
 #define GetSecretRouteHandler_hpp
 
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
 #include <stdio.h>
 #include "../../../src/Route/RouteHandler.hpp"
 
@@ -20,6 +24,9 @@ public:
     virtual ~GetSecretRouteHandler() = default;
 
     virtual std::shared_ptr<HttpResponse> handleRequest(const HttpRequest& request) override;
+
+private:
+    std::string getJoke(int id) const;
 };
 
 #endif /* GetSecretRouteHandler_hpp */
