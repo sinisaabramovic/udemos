@@ -201,6 +201,30 @@ demo/Routes/Secrets/GetSecretRouteHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.s
 .PHONY : demo/Routes/Secrets/GetSecretRouteHandler.cpp.s
 
+demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.o: demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.cpp.o
+.PHONY : demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.o
+
+# target to build an object file
+demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.cpp.o
+.PHONY : demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.cpp.o
+
+demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.i: demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.cpp.i
+.PHONY : demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.i
+
+# target to preprocess a source file
+demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.cpp.i
+.PHONY : demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.cpp.i
+
+demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.s: demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.cpp.s
+.PHONY : demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.s
+
+# target to generate assembly for a file
+demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/udemos.dir/build.make CMakeFiles/udemos.dir/demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.cpp.s
+.PHONY : demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -699,6 +723,9 @@ help:
 	@echo "... demo/Routes/Secrets/GetSecretRouteHandler.o"
 	@echo "... demo/Routes/Secrets/GetSecretRouteHandler.i"
 	@echo "... demo/Routes/Secrets/GetSecretRouteHandler.s"
+	@echo "... demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.o"
+	@echo "... demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.i"
+	@echo "... demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

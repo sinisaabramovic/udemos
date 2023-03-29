@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/sinisaabramovic/projects/udemos/demo/Routes/GetLongResponseRouteHandler.cpp" "CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.o" "gcc" "CMakeFiles/udemos.dir/demo/Routes/GetLongResponseRouteHandler.cpp.o.d"
   "/Users/sinisaabramovic/projects/udemos/demo/Routes/GetRouteHandler.cpp" "CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.o" "gcc" "CMakeFiles/udemos.dir/demo/Routes/GetRouteHandler.cpp.o.d"
   "/Users/sinisaabramovic/projects/udemos/demo/Routes/Secrets/GetSecretRouteHandler.cpp" "CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.o" "gcc" "CMakeFiles/udemos.dir/demo/Routes/Secrets/GetSecretRouteHandler.cpp.o.d"
+  "/Users/sinisaabramovic/projects/udemos/demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.cpp" "CMakeFiles/udemos.dir/demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.cpp.o" "gcc" "CMakeFiles/udemos.dir/demo/Routes/SimpleSecrets/GetSimpleSecretRouteHandler.cpp.o.d"
   "/Users/sinisaabramovic/projects/udemos/main.cpp" "CMakeFiles/udemos.dir/main.cpp.o" "gcc" "CMakeFiles/udemos.dir/main.cpp.o.d"
   "/Users/sinisaabramovic/projects/udemos/src/Core/Config/Configuration.cpp" "CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.o" "gcc" "CMakeFiles/udemos.dir/src/Core/Config/Configuration.cpp.o.d"
   "/Users/sinisaabramovic/projects/udemos/src/Core/CoreMemory/MemoryPool.cpp" "CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.o" "gcc" "CMakeFiles/udemos.dir/src/Core/CoreMemory/MemoryPool.cpp.o.d"

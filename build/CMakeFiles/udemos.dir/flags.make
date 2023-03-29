@@ -4,9 +4,9 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include
+CXX_INCLUDES = -I/opt/homebrew/Cellar/libsodium/1.0.18_1/include -isystem /Users/sinisaabramovic/projects/externals/vcpkg/installed/arm64-osx/include
 
-CXX_FLAGSarm64 =  -Wno-conversion -DOPENSSL_API_COMPAT=0x10100000L -std=c++20 -g -O0 -Og -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk "-arch x86_64" -Wno-shorten-64-to-32 -std=c++20
+CXX_FLAGSarm64 =  -O0 -fstrict-aliasing -g -O0 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fstrict-aliasing "-arch x86_64" -Wno-shorten-64-to-32 -std=c++20
 
-CXX_FLAGS =  -Wno-conversion -DOPENSSL_API_COMPAT=0x10100000L -std=c++20 -g -O0 -Og -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk "-arch x86_64" -Wno-shorten-64-to-32 -std=c++20
+CXX_FLAGS =  -O0 -fstrict-aliasing -g -O0 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fstrict-aliasing "-arch x86_64" -Wno-shorten-64-to-32 -std=c++20
 

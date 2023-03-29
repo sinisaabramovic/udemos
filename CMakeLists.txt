@@ -12,13 +12,17 @@ set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-conversion")
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-conversion")
 
 # Set compiler options
+set(CMAKE_C_COMPILER "gcc")
 set(CMAKE_CXX_COMPILER "/usr/bin/clang++")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DOPENSSL_API_COMPAT=0x10100000L -std=c++20")
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DOPENSSL_API_COMPAT=0x10100000L -std=c++20")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0")
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Og")
+#set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Og")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fstrict-aliasing")
+
 
 # set(CMAKE_TOOLCHAIN_FILE "/Users/sinisaabramovic/projects/externals/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
@@ -26,6 +30,11 @@ set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Og")
 find_package(OpenSSL REQUIRED)
 find_package(ZLIB REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
+# Find the libsodium package
+find_package(PkgConfig REQUIRED)
+pkg_search_module(LIBSODIUM REQUIRED libsodium)
+# Add the include directories
+include_directories(${LIBSODIUM_INCLUDE_DIRS})
 
 # Find required libraries for Linux
 if(UNIX AND NOT APPLE)
@@ -79,13 +88,15 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 # Set compiler options for the executable
-
+target_compile_options(${PROJECT_NAME} PRIVATE -fstrict-aliasing)
 
 # Link required libraries
 if(UNIX AND NOT APPLE)
-    target_link_libraries(${PROJECT_NAME} PRIVATE -lcrypto -lz uuid nlohmann_json::nlohmann_json Boost::filesystem Boost::system)
+    target_link_libraries(${PROJECT_NAME} PRIVATE ${LIBSODIUM_LIBRARIES} -lcrypto -lz uuid nlohmann_json::nlohmann_json Boost::filesystem Boost::system)
+    target_compile_options(${PROJECT_NAME} PRIVATE ${LIBSODIUM_CFLAGS_OTHER})
 else()
     target_compile_options(${PROJECT_NAME} PRIVATE ${ARCH_FLAGS})
     target_compile_options(${PROJECT_NAME} PRIVATE -Wno-shorten-64-to-32)
-    target_link_libraries(${PROJECT_NAME} PRIVATE -lcrypto -lz nlohmann_json::nlohmann_json)
+    target_link_libraries(${PROJECT_NAME} PRIVATE ${LIBSODIUM_LIBRARIES} -lcrypto -lz nlohmann_json::nlohmann_json)
+    target_compile_options(${PROJECT_NAME} PRIVATE ${LIBSODIUM_CFLAGS_OTHER})
 endif()

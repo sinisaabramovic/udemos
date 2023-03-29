@@ -8,17 +8,6 @@
 #ifndef AESUtil_h
 #define AESUtil_h
 
-#include <openssl/conf.h>
-#include <openssl/aes.h>
-#include <openssl/rand.h>
-#include <openssl/kdf.h>
-#include <openssl/err.h>
-#include <openssl/evp.h>
-#include <openssl/sha.h>
-#include <openssl/bio.h>
-#include <openssl/evp.h>
-#include <openssl/buffer.h>
-
 #include <iostream>
 #include <memory>
 #include <vector>
@@ -30,54 +19,60 @@
 #include <string>
 #include <vector>
 #include <sstream>
-#include <openssl/pem.h>
-#include <openssl/evp.h>
-#include <openssl/sha.h>
+#include <iostream>
+#include <sodium.h>
 
 using byte = unsigned char;
 
-bool generateKeyIVFromPrivateKeyPEM(const std::string& privateKeyPEM, byte* key, size_t keyLength, byte* iv, size_t ivLength) {
+bool generateKeyIVFromPrivateKeyPEM(const std::string &privateKeyPEM, byte *key, size_t keyLength, byte *iv, size_t ivLength)
+{
+    if (sodium_init() < 0)
+    {
+        std::cerr << "Failed to initialize libsodium" << std::endl;
+        return false;
+    }
+
     std::string base64KeyData = privateKeyPEM;
     size_t pos = base64KeyData.find("-----BEGIN PRIVATE KEY-----");
-    if (pos != std::string::npos) {
+    if (pos != std::string::npos)
+    {
         base64KeyData.erase(pos, strlen("-----BEGIN PRIVATE KEY-----"));
     }
     pos = base64KeyData.find("-----END PRIVATE KEY-----");
-    if (pos != std::string::npos) {
+    if (pos != std::string::npos)
+    {
         base64KeyData.erase(pos, strlen("-----END PRIVATE KEY-----"));
     }
     base64KeyData.erase(std::remove(base64KeyData.begin(), base64KeyData.end(), ' '), base64KeyData.end());
     base64KeyData.erase(std::remove(base64KeyData.begin(), base64KeyData.end(), '\n'), base64KeyData.end());
     base64KeyData.erase(std::remove(base64KeyData.begin(), base64KeyData.end(), '\r'), base64KeyData.end());
-    
-    BIO* bio_mem = BIO_new_mem_buf(base64KeyData.data(), base64KeyData.size());
-    BIO* bio64 = BIO_new(BIO_f_base64());
-    BIO_set_flags(bio64, BIO_FLAGS_BASE64_NO_NL);
-    BIO_push(bio64, bio_mem);
-    
-    char buffer[1024] = {0};
-    std::string output;
-    int bytesRead;
-    while ((bytesRead = BIO_read(bio64, buffer, sizeof(buffer))) > 0) {
-        output.append(buffer, bytesRead);
-    }
-    
-    BIO_free_all(bio64);
-    
-    byte digest[SHA512_DIGEST_LENGTH];
-    SHA512(reinterpret_cast<const unsigned char*>(output.data()), output.size(), digest);
-    
-    byte* source = digest;
+
+    std::vector<byte> decodedKeyData(base64KeyData.size());
+    size_t decodedKeyDataSize;
+    if (sodium_base642bin(decodedKeyData.data(), decodedKeyData.size(), base64KeyData.data(), base64KeyData.size(),
+                          nullptr, &decodedKeyDataSize, nullptr, sodium_base64_VARIANT_ORIGINAL) != 0)
+    {
+        std::cerr << "Failed to decode base64" << std::endl;
+        return false;
+    }    
+
+    decodedKeyData.resize(decodedKeyDataSize);
+
+    byte digest[crypto_hash_sha512_BYTES];
+    crypto_hash_sha512(digest, decodedKeyData.data(), decodedKeyData.size());
+
+    byte *source = digest;
     size_t sourceLength = sizeof(digest);
-    
-    if (keyLength > sourceLength || ivLength > sourceLength) {
+
+    if (keyLength > sourceLength || ivLength > sourceLength)
+    {
         std::cerr << "Key or IV length is too large" << std::endl;
         return false;
     }
-    
-    memcpy(key, source, keyLength);
-    memcpy(iv, source + keyLength, ivLength);
-    
+
+    memcpy(key, source, keyLength * sizeof(byte));
+    memcpy(iv, source + keyLength, ivLength * sizeof(byte));
+
     return true;
 }
 
